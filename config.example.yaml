@@ -1,0 +1,46 @@
+# Copy to config.yaml or set env vars / GitHub Actions secrets.
+# Env vars override these values (see README).
+
+watch:
+  make: Honda
+  model: S2000
+  # ZIP used for dealer/nearby inventory (MarketCheck). Leave blank for nationwide.
+  zip: ""
+  # Max distance in miles for nearby inventory (MarketCheck free tier max is often 100).
+  radius_miles: 100
+  # Year range (inclusive). S2000 production: 1999–2009.
+  year_min: 1999
+  year_max: 2009
+  max_price: null
+
+sources:
+  bringatrailer: true
+  # Optional: https://www.marketcheck.com/ — free tier works for nearby dealer inventory
+  marketcheck: false
+
+notifications:
+  # Email (SMTP). Recommended: Gmail app password.
+  email:
+    enabled: false
+    to: vk00345@gmail.com
+    from: ""
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    smtp_user: ""
+    # Prefer env SMTP_PASSWORD — do not commit secrets.
+    smtp_password: ""
+
+  # Discord incoming webhook URL (prefer env DISCORD_WEBHOOK_URL)
+  discord:
+    enabled: false
+    webhook_url: ""
+
+  # Open a GitHub issue per new listing (auto-enabled in GitHub Actions).
+  github_issues:
+    enabled: false
+    labels:
+      - s2000-alert
+
+# On first run, record current listings as seen without notifying (avoids spam).
+# Set to true once if you want an immediate digest of everything currently listed.
+notify_existing: false

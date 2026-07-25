@@ -1,0 +1,71 @@
+name: S2000 sale alerts
+
+on:
+  schedule:
+    # Every hour — catches new BaT auctions quickly.
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      notify_existing:
+        description: "Also notify for cars already listed (first digest)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Ensure alert label exists
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "s2000-alert" --color "C8102E" --description "New Honda S2000 listing" || true
+
+      - name: Run S2000 watcher
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          NOTIFY_EMAIL_TO: ${{ secrets.NOTIFY_EMAIL_TO }}
+          NOTIFY_EMAIL_FROM: ${{ secrets.NOTIFY_EMAIL_FROM }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          WATCH_ZIP: ${{ secrets.WATCH_ZIP }}
+          WATCH_RADIUS_MILES: ${{ secrets.WATCH_RADIUS_MILES }}
+          MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
+          NOTIFY_EXISTING: ${{ github.event.inputs.notify_existing || 'false' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src.main
+
+      - name: Commit seen listings state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen.json || true
+          if git diff --staged --quiet; then
+            echo "No seen.json changes"
+          else
+            git commit -m "chore: update S2000 seen listings"
+            git push
+          fi
