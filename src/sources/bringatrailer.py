@@ -8,8 +8,8 @@ from urllib import request
 from bs4 import BeautifulSoup
 
 from ..models import Listing
+from ..watches import Watch
 
-BAT_S2000_URL = "https://bringatrailer.com/honda/s2000/"
 USER_AGENT = "Auto_Trader/1.0 (+https://github.com/KarmicFuture/Auto_Trader)"
 
 
@@ -44,7 +44,12 @@ def _parse_mileage(title: str, excerpt: str = "") -> Optional[int]:
     return None
 
 
-def _listings_from_completed_json(html: str) -> list[Listing]:
+def _matches_watch(title: str, excerpt: str, needle: str) -> bool:
+    blob = f"{title} {excerpt}".lower()
+    return needle.lower() in blob
+
+
+def _listings_from_completed_json(html: str, *, needle: str, make: str, model: str) -> list[Listing]:
     m = re.search(r"var auctionsCompletedInitialData\s*=\s*(\{.*?\});\s*", html, re.S)
     if not m:
         return []
@@ -54,9 +59,10 @@ def _listings_from_completed_json(html: str) -> list[Listing]:
         url = item.get("url") or item.get("permalink")
         title = (item.get("title") or "").strip()
         listing_id = str(item.get("id") or item.get("post_id") or url or title)
+        excerpt = item.get("excerpt") or ""
         if not url or not title:
             continue
-        if "s2000" not in title.lower() and "s2000" not in (item.get("excerpt") or "").lower():
+        if not _matches_watch(title, excerpt, needle):
             continue
         price = item.get("current_bid")
         if price is None:
@@ -69,19 +75,22 @@ def _listings_from_completed_json(html: str) -> list[Listing]:
                 url=url,
                 price=int(price) if price is not None else None,
                 year=_parse_year(title),
-                mileage=_parse_mileage(title, item.get("excerpt") or ""),
+                mileage=_parse_mileage(title, excerpt),
                 location=item.get("location") or item.get("country_code"),
                 status="completed" if not item.get("active") else "live",
                 thumbnail=item.get("thumbnail") or item.get("image"),
-                notes=(item.get("excerpt") or None),
+                notes=excerpt or None,
+                make=make,
+                model=model,
             )
         )
     return out
 
 
-def _listings_from_live_cards(html: str) -> list[Listing]:
+def _listings_from_live_cards(html: str, *, needle: str, make: str, model: str) -> list[Listing]:
     soup = BeautifulSoup(html, "html.parser")
     out: list[Listing] = []
+    needle_re = re.compile(re.escape(needle), re.I)
     for card in soup.select("div.listing-card[data-listing_id]"):
         listing_id = card.get("data-listing_id")
         link = card.select_one('a[href*="/listing/"]')
@@ -90,18 +99,18 @@ def _listings_from_live_cards(html: str) -> list[Listing]:
         url = link.get("href")
         title = link.get_text(" ", strip=True)
         if not url or not title:
-            # Sometimes the visible title is in a nested heading
             heading = card.select_one(".listing-card-title, h3, h2")
             title = heading.get_text(" ", strip=True) if heading else ""
-        if not title or "s2000" not in title.lower():
-            # Fall back to any S2000 text in the card
-            text = card.get_text(" ", strip=True)
-            m = re.search(r"([^.]{0,80}S2000[^.]{0,40})", text, re.I)
-            title = m.group(1).strip() if m else title
-        if not title:
+        text = card.get_text(" ", strip=True)
+        if not title or needle.lower() not in title.lower():
+            m = needle_re.search(text)
+            if m:
+                start = max(0, m.start() - 40)
+                title = text[start : m.end() + 40].strip()
+        if not title or not _matches_watch(title, text, needle):
             continue
 
-        money = re.findall(r"\$[\d,]+", card.get_text(" ", strip=True))
+        money = re.findall(r"\$[\d,]+", text)
         price = _parse_price(money[0]) if money else None
         img = card.select_one("img")
         thumb = img.get("src") if img else None
@@ -121,28 +130,33 @@ def _listings_from_live_cards(html: str) -> list[Listing]:
                 status="live",
                 thumbnail=thumb,
                 notes=excerpt or None,
+                make=make,
+                model=model,
             )
         )
     return out
 
 
-def fetch_bringatrailer_s2000(
+def fetch_bringatrailer_watch(
+    watch: Watch,
     *,
     include_completed: bool = False,
     year_min: int | None = None,
     year_max: int | None = None,
     max_price: int | None = None,
 ) -> list[Listing]:
-    """Fetch Honda S2000 auctions from Bring a Trailer.
+    html = _http_get(watch.bat_url)
+    live = _listings_from_live_cards(
+        html, needle=watch.bat_title_needle, make=watch.make, model=watch.model
+    )
+    completed = (
+        _listings_from_completed_json(
+            html, needle=watch.bat_title_needle, make=watch.make, model=watch.model
+        )
+        if include_completed
+        else []
+    )
 
-    By default only live/current auctions are returned (what you want for 'for sale').
-    Set include_completed=True to also ingest recently completed auctions.
-    """
-    html = _http_get(BAT_S2000_URL)
-    live = _listings_from_live_cards(html)
-    completed = _listings_from_completed_json(html) if include_completed else []
-
-    # Prefer live cards; completed may overlap after an auction ends.
     by_key: dict[str, Listing] = {}
     for listing in completed + live:
         by_key[listing.key] = listing
@@ -155,7 +169,15 @@ def fetch_bringatrailer_s2000(
             continue
         if max_price is not None and listing.price is not None and listing.price > max_price:
             continue
-        filtered.append(listing)
+        filtered.append(listing.with_updates(watch_id=watch.id))
 
     filtered.sort(key=lambda x: (0 if x.status == "live" else 1, x.title))
     return filtered
+
+
+def fetch_bringatrailer_s2000(**kwargs) -> list[Listing]:
+    from ..watches import get_watch
+
+    watch = get_watch("honda-s2000")
+    assert watch is not None
+    return fetch_bringatrailer_watch(watch, **kwargs)

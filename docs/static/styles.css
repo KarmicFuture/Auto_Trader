@@ -135,7 +135,7 @@ a {
   margin: 0 0 0.85rem;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(3.4rem, 11vw, 7.5rem);
+  font-size: clamp(3rem, 9vw, 6.2rem);
   line-height: 0.88;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -356,6 +356,12 @@ a {
   font-size: 0.95rem;
 }
 
+.listing__value-note {
+  margin: 0.15rem 0 0;
+  color: var(--fog);
+  font-size: 0.88rem;
+}
+
 .listing__price {
   padding: 1rem 1.1rem;
   display: grid;
@@ -377,6 +383,53 @@ a {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.value-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.5rem;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.value-pill--great {
+  color: #dff7e6;
+  border-color: rgba(56, 178, 106, 0.55);
+  background: rgba(56, 178, 106, 0.16);
+}
+
+.value-pill--good {
+  color: #d9f0ff;
+  border-color: rgba(66, 153, 225, 0.5);
+  background: rgba(66, 153, 225, 0.14);
+}
+
+.value-pill--fair {
+  color: var(--chrome);
+  border-color: rgba(232, 234, 237, 0.28);
+  background: rgba(232, 234, 237, 0.08);
+}
+
+.value-pill--soft {
+  color: #ffe0b8;
+  border-color: rgba(221, 152, 58, 0.5);
+  background: rgba(221, 152, 58, 0.14);
+}
+
+.value-pill--stretched {
+  color: #ffb7c0;
+  border-color: rgba(208, 18, 45, 0.45);
+  background: rgba(208, 18, 45, 0.14);
+}
+
+.value-pill--muted {
+  color: var(--steel);
 }
 
 .empty {

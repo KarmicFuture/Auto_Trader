@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a static S2K Board site into docs/ for GitHub Pages."""
+"""Build a static Auto Board site into docs/ for GitHub Pages."""
 
 from __future__ import annotations
 
@@ -12,14 +12,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.catalog import fetch_us_s2000_listings, listings_payload  # noqa: E402
+from src.catalog import fetch_us_board_listings, listings_payload  # noqa: E402
 
 OUT = ROOT / "docs"
 WEB = ROOT / "src" / "web"
 
 
 def build() -> None:
-    listings, errors = fetch_us_s2000_listings()
+    listings, errors = fetch_us_board_listings()
     payload = listings_payload(
         listings,
         errors=errors,
@@ -36,13 +36,11 @@ def build() -> None:
     html = (
         template.replace("{{ asset_prefix }}", "./static")
         .replace("{{ api_url|tojson }}", json.dumps("./listings.json"))
-        .replace("{{ brand }}", "S2K Board")
+        .replace("{{ brand }}", "Auto Board")
     )
-    # Remove unused jinja bits if any remain
     (OUT / "index.html").write_text(html)
     (OUT / "listings.json").write_text(json.dumps(payload, indent=2) + "\n")
     (OUT / ".nojekyll").write_text("")
-    # Friendly aliases that used to 404 when people typed them
     for name in ("listings", "board", "s2k"):
         (OUT / f"{name}.html").write_text(html)
 

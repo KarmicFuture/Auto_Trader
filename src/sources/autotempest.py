@@ -246,4 +246,6 @@ class AutoTempestClient:
             status="active",
             thumbnail=item.get("imgSource") or item.get("img"),
             notes=" ".join(notes_parts)[:240] or None,
+            make=item.get("make"),
+            model=item.get("model") or item.get("backendModel"),
         )
