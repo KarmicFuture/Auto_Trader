@@ -70,6 +70,10 @@ def load_config(path: Path | None = None) -> dict[str, Any]:
 
     if _env_bool("SOURCE_BRINGATRAILER") is not None:
         env_overlay["sources"]["bringatrailer"] = _env_bool("SOURCE_BRINGATRAILER")
+    if _env_bool("SOURCE_CARS_COM") is not None:
+        env_overlay["sources"]["cars_com"] = _env_bool("SOURCE_CARS_COM")
+    if _env_bool("SOURCE_AUTOTRADER") is not None:
+        env_overlay["sources"]["autotrader"] = _env_bool("SOURCE_AUTOTRADER")
     if _env_bool("SOURCE_MARKETCHECK") is not None:
         env_overlay["sources"]["marketcheck"] = _env_bool("SOURCE_MARKETCHECK")
     elif os.getenv("MARKETCHECK_API_KEY"):

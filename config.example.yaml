@@ -4,9 +4,9 @@
 watch:
   make: Honda
   model: S2000
-  # ZIP used for dealer/nearby inventory (MarketCheck). Leave blank for nationwide.
+  # ZIP for Cars.com / Autotrader / MarketCheck. Leave blank for nationwide.
   zip: ""
-  # Max distance in miles for nearby inventory (MarketCheck free tier max is often 100).
+  # Max distance in miles from ZIP. Ignored for nationwide (blank ZIP).
   radius_miles: 100
   # Year range (inclusive). S2000 production: 1999–2009.
   year_min: 1999
@@ -15,6 +15,8 @@ watch:
 
 sources:
   bringatrailer: true
+  cars_com: true
+  autotrader: true
   # Optional: https://www.marketcheck.com/ — free tier works for nearby dealer inventory
   marketcheck: false
 
