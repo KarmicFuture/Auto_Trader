@@ -18,10 +18,82 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 )
 
+# AutoTempest site codes that return nationwide US inventory when radius=0.
+# Valid codes (API): ah, at, cab, cg, cgc, cm, cs, ct, cv, eb, ebcom, fbm,
+# hem, hemc, kj, ot, pa, ssm, st, tc, te, extended
+NATIONAL_SITE_CODES = (
+    "cm",  # Cars.com
+    "eb",  # eBay Motors
+    "hem",  # Hemmings
+    "ot",  # CarGurus + TrueCar mash
+    "te",  # Cars & Bids
+    "cv",  # Carvana
+    "at",  # Autotrader (often empty from cloud IPs)
+    "fbm",  # Facebook Marketplace (often empty from cloud IPs)
+    "tc",  # TrueCar (when served separately from ot)
+    "cs",  # Additional AT mash source
+    "st",  # Additional AT mash source
+    "extended",  # Extended AT inventory
+)
+
 SITE_CODES = {
     "cars.com": "cm",
+    "ebay": "eb",
+    "hemmings": "hem",
+    "cargurus": "ot",
+    "truecar": "ot",
+    "carsandbids": "te",
+    "carvana": "cv",
     "autotrader": "at",
+    "facebook": "fbm",
 }
+
+# Map AutoTempest `sourceName` (and URL host fallbacks) → board source ids.
+SOURCE_NAME_MAP = {
+    "cars.com": "cars.com",
+    "ebay": "ebay",
+    "hemmings classifieds": "hemmings",
+    "hemmings": "hemmings",
+    "cargurus": "cargurus",
+    "truecar": "truecar",
+    "cars & bids": "carsandbids",
+    "cars and bids": "carsandbids",
+    "carvana": "carvana",
+    "autotrader": "autotrader",
+    "facebook marketplace": "facebook",
+    "facebook": "facebook",
+}
+
+SOURCE_HOST_MAP = {
+    "cars.com": "cars.com",
+    "ebay.com": "ebay",
+    "ebaymotors.com": "ebay",
+    "hemmings.com": "hemmings",
+    "cargurus.com": "cargurus",
+    "truecar.com": "truecar",
+    "carsandbids.com": "carsandbids",
+    "carvana.com": "carvana",
+    "autotrader.com": "autotrader",
+    "facebook.com": "facebook",
+    "marketplace.facebook.com": "facebook",
+}
+
+
+def resolve_source_name(item: dict[str, Any], *, fallback: str | None = None) -> str:
+    """Pick a stable board source id from an AutoTempest result row."""
+    raw = (item.get("sourceName") or "").strip().lower()
+    if raw in SOURCE_NAME_MAP:
+        return SOURCE_NAME_MAP[raw]
+    url = item.get("url") or ""
+    host = parse.urlsplit(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    for suffix, source in SOURCE_HOST_MAP.items():
+        if host == suffix or host.endswith("." + suffix):
+            return source
+    if fallback:
+        return fallback
+    return raw.replace(" ", "") or "autotempest"
 
 
 def _jquery_param(params: dict[str, Any]) -> str:
@@ -150,7 +222,7 @@ class AutoTempestClient:
         self,
         *,
         site_code: str,
-        source_name: str,
+        source_name: str | None = None,
         make: str = "honda",
         model: str = "s2000",
         zip_code: str = "10001",
@@ -211,8 +283,51 @@ class AutoTempestClient:
 
         return out
 
+    def fetch_national_listings(
+        self,
+        *,
+        make: str = "honda",
+        model: str = "s2000",
+        zip_code: str = "10001",
+        radius_miles: int | None = None,
+        year_min: int | None = None,
+        year_max: int | None = None,
+        max_price: int | None = None,
+        max_pages: int = 5,
+        site_codes: tuple[str, ...] | list[str] | None = None,
+        exclude_site_codes: set[str] | None = None,
+    ) -> list[Listing]:
+        """Fetch nationwide listings across popular AutoTempest mash sources."""
+        codes = list(site_codes or NATIONAL_SITE_CODES)
+        if exclude_site_codes:
+            codes = [c for c in codes if c not in exclude_site_codes]
+
+        out: list[Listing] = []
+        seen_urls: set[str] = set()
+        for code in codes:
+            batch = self.fetch_site_listings(
+                site_code=code,
+                source_name=None,
+                make=make,
+                model=model,
+                zip_code=zip_code,
+                radius_miles=radius_miles,
+                year_min=year_min,
+                year_max=year_max,
+                max_price=max_price,
+                max_pages=max_pages,
+            )
+            for listing in batch:
+                if listing.url in seen_urls:
+                    continue
+                seen_urls.add(listing.url)
+                out.append(listing)
+        return out
+
     @staticmethod
-    def _to_listing(item: dict[str, Any], *, source_name: str) -> Listing | None:
+    def _to_listing(
+        item: dict[str, Any], *, source_name: str | None = None
+    ) -> Listing | None:
         url = item.get("url") or ""
         title = (item.get("title") or "").strip()
         listing_id = str(item.get("id") or item.get("externalId") or "")
@@ -234,9 +349,10 @@ class AutoTempestClient:
             )
             if p
         ]
+        resolved = resolve_source_name(item, fallback=source_name)
         return Listing(
             id=listing_id,
-            source=source_name,
+            source=resolved,
             title=title,
             url=clean,
             price=_parse_price(item.get("price")),

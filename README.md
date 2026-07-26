@@ -2,6 +2,8 @@
 
 Browse **Honda S2000** and **Porsche Cayman** cars for sale in the United States, each with an **independent value score**.
 
+Sources: Cars.com, CarGurus, eBay, TrueCar, Carvana, Hemmings, Cars & Bids, Bring a Trailer, and Autotrader (when reachable).
+
 ## Value score
 
 Every listing is scored from its own year, mileage, trim cues, and ask price against a fixed fair-value curve for that model — not against other cars currently listed. Higher score = better buy vs that car’s own expected market value.
