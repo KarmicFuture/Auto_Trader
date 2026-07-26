@@ -1,6 +1,6 @@
 {
   "count": 247,
-  "refreshed_at": "2026-07-26T16:03:16.950595+00:00",
+  "refreshed_at": "2026-07-26T19:38:08.557692+00:00",
   "errors": [],
   "watches": [
     {
@@ -22,7 +22,7 @@
       "source": "bringatrailer",
       "title": "2006 Porsche Cayman S 6-Speed",
       "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-291/",
-      "price": 9600,
+      "price": 11000,
       "year": 2006,
       "mileage": null,
       "location": null,
@@ -35,7 +35,7 @@
       "fair_value": 28800,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -19200
+      "value_delta": -17800
     },
     {
       "id": "117699046",
@@ -102,7 +102,7 @@
       "source": "bringatrailer",
       "title": "27k-Mile 2003 Honda S2000",
       "url": "https://bringatrailer.com/listing/2003-honda-s2000-223/",
-      "price": 19000,
+      "price": 19751,
       "year": 2003,
       "mileage": 27000,
       "location": null,
@@ -115,7 +115,7 @@
       "fair_value": 35900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -16900
+      "value_delta": -16149
     },
     {
       "id": "116570066",
