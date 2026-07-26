@@ -29,7 +29,9 @@ def test_parse_year_and_mileage():
 
 
 def test_live_cards():
-    listings = _listings_from_live_cards(SAMPLE_HTML)
+    listings = _listings_from_live_cards(
+        SAMPLE_HTML, needle="s2000", make="Honda", model="S2000"
+    )
     assert len(listings) == 1
     assert listings[0].id == "118176273"
     assert listings[0].status == "live"
@@ -38,7 +40,9 @@ def test_live_cards():
 
 
 def test_completed_json():
-    listings = _listings_from_completed_json(SAMPLE_HTML)
+    listings = _listings_from_completed_json(
+        SAMPLE_HTML, needle="s2000", make="Honda", model="S2000"
+    )
     assert len(listings) == 1
     assert listings[0].year == 2005
     assert listings[0].price == 25000

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>S2K Board — Honda S2000s for sale in the US</title>
-  <meta name="description" content="Live Honda S2000 listings across the United States from Cars.com, Bring a Trailer, and Autotrader." />
+  <title>Auto Board — S2000 & Cayman values in the US</title>
+  <meta name="description" content="Live Honda S2000 and Porsche Cayman listings across the United States with an independent value score." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,16 +24,16 @@
     </div>
 
     <nav class="nav">
-      <a class="nav__brand" href="#top">S2K Board</a>
+      <a class="nav__brand" href="#top">Auto Board</a>
       <a class="nav__link" href="#listings">Listings</a>
     </nav>
 
     <div class="hero__copy">
-      <p class="brand">S2K Board</p>
-      <h1>Every Honda S2000 for sale in the United States.</h1>
-      <p class="lede">Live inventory from Cars.com, Bring a Trailer, and Autotrader — AP1 and AP2, coast to coast.</p>
+      <p class="brand">Auto Board</p>
+      <h1>S2000s and Caymans for sale in the United States.</h1>
+      <p class="lede">Each car gets an independent value score from year, mileage, and ask — not from whatever else is listed today.</p>
       <div class="cta">
-        <a class="btn btn--primary" href="#listings">Browse listings</a>
+        <a class="btn btn--primary" href="#listings">Browse by value</a>
         <button class="btn btn--ghost" type="button" id="refresh-btn">Refresh now</button>
       </div>
     </div>
@@ -43,9 +43,17 @@
     <div class="board__head">
       <div>
         <h2>United States inventory</h2>
-        <p class="board__sub" id="status-line">Loading live S2000s…</p>
+        <p class="board__sub" id="status-line">Loading live inventory…</p>
       </div>
       <div class="filters" role="group" aria-label="Filter listings">
+        <label class="filter">
+          <span>Model</span>
+          <select id="filter-watch">
+            <option value="all">All models</option>
+            <option value="honda-s2000">Honda S2000</option>
+            <option value="porsche-cayman">Porsche Cayman</option>
+          </select>
+        </label>
         <label class="filter">
           <span>Source</span>
           <select id="filter-source">
@@ -58,6 +66,7 @@
         <label class="filter">
           <span>Sort</span>
           <select id="filter-sort">
+            <option value="value-desc">Value score ↓</option>
             <option value="price-asc">Price ↑</option>
             <option value="price-desc">Price ↓</option>
             <option value="year-desc">Year ↓</option>
@@ -69,11 +78,11 @@
 
     <div id="error-banner" class="banner" hidden></div>
     <div id="listing-grid" class="listing-grid" aria-live="polite"></div>
-    <p id="empty-state" class="empty" hidden>No S2000s matched those filters.</p>
+    <p id="empty-state" class="empty" hidden>No cars matched those filters.</p>
   </main>
 
   <footer class="footer">
-    <p><span class="footer__brand">S2K Board</span> watches US S2000 inventory so you don’t have to.</p>
+    <p><span class="footer__brand">Auto Board</span> scores each car on its own market value curve so deals stay comparable across the country.</p>
   </footer>
 
   <script src="./static/app.js" defer></script>

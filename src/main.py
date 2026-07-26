@@ -7,100 +7,31 @@ from pathlib import Path
 from typing import Sequence
 
 from .config import load_config
+from .catalog import fetch_us_board_listings
 from .models import Listing
 from .notify import dispatch_notifications, format_digest
-from .sources import (
-    fetch_autotrader_s2000,
-    fetch_bringatrailer_s2000,
-    fetch_cars_com_s2000,
-    fetch_marketcheck_s2000,
-)
 from .store import SeenStore
-
-
-def _radius_for_marketplace(watch: dict) -> int | None:
-    """Radius for Cars.com / Autotrader. None/blank zip => nationwide."""
-    zip_code = str(watch.get("zip") or "").strip()
-    if not zip_code:
-        return None
-    return int(watch.get("radius_miles") or 100)
 
 
 def collect_listings(cfg: dict) -> list[Listing]:
     watch = cfg.get("watch") or {}
     sources = cfg.get("sources") or {}
-    year_min = watch.get("year_min")
-    year_max = watch.get("year_max")
     max_price = watch.get("max_price")
-    zip_code = str(watch.get("zip") or "").strip()
-    radius = _radius_for_marketplace(watch)
+    watch_ids = cfg.get("watch_ids")  # optional list override
 
-    found: list[Listing] = []
-    errors: list[str] = []
-
-    if sources.get("bringatrailer", True):
-        try:
-            found.extend(
-                fetch_bringatrailer_s2000(
-                    include_completed=False,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001 - keep other sources running
-            errors.append(f"bringatrailer: {exc}")
-
-    if sources.get("cars_com", True):
-        try:
-            found.extend(
-                fetch_cars_com_s2000(
-                    zip_code=zip_code,
-                    radius_miles=radius,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"cars.com: {exc}")
-
-    if sources.get("autotrader", True):
-        try:
-            found.extend(
-                fetch_autotrader_s2000(
-                    zip_code=zip_code,
-                    radius_miles=radius,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"autotrader: {exc}")
-
-    if sources.get("marketcheck"):
-        try:
-            found.extend(
-                fetch_marketcheck_s2000(
-                    zip_code=zip_code,
-                    radius_miles=int(watch.get("radius_miles") or 100),
-                    year_min=int(year_min or 1999),
-                    year_max=int(year_max or 2009),
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"marketcheck: {exc}")
-
+    listings, errors = fetch_us_board_listings(
+        watch_ids=watch_ids,
+        max_price=max_price,
+        include_bringatrailer=sources.get("bringatrailer", True),
+        include_cars_com=sources.get("cars_com", True),
+        include_autotrader=sources.get("autotrader", True),
+        include_marketcheck=bool(sources.get("marketcheck")),
+        marketcheck_zip=str(watch.get("zip") or "90210"),
+        marketcheck_radius=int(watch.get("radius_miles") or 100),
+    )
     for err in errors:
         print(f"Source warning: {err}", file=sys.stderr)
-
-    # De-dupe by URL as a secondary key
-    by_url: dict[str, Listing] = {}
-    for listing in found:
-        by_url[listing.url] = listing
-    return list(by_url.values())
+    return listings
 
 
 def run_watch(

@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import re
 import sys
-from typing import Any
+from typing import Any, Iterable
 
 from .models import Listing
 from .sources import (
-    fetch_autotrader_s2000,
-    fetch_bringatrailer_s2000,
-    fetch_cars_com_s2000,
+    fetch_autotrader_watch,
+    fetch_bringatrailer_watch,
+    fetch_cars_com_watch,
     fetch_marketcheck_s2000,
 )
+from .value_score import apply_value_score, rank_key
+from .watches import WATCHES, Watch, get_watch
 
 _DISTANCE_SUFFIX = re.compile(r"\s*\([^)]*\bmi\b[^)]*\)\s*$", re.I)
 
@@ -22,25 +24,74 @@ def _us_location(listing: Listing) -> Listing:
     cleaned = _DISTANCE_SUFFIX.sub("", listing.location).strip() or None
     if cleaned == listing.location:
         return listing
-    return Listing(
-        id=listing.id,
-        source=listing.source,
-        title=listing.title,
-        url=listing.url,
-        price=listing.price,
-        year=listing.year,
-        mileage=listing.mileage,
-        location=cleaned,
-        status=listing.status,
-        thumbnail=listing.thumbnail,
-        notes=listing.notes,
-    )
+    return listing.with_updates(location=cleaned)
 
 
-def fetch_us_s2000_listings(
+def _fetch_watch(
+    watch: Watch,
     *,
-    year_min: int = 1999,
-    year_max: int = 2009,
+    max_price: int | None,
+    include_bringatrailer: bool,
+    include_cars_com: bool,
+    include_autotrader: bool,
+) -> tuple[list[Listing], list[str]]:
+    found: list[Listing] = []
+    errors: list[str] = []
+
+    if include_bringatrailer:
+        try:
+            found.extend(
+                fetch_bringatrailer_watch(
+                    watch,
+                    include_completed=False,
+                    year_min=watch.year_min,
+                    year_max=watch.year_max,
+                    max_price=max_price,
+                )
+            )
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{watch.id}/bringatrailer: {exc}")
+
+    if include_cars_com:
+        try:
+            found.extend(
+                fetch_cars_com_watch(
+                    watch,
+                    zip_code="10001",
+                    radius_miles=0,
+                    year_min=watch.year_min,
+                    year_max=watch.year_max,
+                    max_price=max_price,
+                    max_pages=5,
+                )
+            )
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{watch.id}/cars.com: {exc}")
+
+    if include_autotrader:
+        try:
+            found.extend(
+                fetch_autotrader_watch(
+                    watch,
+                    zip_code="10001",
+                    radius_miles=0,
+                    year_min=watch.year_min,
+                    year_max=watch.year_max,
+                    max_price=max_price,
+                )
+            )
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"{watch.id}/autotrader: {exc}")
+
+    scored = [
+        apply_value_score(_us_location(listing), watch.id) for listing in found
+    ]
+    return scored, errors
+
+
+def fetch_us_board_listings(
+    *,
+    watch_ids: Iterable[str] | None = None,
     max_price: int | None = None,
     include_bringatrailer: bool = True,
     include_cars_com: bool = True,
@@ -49,66 +100,41 @@ def fetch_us_s2000_listings(
     marketcheck_zip: str = "90210",
     marketcheck_radius: int = 100,
 ) -> tuple[list[Listing], list[str]]:
-    """Fetch Honda S2000s for sale across the United States.
+    """Fetch nationwide US listings for configured watches and score each car."""
+    selected = []
+    wanted = set(watch_ids) if watch_ids is not None else None
+    for watch in WATCHES:
+        if wanted is None or watch.id in wanted:
+            selected.append(watch)
 
-    Cars.com / Autotrader use nationwide search (no ZIP radius).
-    Bring a Trailer is included as live US auction inventory.
-    """
     found: list[Listing] = []
     errors: list[str] = []
 
-    if include_bringatrailer:
-        try:
-            found.extend(
-                fetch_bringatrailer_s2000(
-                    include_completed=False,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"bringatrailer: {exc}")
+    for watch in selected:
+        batch, batch_errors = _fetch_watch(
+            watch,
+            max_price=max_price,
+            include_bringatrailer=include_bringatrailer,
+            include_cars_com=include_cars_com,
+            include_autotrader=include_autotrader,
+        )
+        found.extend(batch)
+        errors.extend(batch_errors)
 
-    if include_cars_com:
+    if include_marketcheck and (wanted is None or "honda-s2000" in wanted):
         try:
-            found.extend(
-                fetch_cars_com_s2000(
-                    zip_code="10001",
-                    radius_miles=0,  # AutoTempest nationwide
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                    max_pages=5,
-                )
+            s2k = get_watch("honda-s2000")
+            assert s2k is not None
+            market = fetch_marketcheck_s2000(
+                zip_code=marketcheck_zip,
+                radius_miles=marketcheck_radius,
+                year_min=s2k.year_min,
+                year_max=s2k.year_max,
+                max_price=max_price,
             )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"cars.com: {exc}")
-
-    if include_autotrader:
-        try:
             found.extend(
-                fetch_autotrader_s2000(
-                    zip_code="10001",
-                    radius_miles=0,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"autotrader: {exc}")
-
-    if include_marketcheck:
-        try:
-            found.extend(
-                fetch_marketcheck_s2000(
-                    zip_code=marketcheck_zip,
-                    radius_miles=marketcheck_radius,
-                    year_min=year_min,
-                    year_max=year_max,
-                    max_price=max_price,
-                )
+                apply_value_score(_us_location(item.with_updates(watch_id=s2k.id)), s2k.id)
+                for item in market
             )
         except Exception as exc:  # noqa: BLE001
             errors.append(f"marketcheck: {exc}")
@@ -118,17 +144,16 @@ def fetch_us_s2000_listings(
 
     by_url: dict[str, Listing] = {}
     for listing in found:
-        by_url[listing.url] = _us_location(listing)
+        by_url[listing.url] = listing
 
     listings = list(by_url.values())
-    listings.sort(
-        key=lambda item: (
-            item.price is None,
-            item.price if item.price is not None else 10**9,
-            item.title,
-        )
-    )
+    listings.sort(key=rank_key)
     return listings, errors
+
+
+def fetch_us_s2000_listings(**kwargs) -> tuple[list[Listing], list[str]]:
+    """Backward-compatible S2000-only fetch."""
+    return fetch_us_board_listings(watch_ids=["honda-s2000"], **kwargs)
 
 
 def listings_payload(
@@ -141,5 +166,9 @@ def listings_payload(
         "count": len(listings),
         "refreshed_at": refreshed_at,
         "errors": errors or [],
+        "watches": [
+            {"id": w.id, "label": w.label, "make": w.make, "model": w.model}
+            for w in WATCHES
+        ],
         "listings": [listing.to_dict() for listing in listings],
     }

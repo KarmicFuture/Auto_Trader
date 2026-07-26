@@ -10,20 +10,28 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from ..catalog import fetch_us_s2000_listings, listings_payload
+from ..catalog import fetch_us_board_listings, listings_payload
 
 WEB_DIR = Path(__file__).resolve().parent
 CACHE_TTL_SECONDS = 10 * 60
 
-app = FastAPI(title="S2K Board", description="Honda S2000s for sale across the United States")
+app = FastAPI(
+    title="Auto Board",
+    description="Honda S2000 and Porsche Cayman listings across the United States",
+)
 templates = Jinja2Templates(directory=str(WEB_DIR / "templates"))
 
 _cache: dict[str, Any] = {"expires": 0.0, "payload": None}
 
 
-def _get_catalog(*, force: bool = False, max_price: int | None = None) -> dict[str, Any]:
+def _get_catalog(
+    *,
+    force: bool = False,
+    max_price: int | None = None,
+    watch: str | None = None,
+) -> dict[str, Any]:
     now = time.time()
-    cache_key = f"us:{max_price}"
+    cache_key = f"us:{max_price}:{watch or 'all'}"
     cached = _cache.get("payload")
     if (
         not force
@@ -33,7 +41,11 @@ def _get_catalog(*, force: bool = False, max_price: int | None = None) -> dict[s
     ):
         return cached
 
-    listings, errors = fetch_us_s2000_listings(max_price=max_price)
+    watch_ids = [watch] if watch else None
+    listings, errors = fetch_us_board_listings(
+        watch_ids=watch_ids,
+        max_price=max_price,
+    )
     payload = listings_payload(
         listings,
         errors=errors,
@@ -50,7 +62,7 @@ def _render_index(request: Request) -> HTMLResponse:
         request,
         "index.html",
         {
-            "brand": "S2K Board",
+            "brand": "Auto Board",
             "api_url": "/api/listings",
             "asset_prefix": "/static",
         },
@@ -71,7 +83,6 @@ async def index_html(request: Request) -> HTMLResponse:
 @app.get("/board", response_class=HTMLResponse)
 @app.get("/s2k", response_class=HTMLResponse)
 async def listings_page(request: Request) -> HTMLResponse:
-    """Aliases people often hit; same board as home."""
     return _render_index(request)
 
 
@@ -84,8 +95,11 @@ async def api_root() -> RedirectResponse:
 async def api_listings(
     refresh: bool = Query(False),
     max_price: int | None = Query(None, ge=1000, le=500000),
+    watch: str | None = Query(
+        None, description="Watch id, e.g. honda-s2000 or porsche-cayman"
+    ),
 ) -> dict[str, Any]:
-    return _get_catalog(force=refresh, max_price=max_price)
+    return _get_catalog(force=refresh, max_price=max_price, watch=watch)
 
 
 @app.get("/api/health")
@@ -93,5 +107,4 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-# Mount static last so it doesn't swallow API/page routes.
 app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")
