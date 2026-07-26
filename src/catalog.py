@@ -8,8 +8,8 @@ from .models import Listing
 from .sources import (
     fetch_autotrader_watch,
     fetch_bringatrailer_watch,
-    fetch_cars_com_watch,
     fetch_marketcheck_s2000,
+    fetch_national_watch,
 )
 from .value_score import apply_value_score, rank_key
 from .watches import WATCHES, Watch, get_watch
@@ -52,10 +52,13 @@ def _fetch_watch(
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{watch.id}/bringatrailer: {exc}")
 
+    # AutoTempest national mash: Cars.com, eBay, Hemmings, CarGurus, TrueCar,
+    # Cars & Bids, Carvana, and other AT codes when they return inventory.
+    # Flag name remains include_cars_com for config compatibility.
     if include_cars_com:
         try:
             found.extend(
-                fetch_cars_com_watch(
+                fetch_national_watch(
                     watch,
                     zip_code="10001",
                     radius_miles=0,
@@ -66,7 +69,7 @@ def _fetch_watch(
                 )
             )
         except Exception as exc:  # noqa: BLE001
-            errors.append(f"{watch.id}/cars.com: {exc}")
+            errors.append(f"{watch.id}/national: {exc}")
 
     if include_autotrader:
         try:

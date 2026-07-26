@@ -17,10 +17,20 @@
     value == null ? "Mileage n/a" : `${Number(value).toLocaleString("en-US")} mi`;
 
   const sourceLabel = (source) => {
-    if (source === "cars.com") return "Cars.com";
-    if (source === "bringatrailer") return "Bring a Trailer";
-    if (source === "autotrader") return "Autotrader";
-    return source;
+    const labels = {
+      "cars.com": "Cars.com",
+      bringatrailer: "Bring a Trailer",
+      autotrader: "Autotrader",
+      ebay: "eBay",
+      hemmings: "Hemmings",
+      cargurus: "CarGurus",
+      truecar: "TrueCar",
+      carsandbids: "Cars & Bids",
+      carvana: "Carvana",
+      facebook: "Facebook Marketplace",
+      marketcheck: "MarketCheck",
+    };
+    return labels[source] || source;
   };
 
   const modelLabel = (item) => {
