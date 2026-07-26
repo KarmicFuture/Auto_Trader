@@ -1,6 +1,6 @@
 {
   "count": 247,
-  "refreshed_at": "2026-07-26T15:55:12.769438+00:00",
+  "refreshed_at": "2026-07-26T16:03:16.950595+00:00",
   "errors": [],
   "watches": [
     {
@@ -198,26 +198,6 @@
       "value_delta": -19701
     },
     {
-      "id": "115757505",
-      "source": "bringatrailer",
-      "title": "2016 Porsche Cayman GT4 Clubsport",
-      "url": "https://bringatrailer.com/listing/2016-porsche-981-cayman-gt4-clubsport/",
-      "price": 76000,
-      "year": 2016,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/2016_porsche_981-cayman-gt4-clubsport_2016_porsche_981-cayman-gt4-clubsport_e03576e0-2c93-4e61-8277-d67e7e085334-vDvcOO-62706-62707-scaled.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 107800,
-      "value_score": 99.2,
-      "value_label": "Great value",
-      "value_delta": -31800
-    },
-    {
       "id": "cm-c77a5ab0-aeee-432f-abfa-2c8df3fa11c2",
       "source": "cars.com",
       "title": "2005 Honda S2000",
@@ -256,6 +236,26 @@
       "value_score": 95.8,
       "value_label": "Great value",
       "value_delta": -8524
+    },
+    {
+      "id": "115757505",
+      "source": "bringatrailer",
+      "title": "2016 Porsche Cayman GT4 Clubsport",
+      "url": "https://bringatrailer.com/listing/2016-porsche-981-cayman-gt4-clubsport/",
+      "price": 80000,
+      "year": 2016,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/2016_porsche_981-cayman-gt4-clubsport_2016_porsche_981-cayman-gt4-clubsport_e03576e0-2c93-4e61-8277-d67e7e085334-vDvcOO-62706-62707-scaled.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 107800,
+      "value_score": 93.0,
+      "value_label": "Great value",
+      "value_delta": -27800
     },
     {
       "id": "118250115",
