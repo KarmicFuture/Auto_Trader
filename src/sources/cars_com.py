@@ -13,6 +13,7 @@ def fetch_cars_com_s2000(
     year_min: Optional[int] = None,
     year_max: Optional[int] = None,
     max_price: Optional[int] = None,
+    max_pages: int = 3,
 ) -> list[Listing]:
     """Fetch Honda S2000 listings from Cars.com via AutoTempest.
 
@@ -32,4 +33,5 @@ def fetch_cars_com_s2000(
         year_min=year_min,
         year_max=year_max,
         max_price=max_price,
+        max_pages=max_pages,
     )
