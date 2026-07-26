@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a static Auto Board site into docs/ for GitHub Pages."""
+"""Build a static Auto Board PWA into docs/ for GitHub Pages."""
 
 from __future__ import annotations
 
@@ -18,6 +18,17 @@ OUT = ROOT / "docs"
 WEB = ROOT / "src" / "web"
 
 
+def render_html(template: str) -> str:
+    return (
+        template.replace("{{ asset_prefix }}", "./static")
+        .replace("{{ api_url|tojson }}", json.dumps("./listings.json"))
+        .replace("{{ asset_prefix|tojson }}", json.dumps("./static"))
+        .replace("{{ sw_url|tojson }}", json.dumps("./sw.js"))
+        .replace("{{ root_prefix }}", ".")
+        .replace("{{ brand }}", "Auto Board")
+    )
+
+
 def build() -> None:
     listings, errors = fetch_us_board_listings()
     payload = listings_payload(
@@ -32,12 +43,12 @@ def build() -> None:
     static_out = OUT / "static"
     shutil.copytree(WEB / "static", static_out)
 
+    # PWA root assets (scope + start_url resolve from site root).
+    shutil.copy2(WEB / "static" / "manifest.webmanifest", OUT / "manifest.webmanifest")
+    shutil.copy2(WEB / "static" / "sw.js", OUT / "sw.js")
+
     template = (WEB / "templates" / "index.html").read_text()
-    html = (
-        template.replace("{{ asset_prefix }}", "./static")
-        .replace("{{ api_url|tojson }}", json.dumps("./listings.json"))
-        .replace("{{ brand }}", "Auto Board")
-    )
+    html = render_html(template)
     (OUT / "index.html").write_text(html)
     (OUT / "listings.json").write_text(json.dumps(payload, indent=2) + "\n")
     (OUT / ".nojekyll").write_text("")

@@ -6,7 +6,9 @@ Browse **Honda S2000** and **Porsche Cayman** cars for sale in the United States
 
 Every listing is scored from its own year, mileage, trim cues, and ask price against a fixed fair-value curve for that model — not against other cars currently listed. Higher score = better buy vs that car’s own expected market value.
 
-## Website
+## App
+
+Auto Board is an installable progressive web app: browse inventory, filter by value, and star cars to a local Saved list.
 
 ### Local
 
@@ -16,6 +18,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python3 -m uvicorn src.web.app:app --host 0.0.0.0 --port 8000
 ```
+
+Open http://localhost:8000 — on a phone or Chromium, use **Install** when prompted (or the browser “Add to Home Screen” action).
 
 ### GitHub Pages
 

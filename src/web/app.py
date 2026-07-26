@@ -6,13 +6,14 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, Query, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from ..catalog import fetch_us_board_listings, listings_payload
 
 WEB_DIR = Path(__file__).resolve().parent
+STATIC_DIR = WEB_DIR / "static"
 CACHE_TTL_SECONDS = 10 * 60
 
 app = FastAPI(
@@ -65,6 +66,8 @@ def _render_index(request: Request) -> HTMLResponse:
             "brand": "Auto Board",
             "api_url": "/api/listings",
             "asset_prefix": "/static",
+            "root_prefix": "",
+            "sw_url": "/sw.js",
         },
     )
 
@@ -84,6 +87,23 @@ async def index_html(request: Request) -> HTMLResponse:
 @app.get("/s2k", response_class=HTMLResponse)
 async def listings_page(request: Request) -> HTMLResponse:
     return _render_index(request)
+
+
+@app.get("/manifest.webmanifest")
+async def manifest() -> FileResponse:
+    return FileResponse(
+        STATIC_DIR / "manifest.webmanifest",
+        media_type="application/manifest+json",
+    )
+
+
+@app.get("/sw.js")
+async def service_worker() -> FileResponse:
+    return FileResponse(
+        STATIC_DIR / "sw.js",
+        media_type="application/javascript",
+        headers={"Cache-Control": "no-cache"},
+    )
 
 
 @app.get("/api")
@@ -107,4 +127,4 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
