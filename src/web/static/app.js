@@ -108,10 +108,19 @@
   }
 
   async function load(force = false) {
+    const baseUrl = window.S2K_API_URL || "/api/listings";
+    const isStaticJson = /\.json(\?|$)/i.test(baseUrl);
     statusLine.textContent = force ? "Refreshing live inventory…" : "Loading live S2000s…";
     refreshBtn.disabled = true;
+    if (isStaticJson) {
+      refreshBtn.hidden = true;
+    }
     try {
-      const response = await fetch(`/api/listings${force ? "?refresh=true" : ""}`);
+      const url =
+        force && !isStaticJson
+          ? `${baseUrl}${baseUrl.includes("?") ? "&" : "?"}refresh=true`
+          : baseUrl;
+      const response = await fetch(url, { cache: force ? "no-store" : "default" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       listings = data.listings || [];

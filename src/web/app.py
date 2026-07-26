@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, Query, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -16,7 +16,6 @@ WEB_DIR = Path(__file__).resolve().parent
 CACHE_TTL_SECONDS = 10 * 60
 
 app = FastAPI(title="S2K Board", description="Honda S2000s for sale across the United States")
-app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")
 templates = Jinja2Templates(directory=str(WEB_DIR / "templates"))
 
 _cache: dict[str, Any] = {"expires": 0.0, "payload": None}
@@ -46,13 +45,39 @@ def _get_catalog(*, force: bool = False, max_price: int | None = None) -> dict[s
     return payload
 
 
-@app.get("/", response_class=HTMLResponse)
-async def index(request: Request) -> HTMLResponse:
+def _render_index(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(
         request,
         "index.html",
-        {"brand": "S2K Board"},
+        {
+            "brand": "S2K Board",
+            "api_url": "/api/listings",
+            "asset_prefix": "/static",
+        },
     )
+
+
+@app.get("/", response_class=HTMLResponse)
+async def index(request: Request) -> HTMLResponse:
+    return _render_index(request)
+
+
+@app.get("/index.html", response_class=HTMLResponse)
+async def index_html(request: Request) -> HTMLResponse:
+    return _render_index(request)
+
+
+@app.get("/listings", response_class=HTMLResponse)
+@app.get("/board", response_class=HTMLResponse)
+@app.get("/s2k", response_class=HTMLResponse)
+async def listings_page(request: Request) -> HTMLResponse:
+    """Aliases people often hit; same board as home."""
+    return _render_index(request)
+
+
+@app.get("/api")
+async def api_root() -> RedirectResponse:
+    return RedirectResponse(url="/api/listings", status_code=307)
 
 
 @app.get("/api/listings")
@@ -66,3 +91,7 @@ async def api_listings(
 @app.get("/api/health")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+# Mount static last so it doesn't swallow API/page routes.
+app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")

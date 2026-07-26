@@ -4,6 +4,8 @@ Browse every **Honda S2000 for sale in the United States**, and optionally get a
 
 ## Website (S2K Board)
 
+### Run locally
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -14,12 +16,29 @@ python3 -m uvicorn src.web.app:app --host 0.0.0.0 --port 8000 --reload
 # or: bash scripts/dev-web.sh
 ```
 
-The site loads live US inventory from:
+Also works at `/listings`, `/board`, `/s2k`, and `/index.html`.
+
+### Public GitHub Pages URL
+
+After this PR is merged (and Pages is enabled for GitHub Actions), the board deploys to:
+
+**https://karmicfuture.github.io/Auto_Trader/**
+
+Enable once: repo **Settings → Pages → Source = GitHub Actions**.  
+The `Deploy S2K Board to GitHub Pages` workflow rebuilds the static site on push to `main` and every 6 hours.
+
+To build the static site yourself:
+
+```bash
+python scripts/build_static_site.py   # writes docs/
+```
+
+The site loads US inventory from:
 - [Cars.com](https://www.cars.com/)
 - [Bring a Trailer](https://bringatrailer.com/honda/s2000/)
 - [Autotrader](https://www.autotrader.com/) (when not IP-blocked)
 
-API: `GET /api/listings` · force refresh with `?refresh=true`
+Live API (local server): `GET /api/listings` · force refresh with `?refresh=true`
 
 ## Alerts (optional)
 

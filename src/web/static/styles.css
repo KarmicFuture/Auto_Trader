@@ -77,7 +77,7 @@ a {
   position: absolute;
   inset: -4%;
   background:
-    url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/2560px-HondaS2000-004.jpg")
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/HondaS2000-004.jpg/1920px-HondaS2000-004.jpg")
       center 45% / cover no-repeat;
   transform: scale(1.08);
   animation: drift 18s var(--ease) infinite alternate;

@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="{{ asset_prefix }}/styles.css" />
+  <script>
+    window.S2K_API_URL = {{ api_url|tojson }};
+  </script>
 </head>
 <body>
   <a class="skip" href="#listings">Skip to listings</a>
@@ -73,6 +76,6 @@
     <p><span class="footer__brand">S2K Board</span> watches US S2000 inventory so you don’t have to.</p>
   </footer>
 
-  <script src="/static/app.js" defer></script>
+  <script src="{{ asset_prefix }}/app.js" defer></script>
 </body>
 </html>
