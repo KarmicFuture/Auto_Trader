@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S2K Board — Honda S2000s for sale in the US</title>
+  <meta name="description" content="Live Honda S2000 listings across the United States from Cars.com, Bring a Trailer, and Autotrader." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset_prefix }}/styles.css" />
+  <script>
+    window.S2K_API_URL = {{ api_url|tojson }};
+  </script>
+</head>
+<body>
+  <a class="skip" href="#listings">Skip to listings</a>
+
+  <header class="hero" id="top">
+    <div class="hero__media" aria-hidden="true">
+      <div class="hero__image"></div>
+      <div class="hero__wash"></div>
+      <div class="hero__grain"></div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav__brand" href="#top">S2K Board</a>
+      <a class="nav__link" href="#listings">Listings</a>
+    </nav>
+
+    <div class="hero__copy">
+      <p class="brand">S2K Board</p>
+      <h1>Every Honda S2000 for sale in the United States.</h1>
+      <p class="lede">Live inventory from Cars.com, Bring a Trailer, and Autotrader — AP1 and AP2, coast to coast.</p>
+      <div class="cta">
+        <a class="btn btn--primary" href="#listings">Browse listings</a>
+        <button class="btn btn--ghost" type="button" id="refresh-btn">Refresh now</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="listings" class="board">
+    <div class="board__head">
+      <div>
+        <h2>United States inventory</h2>
+        <p class="board__sub" id="status-line">Loading live S2000s…</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter listings">
+        <label class="filter">
+          <span>Source</span>
+          <select id="filter-source">
+            <option value="all">All sources</option>
+            <option value="cars.com">Cars.com</option>
+            <option value="bringatrailer">Bring a Trailer</option>
+            <option value="autotrader">Autotrader</option>
+          </select>
+        </label>
+        <label class="filter">
+          <span>Sort</span>
+          <select id="filter-sort">
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+            <option value="year-desc">Year ↓</option>
+            <option value="mileage-asc">Mileage ↑</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div id="error-banner" class="banner" hidden></div>
+    <div id="listing-grid" class="listing-grid" aria-live="polite"></div>
+    <p id="empty-state" class="empty" hidden>No S2000s matched those filters.</p>
+  </main>
+
+  <footer class="footer">
+    <p><span class="footer__brand">S2K Board</span> watches US S2000 inventory so you don’t have to.</p>
+  </footer>
+
+  <script src="{{ asset_prefix }}/app.js" defer></script>
+</body>
+</html>
