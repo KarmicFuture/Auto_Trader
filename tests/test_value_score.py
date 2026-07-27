@@ -48,3 +48,21 @@ def test_apply_value_score_sets_fields():
     assert scored.value_score is not None
     assert scored.value_label is not None
     assert scored.watch_id == "honda-s2000"
+
+
+def test_meyers_manx_scores_above_generic_buggy():
+    manx, manx_label = estimate_fair_value(
+        watch_id="dune-buggy",
+        title="1969 Meyers Manx",
+        year=1969,
+        mileage=5000,
+    )
+    generic, generic_label = estimate_fair_value(
+        watch_id="dune-buggy",
+        title="Volkswagen-Powered Dune Buggy",
+        year=1968,
+        mileage=5000,
+    )
+    assert manx > generic
+    assert "Manx" in manx_label
+    assert "buggy" in generic_label.lower()

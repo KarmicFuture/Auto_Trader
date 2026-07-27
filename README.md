@@ -1,6 +1,6 @@
 # Auto_Trader — Auto Board
 
-Browse **Honda S2000** and **Porsche Cayman** cars for sale in the United States, each with an **independent value score**.
+Browse **Honda S2000**, **Porsche Cayman**, and **dune buggy** listings for sale in the United States, each with an **independent value score**.
 
 ## Value score
 

@@ -19,6 +19,16 @@ class Watch:
     autotrader_model: str
     year_min: int
     year_max: int
+    # Extra BaT category pages as (url, title_needle) pairs.
+    extra_bat_pages: tuple[tuple[str, str], ...] = ()
+    # Cars.com / Autotrader make-model search (not useful for kit/specialty cars).
+    include_dealer_sources: bool = True
+    # Include recent BaT results (useful when live specialty inventory is thin).
+    bat_include_completed: bool = False
+
+    @property
+    def bat_pages(self) -> tuple[tuple[str, str], ...]:
+        return ((self.bat_url, self.bat_title_needle),) + self.extra_bat_pages
 
 
 WATCHES: tuple[Watch, ...] = (
@@ -49,6 +59,25 @@ WATCHES: tuple[Watch, ...] = (
         autotrader_model="CAYMAN",
         year_min=2006,
         year_max=2026,
+    ),
+    Watch(
+        id="dune-buggy",
+        label="Dune Buggy",
+        make="Volkswagen",
+        model="Dune Buggy",
+        make_slug="volkswagen",
+        model_slug="buggy",
+        bat_url="https://bringatrailer.com/volkswagen/rail-dune-buggy/",
+        bat_title_needle="buggy",
+        autotrader_make="",
+        autotrader_model="",
+        year_min=1955,
+        year_max=2026,
+        extra_bat_pages=(
+            ("https://bringatrailer.com/meyers-manx/manx/", "manx"),
+        ),
+        include_dealer_sources=False,
+        bat_include_completed=True,
     ),
 )
 

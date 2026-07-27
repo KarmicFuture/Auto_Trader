@@ -43,7 +43,7 @@ def _fetch_watch(
             found.extend(
                 fetch_bringatrailer_watch(
                     watch,
-                    include_completed=False,
+                    include_completed=watch.bat_include_completed,
                     year_min=watch.year_min,
                     year_max=watch.year_max,
                     max_price=max_price,
@@ -52,7 +52,7 @@ def _fetch_watch(
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{watch.id}/bringatrailer: {exc}")
 
-    if include_cars_com:
+    if include_cars_com and watch.include_dealer_sources:
         try:
             found.extend(
                 fetch_cars_com_watch(
@@ -68,7 +68,7 @@ def _fetch_watch(
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{watch.id}/cars.com: {exc}")
 
-    if include_autotrader:
+    if include_autotrader and watch.include_dealer_sources:
         try:
             found.extend(
                 fetch_autotrader_watch(

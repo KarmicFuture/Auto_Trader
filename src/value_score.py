@@ -61,6 +61,26 @@ def _detect_cayman_anchor(title: str, year: Optional[int]) -> tuple[int, str]:
     return 27_000 + premium, "987.1 Cayman"
 
 
+def _detect_dune_buggy_anchor(title: str, year: Optional[int]) -> tuple[int, str]:
+    text = title.lower()
+    if "meyers manx" in text or re.search(r"\bmanx\b", text):
+        if "manxter" in text or "2+2" in text:
+            return 28_000, "Manxter"
+        if "clone" in text or "replica" in text:
+            return 16_000, "Manx-style buggy"
+        return 32_000, "Meyers Manx"
+    if "empi" in text:
+        return 18_000, "EMPI buggy"
+    if "sand" in text and "rail" in text:
+        return 14_000, "Sand rail"
+    if "914" in text or "porsche" in text:
+        return 22_000, "Porsche-powered buggy"
+    # Newer turnkey builds often ask more than weathered vintage kits.
+    if year is not None and year >= 2000:
+        return 16_000, "Dune buggy"
+    return 12_000, "Dune buggy"
+
+
 def estimate_fair_value(
     *,
     watch_id: str,
@@ -92,6 +112,13 @@ def estimate_fair_value(
             # Cap model-year drift so brand-new cars don't runaway vs ask noise
             fair += max(-6_000, min(6_000, (year - 2012) * 700))
         return max(14_000, int(round(fair / 100.0) * 100)), label
+
+    if watch_id == "dune-buggy":
+        base, label = _detect_dune_buggy_anchor(title, year)
+        # Odometers are noisy / often reset on kit builds — soft mileage effect.
+        miles = mileage if mileage is not None else 8_000
+        fair = base - ((miles - 8_000) / 1000.0) * 80.0
+        return max(4_000, int(round(fair / 100.0) * 100)), label
 
     return None, "Unknown"
 
