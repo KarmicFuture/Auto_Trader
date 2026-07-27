@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+from html import unescape
 from typing import Optional
 from urllib import request
 
@@ -57,9 +58,9 @@ def _listings_from_completed_json(html: str, *, needle: str, make: str, model: s
     out: list[Listing] = []
     for item in data.get("items") or []:
         url = item.get("url") or item.get("permalink")
-        title = (item.get("title") or "").strip()
+        title = unescape((item.get("title") or "").strip())
         listing_id = str(item.get("id") or item.get("post_id") or url or title)
-        excerpt = item.get("excerpt") or ""
+        excerpt = unescape(item.get("excerpt") or "")
         if not url or not title:
             continue
         if not _matches_watch(title, excerpt, needle):
@@ -97,11 +98,11 @@ def _listings_from_live_cards(html: str, *, needle: str, make: str, model: str) 
         if not listing_id or not link:
             continue
         url = link.get("href")
-        title = link.get_text(" ", strip=True)
+        title = unescape(link.get_text(" ", strip=True))
         if not url or not title:
             heading = card.select_one(".listing-card-title, h3, h2")
-            title = heading.get_text(" ", strip=True) if heading else ""
-        text = card.get_text(" ", strip=True)
+            title = unescape(heading.get_text(" ", strip=True) if heading else "")
+        text = unescape(card.get_text(" ", strip=True))
         if not title or needle.lower() not in title.lower():
             m = needle_re.search(text)
             if m:
@@ -115,7 +116,7 @@ def _listings_from_live_cards(html: str, *, needle: str, make: str, model: str) 
         img = card.select_one("img")
         thumb = img.get("src") if img else None
         excerpt_el = card.select_one(".listing-card-excerpt, p")
-        excerpt = excerpt_el.get_text(" ", strip=True) if excerpt_el else ""
+        excerpt = unescape(excerpt_el.get_text(" ", strip=True) if excerpt_el else "")
 
         out.append(
             Listing(

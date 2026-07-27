@@ -16,7 +16,7 @@ SAMPLE_HTML = """
   <img src="https://example.com/s2k.jpg" />
 </div>
 <script>
-var auctionsCompletedInitialData = {"items":[{"id":1,"active":false,"title":"2005 Honda S2000","url":"https://bringatrailer.com/listing/2005-honda-s2000-1/","current_bid":25000,"excerpt":"50k miles","country_code":"US"}]};
+var auctionsCompletedInitialData = {"items":[{"id":1,"active":false,"title":"2005 Honda S2000","url":"https://bringatrailer.com/listing/2005-honda-s2000-1/","current_bid":25000,"excerpt":"50k miles","country_code":"US"},{"id":2,"active":false,"title":"Meyers Manx Tow&#8217;d","url":"https://bringatrailer.com/listing/meyers-manx-towd-1/","current_bid":12000,"excerpt":"Dune buggy","country_code":"US"}]};
 </script>
 </body></html>
 """
@@ -47,3 +47,11 @@ def test_completed_json():
     assert listings[0].year == 2005
     assert listings[0].price == 25000
     assert listings[0].status == "completed"
+
+
+def test_completed_json_unescapes_entities():
+    listings = _listings_from_completed_json(
+        SAMPLE_HTML, needle="manx", make="Volkswagen", model="Dune Buggy"
+    )
+    assert len(listings) == 1
+    assert listings[0].title == "Meyers Manx Tow’d"
