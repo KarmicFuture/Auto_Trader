@@ -145,21 +145,21 @@ def fetch_bringatrailer_watch(
     year_max: int | None = None,
     max_price: int | None = None,
 ) -> list[Listing]:
-    html = _http_get(watch.bat_url)
-    live = _listings_from_live_cards(
-        html, needle=watch.bat_title_needle, make=watch.make, model=watch.model
-    )
-    completed = (
-        _listings_from_completed_json(
-            html, needle=watch.bat_title_needle, make=watch.make, model=watch.model
-        )
-        if include_completed
-        else []
-    )
-
     by_key: dict[str, Listing] = {}
-    for listing in completed + live:
-        by_key[listing.key] = listing
+    for bat_url, needle in watch.bat_pages:
+        html = _http_get(bat_url)
+        live = _listings_from_live_cards(
+            html, needle=needle, make=watch.make, model=watch.model
+        )
+        completed = (
+            _listings_from_completed_json(
+                html, needle=needle, make=watch.make, model=watch.model
+            )
+            if include_completed
+            else []
+        )
+        for listing in completed + live:
+            by_key[listing.key] = listing
 
     filtered: list[Listing] = []
     for listing in by_key.values():

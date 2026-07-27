@@ -96,7 +96,7 @@ async def api_listings(
     refresh: bool = Query(False),
     max_price: int | None = Query(None, ge=1000, le=500000),
     watch: str | None = Query(
-        None, description="Watch id, e.g. honda-s2000 or porsche-cayman"
+        None, description="Watch id, e.g. honda-s2000, porsche-cayman, or dune-buggy"
     ),
 ) -> dict[str, Any]:
     return _get_catalog(force=refresh, max_price=max_price, watch=watch)

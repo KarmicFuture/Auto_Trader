@@ -16,16 +16,19 @@
   const miles = (value) =>
     value == null ? "Mileage n/a" : `${Number(value).toLocaleString("en-US")} mi`;
 
-  const sourceLabel = (source) => {
-    if (source === "cars.com") return "Cars.com";
-    if (source === "bringatrailer") return "Bring a Trailer";
-    if (source === "autotrader") return "Autotrader";
-    return source;
+  const sourceLabel = (source, status) => {
+    let label = source;
+    if (source === "cars.com") label = "Cars.com";
+    else if (source === "bringatrailer") label = "Bring a Trailer";
+    else if (source === "autotrader") label = "Autotrader";
+    if (status === "completed") return `${label} · sold`;
+    return label;
   };
 
   const modelLabel = (item) => {
     if (item.watch_id === "porsche-cayman") return "Cayman";
     if (item.watch_id === "honda-s2000") return "S2000";
+    if (item.watch_id === "dune-buggy") return "Dune Buggy";
     return item.model || "Car";
   };
 
@@ -109,7 +112,7 @@
       const body = document.createElement("div");
       body.className = "listing__body";
       body.innerHTML = `
-        <p class="listing__source">${sourceLabel(item.source)} · ${escapeHtml(
+        <p class="listing__source">${sourceLabel(item.source, item.status)} · ${escapeHtml(
           item.make && item.model ? `${item.make} ${item.model}` : modelLabel(item)
         )}</p>
         <h3 class="listing__title">${escapeHtml(item.title)}</h3>
@@ -169,7 +172,8 @@
         : "just now";
       const s2k = listings.filter((x) => x.watch_id === "honda-s2000").length;
       const cayman = listings.filter((x) => x.watch_id === "porsche-cayman").length;
-      statusLine.textContent = `${data.count} cars · ${s2k} S2000 · ${cayman} Cayman · updated ${when}`;
+      const buggy = listings.filter((x) => x.watch_id === "dune-buggy").length;
+      statusLine.textContent = `${data.count} cars · ${s2k} S2000 · ${cayman} Cayman · ${buggy} dune buggy · updated ${when}`;
 
       if (data.errors && data.errors.length) {
         errorBanner.hidden = false;
