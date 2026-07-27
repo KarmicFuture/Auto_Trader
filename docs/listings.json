@@ -1,6 +1,6 @@
 {
   "count": 294,
-  "refreshed_at": "2026-07-27T10:11:56.158892+00:00",
+  "refreshed_at": "2026-07-27T15:17:39.364573+00:00",
   "errors": [],
   "watches": [
     {
@@ -548,7 +548,7 @@
       "source": "bringatrailer",
       "title": "27k-Mile 2003 Honda S2000",
       "url": "https://bringatrailer.com/listing/2003-honda-s2000-223/",
-      "price": 21251,
+      "price": 21501,
       "year": 2003,
       "mileage": 27000,
       "location": null,
@@ -561,7 +561,7 @@
       "fair_value": 35900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -14649
+      "value_delta": -14399
     },
     {
       "id": "116570066",
@@ -628,7 +628,7 @@
       "source": "bringatrailer",
       "title": "2024 Porsche 718 Cayman GTS 4.0 6-Speed",
       "url": "https://bringatrailer.com/listing/2024-porsche-718-cayman-gts-4-0-11/",
-      "price": 35986,
+      "price": 37000,
       "year": 2024,
       "mileage": null,
       "location": null,
@@ -641,7 +641,7 @@
       "fair_value": 101000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -65014
+      "value_delta": -64000
     },
     {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
