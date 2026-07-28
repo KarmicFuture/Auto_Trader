@@ -6200,6 +6200,26 @@
       "watch_id": "honda-s2000",
       "year": 2003
     },
+    "cars.com:cmp-dabc4f87-af03-4d9a-b367-bed99fbdef27": {
+      "fair_value": 65900,
+      "id": "cmp-dabc4f87-af03-4d9a-b367-bed99fbdef27",
+      "location": "SAMMAMISH, WA",
+      "make": "Porsche",
+      "mileage": 9100,
+      "model": "Cayman",
+      "notes": "I am selling my cherished 2024 Porsche c ayman base.  This car is an experience t o drive wi",
+      "price": 80000,
+      "source": "cars.com",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/661503b0-9806-4423-81e4-aee4d62c1d24/9c386fb2-d667-4605-9d98-436b226437ec.jpeg",
+      "title": "2024 Porsche 718 Cayman 718 Cayman",
+      "url": "https://www.cars.com/vehicledetail/dabc4f87-af03-4d9a-b367-bed99fbdef27/",
+      "value_delta": 14100,
+      "value_label": "Stretched",
+      "value_score": 14.3,
+      "watch_id": "porsche-cayman",
+      "year": 2024
+    },
     "cars.com:cmp-e7701327-e3b8-47e2-8cef-29401617b967": {
       "fair_value": 27100,
       "id": "cmp-e7701327-e3b8-47e2-8cef-29401617b967",
@@ -6572,6 +6592,7 @@
     "cars.com:cmp-b9aa1e2d-a171-4b91-b181-329c25b72b5f",
     "cars.com:cmp-d341d822-69d0-4532-a5b1-32723959a97b",
     "cars.com:cmp-da1bc291-ed91-4dd6-9558-485b3969af58",
+    "cars.com:cmp-dabc4f87-af03-4d9a-b367-bed99fbdef27",
     "cars.com:cmp-e7701327-e3b8-47e2-8cef-29401617b967",
     "cars.com:cmp-f944fa85-ff6d-4e08-bf98-4aaa2f5c68c6",
     "cars.com:cmp-fb7cc138-a1ff-4102-afb7-611f4efc0481"
