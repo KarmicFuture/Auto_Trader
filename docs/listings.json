@@ -1,6 +1,6 @@
 {
   "count": 678,
-  "refreshed_at": "2026-07-29T00:14:07.556996+00:00",
+  "refreshed_at": "2026-07-29T00:19:37.258573+00:00",
   "errors": [],
   "watches": [
     {
@@ -24,24 +24,24 @@
   ],
   "listings": [
     {
-      "id": "118556667",
+      "id": "118199745",
       "source": "bringatrailer",
-      "title": "3,600-Mile 2021 Porsche 718 Cayman GT4",
-      "url": "https://bringatrailer.com/listing/2021-porsche-718-cayman-gt4-34/",
+      "title": "2007 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2007-honda-s2000-200/",
       "price": 2000,
-      "year": 2021,
+      "year": 2007,
       "mileage": null,
       "location": null,
       "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/B0014566-Edit-scaled-copy-2026-07-16-2cz-60508.jpg?w=470&h=318&crop=1",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/DSC00345-scaled-copy-2026-07-13-w33-56241.jpg?w=470&h=318&crop=1",
       "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 111000,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 35200,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -109000
+      "value_delta": -33200
     },
     {
       "id": "102979633",
@@ -268,7 +268,7 @@
       "source": "bringatrailer",
       "title": "2001 Honda S2000",
       "url": "https://bringatrailer.com/listing/2001-honda-s2000-242/",
-      "price": 10000,
+      "price": 10250,
       "year": 2001,
       "mileage": null,
       "location": null,
@@ -281,7 +281,7 @@
       "fair_value": 29500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -19500
+      "value_delta": -19250
     },
     {
       "id": "118633954",
@@ -304,26 +304,6 @@
       "value_delta": -12513
     },
     {
-      "id": "117699046",
-      "source": "bringatrailer",
-      "title": "22k-Mile 2010 Porsche Cayman 6-Speed",
-      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-13/",
-      "price": 11000,
-      "year": 2010,
-      "mileage": 22000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/2479_-_2010_Porsche_Cayman-3-scaled-copy-2026-07-02-kp0-20209.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 35300,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -24300
-    },
-    {
       "id": "cgu-424077779",
       "source": "cargurus",
       "title": "2002 Honda S2000 Roadster",
@@ -342,6 +322,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -10506
+    },
+    {
+      "id": "117699046",
+      "source": "bringatrailer",
+      "title": "22k-Mile 2010 Porsche Cayman 6-Speed",
+      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-13/",
+      "price": 12500,
+      "year": 2010,
+      "mileage": 22000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/2479_-_2010_Porsche_Cayman-3-scaled-copy-2026-07-02-kp0-20209.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 35300,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -22800
     },
     {
       "id": "112742735",
@@ -528,7 +528,7 @@
       "source": "bringatrailer",
       "title": "2006 Porsche Cayman S 6-Speed",
       "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-291/",
-      "price": 19250,
+      "price": 19500,
       "year": 2006,
       "mileage": null,
       "location": null,
@@ -541,7 +541,7 @@
       "fair_value": 28800,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -9550
+      "value_delta": -9300
     },
     {
       "id": "108423067",
@@ -602,26 +602,6 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -10000
-    },
-    {
-      "id": "116570066",
-      "source": "bringatrailer",
-      "title": "22k-Mile 2001 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2001-honda-s2000-235/",
-      "price": 24751,
-      "year": 2001,
-      "mileage": 22000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/ZR1_4295-copy-2026-07-15-0rh-37430.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 36300,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -11549
     },
     {
       "id": "118370646",
@@ -724,26 +704,6 @@
       "value_delta": -151000
     },
     {
-      "id": "116975758",
-      "source": "bringatrailer",
-      "title": "2024 Porsche 718 Cayman GTS 4.0 6-Speed",
-      "url": "https://bringatrailer.com/listing/2024-porsche-718-cayman-gts-4-0-11/",
-      "price": 37000,
-      "year": 2024,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/718_GTS-167-copy-2026-07-16-445-28526.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 101000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -64000
-    },
-    {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
       "source": "cars.com",
       "title": "2018 Porsche 718 Cayman",
@@ -804,6 +764,26 @@
       "value_delta": -46111
     },
     {
+      "id": "118556667",
+      "source": "bringatrailer",
+      "title": "3,600-Mile 2021 Porsche 718 Cayman GT4",
+      "url": "https://bringatrailer.com/listing/2021-porsche-718-cayman-gt4-34/",
+      "price": 50000,
+      "year": 2021,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/B0014566-Edit-scaled-copy-2026-07-16-2cz-60508.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 111000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -61000
+    },
+    {
       "id": "cgu-446490180",
       "source": "cargurus",
       "title": "2008 Honda S2000 CR",
@@ -822,6 +802,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -47455
+    },
+    {
+      "id": "116975758",
+      "source": "bringatrailer",
+      "title": "2024 Porsche 718 Cayman GTS 4.0 6-Speed",
+      "url": "https://bringatrailer.com/listing/2024-porsche-718-cayman-gts-4-0-11/",
+      "price": 55000,
+      "year": 2024,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/718_GTS-167-copy-2026-07-16-445-28526.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 101000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -46000
     },
     {
       "id": "cm-c77a5ab0-aeee-432f-abfa-2c8df3fa11c2",
