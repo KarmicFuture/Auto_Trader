@@ -1,5 +1,25 @@
 {
   "listings": {
+    "autotempest:ll-JHMAP21404S000361": {
+      "fair_value": 35300,
+      "id": "ll-JHMAP21404S000361",
+      "location": "Woodside, NY",
+      "make": "Honda",
+      "mileage": 52643,
+      "model": "S2000",
+      "notes": "Paragon Honda nExperience one of Honda's most celebrat ed driver's cars with this exceptionally  well-kept",
+      "price": 48175,
+      "source": "autotempest",
+      "status": "active",
+      "thumbnail": "https://img.autotempest.com/pi/?img=44f634eb1e1b78b81b460cf6MuTMp9utAmuG5tKzG%2BLLLQngRLGx87XS5yln1ETG5aGePtt9nckA7YS2uCU4Pblhe0wAsALLnOLI6q2LlB3U3lzMGfT%2B0opaLJG3cr3AAdDjSicWK8jIwgNfBeoS2LVKU7K9AkzKMaJ2q7fXybZAdKMJnrtIWHpbkg%3D%3D",
+      "title": "2004 Honda S2000",
+      "url": "https://autos.lotlinx.com",
+      "value_delta": 12875,
+      "value_label": "Stretched",
+      "value_score": 0.0,
+      "watch_id": "honda-s2000",
+      "year": 2004
+    },
     "bringatrailer:100101511": {
       "fair_value": 12000,
       "id": "100101511",
@@ -1188,13 +1208,13 @@
       "mileage": null,
       "model": "S2000",
       "notes": null,
-      "price": 13000,
+      "price": 18000,
       "source": "bringatrailer",
       "status": "live",
       "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/DSC00345-scaled-copy-2026-07-13-w33-56241.jpg?w=470&h=318&crop=1",
       "title": "2007 Honda S2000",
       "url": "https://bringatrailer.com/listing/2007-honda-s2000-200/",
-      "value_delta": -22200,
+      "value_delta": -17200,
       "value_label": "Great value",
       "value_score": 100.0,
       "watch_id": "honda-s2000",
@@ -13583,7 +13603,7 @@
     "ebay:eb-v1|278207319305|0": {
       "fair_value": 32600,
       "id": "eb-v1|278207319305|0",
-      "location": "Stouffville",
+      "location": "Jackson",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
@@ -13663,7 +13683,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Plainfield, NJ",
+      "location": "Carlstadt, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -14522,6 +14542,7 @@
     }
   },
   "seen": [
+    "autotempest:ll-JHMAP21404S000361",
     "bringatrailer:100101511",
     "bringatrailer:101842204",
     "bringatrailer:102979633",
