@@ -1,0 +1,153 @@
+{
+  "brand": "Vinu",
+  "siteUrl": "https://vinu.us",
+  "status": "coming-soon",
+  "tagline": "Personal brand home for Vinod Kumar \u2014 launching soon.",
+  "updatedAt": "2026-07-30T23:00:00.000Z",
+  "pages": [
+    {
+      "id": "home",
+      "title": "Home",
+      "path": "/",
+      "status": "live",
+      "note": "Coming soon landing page is live on Vinu.us."
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "path": "/about",
+      "status": "planned",
+      "note": "Story, focus areas, and how to reach Vinu."
+    },
+    {
+      "id": "work",
+      "title": "Work",
+      "path": "/work",
+      "status": "planned",
+      "note": "Selected projects across Karmic Futures and personal builds."
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "path": "/contact",
+      "status": "planned",
+      "note": "Simple form + social destinations."
+    }
+  ],
+  "projects": [
+    {
+      "id": "vinu-us",
+      "name": "Vinu.us",
+      "role": "Primary site",
+      "url": "https://vinu.us",
+      "status": "coming-soon"
+    },
+    {
+      "id": "how-to-ai",
+      "name": "How to AI",
+      "role": "Karmic Futures",
+      "url": "https://github.com/KarmicFuture/how-to-ai",
+      "status": "active"
+    },
+    {
+      "id": "yborheights",
+      "name": "Ybor Heights",
+      "role": "Neighborhood site",
+      "url": "https://github.com/KarmicFuture/yborheights",
+      "status": "active"
+    },
+    {
+      "id": "birthday-bash",
+      "name": "Vinu Birthday Bash",
+      "role": "Event RSVP",
+      "url": "https://github.com/KarmicFuture/vinus-birthday-bash",
+      "status": "active"
+    },
+    {
+      "id": "auto-trader",
+      "name": "Auto Trader",
+      "role": "Listings board",
+      "url": "https://github.com/KarmicFuture/Auto_Trader",
+      "status": "active"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "brand-voice",
+      "label": "Lock brand voice and visual system for Vinu.us",
+      "done": true
+    },
+    {
+      "id": "domain",
+      "label": "Confirm domain + DNS for vinu.us",
+      "done": true
+    },
+    {
+      "id": "coming-soon",
+      "label": "Ship coming-soon landing",
+      "done": true
+    },
+    {
+      "id": "about-page",
+      "label": "Draft About page copy",
+      "done": false
+    },
+    {
+      "id": "work-grid",
+      "label": "Select featured work for the public site",
+      "done": false
+    },
+    {
+      "id": "contact",
+      "label": "Wire contact / social destinations",
+      "done": false
+    },
+    {
+      "id": "analytics",
+      "label": "Add privacy-friendly analytics",
+      "done": false
+    },
+    {
+      "id": "launch",
+      "label": "Replace coming-soon with full site",
+      "done": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Write a one-paragraph Vinu.us intro",
+      "done": false,
+      "createdAt": "2026-07-30T20:00:00.000Z"
+    },
+    {
+      "id": "task-2",
+      "title": "Collect 3\u20135 hero photos for the launch site",
+      "done": false,
+      "createdAt": "2026-07-30T20:05:00.000Z"
+    },
+    {
+      "id": "task-3",
+      "title": "Decide homepage CTA (Contact vs Work)",
+      "done": false,
+      "createdAt": "2026-07-30T20:10:00.000Z"
+    }
+  ],
+  "activity": [
+    {
+      "id": "act-1",
+      "label": "Vinu Dashboard repository scaffolded",
+      "at": "2026-07-30T23:00:00.000Z"
+    },
+    {
+      "id": "act-2",
+      "label": "Coming soon page confirmed live on vinu.us",
+      "at": "2026-07-30T18:00:00.000Z"
+    },
+    {
+      "id": "act-3",
+      "label": "Domain Vinu.us pointed at launch surface",
+      "at": "2026-07-29T12:00:00.000Z"
+    }
+  ]
+}

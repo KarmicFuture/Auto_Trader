@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinu Dashboard — Vinu.us</title>
+    <meta
+      name="description"
+      content="Vinu Dashboard — operations console for launching and running Vinu.us."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <div class="shell">
+      <aside class="rail" aria-label="Sections">
+        <a class="brand" href="#overview">
+          <span class="brand-mark">V</span>
+          <span class="brand-copy">
+            <strong>Vinu</strong>
+            <small>Dashboard</small>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <button class="nav-item is-active" data-view="overview" type="button">
+            Overview
+          </button>
+          <button class="nav-item" data-view="pages" type="button">Pages</button>
+          <button class="nav-item" data-view="projects" type="button">
+            Projects
+          </button>
+          <button class="nav-item" data-view="launch" type="button">Launch</button>
+          <button class="nav-item" data-view="tasks" type="button">Tasks</button>
+        </nav>
+
+        <a class="site-chip" href="https://vinu.us" target="_blank" rel="noreferrer">
+          Open Vinu.us
+        </a>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="status-eyebrow">Site status</p>
+            <h1 id="view-title">Overview</h1>
+          </div>
+          <div class="topbar-meta">
+            <span class="pulse" id="live-pill">Coming soon</span>
+            <time id="updated-at"></time>
+          </div>
+        </header>
+
+        <section class="view is-active" id="view-overview" aria-label="Overview">
+          <div class="hero-panel">
+            <div>
+              <p class="hero-kicker">For Vinu.us</p>
+              <h2 class="hero-title">Vinu</h2>
+              <p class="hero-lede" id="hero-lede">
+                Personal brand home for Vinod Kumar — launching soon.
+              </p>
+              <div class="hero-actions">
+                <a class="btn primary" href="https://vinu.us" target="_blank" rel="noreferrer"
+                  >Visit site</a
+                >
+                <button class="btn ghost" data-view-jump="launch" type="button">
+                  Launch checklist
+                </button>
+              </div>
+            </div>
+            <div class="progress-ring" aria-label="Launch progress">
+              <svg viewBox="0 0 120 120" role="img">
+                <circle class="ring-track" cx="60" cy="60" r="52" />
+                <circle class="ring-value" id="progress-ring" cx="60" cy="60" r="52" />
+              </svg>
+              <div class="progress-copy">
+                <strong id="progress-percent">0%</strong>
+                <span>launch ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-row" id="stat-row"></div>
+
+          <div class="split">
+            <section class="panel">
+              <header class="panel-head">
+                <h3>Recent activity</h3>
+              </header>
+              <ul class="timeline" id="activity-list"></ul>
+            </section>
+            <section class="panel">
+              <header class="panel-head">
+                <h3>Open tasks</h3>
+                <button class="text-btn" data-view-jump="tasks" type="button">
+                  View all
+                </button>
+              </header>
+              <ul class="task-preview" id="task-preview"></ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-pages" aria-label="Pages" hidden>
+          <p class="section-lede">
+            Track every public surface on Vinu.us from coming-soon through launch.
+          </p>
+          <div class="page-list" id="pages-list"></div>
+        </section>
+
+        <section class="view" id="view-projects" aria-label="Projects" hidden>
+          <p class="section-lede">
+            Related builds under the Vinu / Karmic Futures umbrella.
+          </p>
+          <div class="project-grid" id="projects-list"></div>
+        </section>
+
+        <section class="view" id="view-launch" aria-label="Launch checklist" hidden>
+          <p class="section-lede">
+            One checklist from brand lock to replacing the coming-soon page.
+          </p>
+          <ul class="checklist" id="checklist"></ul>
+        </section>
+
+        <section class="view" id="view-tasks" aria-label="Tasks" hidden>
+          <p class="section-lede">Capture the next moves for Vinu.us without leaving the console.</p>
+          <form class="task-form" id="task-form">
+            <label class="sr-only" for="task-input">New task</label>
+            <input
+              id="task-input"
+              name="title"
+              type="text"
+              placeholder="Add a launch task…"
+              autocomplete="off"
+              required
+            />
+            <button class="btn primary" type="submit">Add</button>
+          </form>
+          <ul class="task-list" id="task-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/app.js" type="module"></script>
+  </body>
+</html>
