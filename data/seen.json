@@ -20,6 +20,26 @@
       "watch_id": "honda-s2000",
       "year": 2004
     },
+    "autotempest:ll-WP0AA2A85FK160129": {
+      "fair_value": 47300,
+      "id": "ll-WP0AA2A85FK160129",
+      "location": "Mt Holly, NJ",
+      "make": "Porsche",
+      "mileage": 25050,
+      "model": "Cayman",
+      "notes": "J&s Autohaus Mt Holly Silver 2015 Porsche Cayman RWD 2.7L H6 D OHC--Recent Arrival! 2030 CityHighway MP G--Awards:",
+      "price": 50999,
+      "source": "autotempest",
+      "status": "active",
+      "thumbnail": "https://img.autotempest.com/pi/?img=f9d85a4cb42c0dc969444b87lTOLDywz3B1AVL2OHugV%2FQE8inI89qL6x85IEixiicvXueUjHgNluP4rPtfKumiwXQ73JL8MmaJvLHlVBRVst0TocGZd9Nb19o6aFLkwLFcpdQC3bYlYfOwmbg45ZeJ4GJel3%2BBkjXzmdsmc%2BlkT%2FKdbpWnNiFXWJmBv5Q%3D%3D",
+      "title": "2015 Porsche Cayman Base",
+      "url": "https://autos.lotlinx.com",
+      "value_delta": 3699,
+      "value_label": "Soft value",
+      "value_score": 37.0,
+      "watch_id": "porsche-cayman",
+      "year": 2015
+    },
     "bringatrailer:100101511": {
       "fair_value": 12000,
       "id": "100101511",
@@ -13900,6 +13920,26 @@
       "watch_id": "porsche-cayman",
       "year": 2025
     },
+    "carvana:cv-2004901480": {
+      "fair_value": 41000,
+      "id": "cv-2004901480",
+      "location": "San Diego, CA",
+      "make": "Porsche",
+      "mileage": 68952,
+      "model": "Cayman",
+      "notes": "Head Curtain Air Bags, Knee Air Bags, Si de Air Bags, Dual Air Bags, Bluetooth Wi reless, CD",
+      "price": 41590,
+      "source": "carvana",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/pinb10qmfdde1v1uuezn.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "title": "2016 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4449141",
+      "value_delta": 590,
+      "value_label": "Fair value",
+      "value_score": 47.6,
+      "watch_id": "porsche-cayman",
+      "year": 2016
+    },
     "carvana:cv-2004981233": {
       "fair_value": 45700,
       "id": "cv-2004981233",
@@ -15023,7 +15063,7 @@
     "ebay:eb-v1|278207319305|0": {
       "fair_value": 32600,
       "id": "eb-v1|278207319305|0",
-      "location": "Arlington Heights",
+      "location": "Stouffville",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
@@ -15103,7 +15143,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Passaic, NJ",
+      "location": "Springfield, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -16163,6 +16203,7 @@
   },
   "seen": [
     "autotempest:ll-JHMAP21404S000361",
+    "autotempest:ll-WP0AA2A85FK160129",
     "bringatrailer:100101511",
     "bringatrailer:101842204",
     "bringatrailer:102979633",
@@ -16857,6 +16898,7 @@
     "carsandbids:cab-KZjxNM0k",
     "carsandbids:cab-r4RZ4MwV",
     "carvana:cv-2004719929",
+    "carvana:cv-2004901480",
     "carvana:cv-2004981233",
     "carvana:cv-2004995659",
     "carvana:cv-2005005204",
