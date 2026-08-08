@@ -1,6 +1,6 @@
 {
   "count": 676,
-  "refreshed_at": "2026-08-08T02:26:55.846375+00:00",
+  "refreshed_at": "2026-08-08T02:30:59.455623+00:00",
   "errors": [],
   "watches": [
     {
@@ -284,6 +284,26 @@
       "value_delta": -18500
     },
     {
+      "id": "119542127",
+      "source": "bringatrailer",
+      "title": "2008 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2008-porsche-cayman-s-118/",
+      "price": 14500,
+      "year": 2008,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/987-121-scaled-79486.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 30200,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -15700
+    },
+    {
       "id": "cm-6ed61057-a855-4408-bc9a-2a9da648e267",
       "source": "cars.com",
       "title": "2005 Honda S2000",
@@ -462,26 +482,6 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -15000
-    },
-    {
-      "id": "119542127",
-      "source": "bringatrailer",
-      "title": "2008 Porsche Cayman S 6-Speed",
-      "url": "https://bringatrailer.com/listing/2008-porsche-cayman-s-118/",
-      "price": 17500,
-      "year": 2008,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/987-121-scaled-79486.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 30200,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -12700
     },
     {
       "id": "115914652",
