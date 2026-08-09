@@ -1160,6 +1160,26 @@
       "watch_id": "dune-buggy",
       "year": null
     },
+    "bringatrailer:117685224": {
+      "fair_value": 42100,
+      "id": "117685224",
+      "location": null,
+      "make": "Honda",
+      "mileage": 17000,
+      "model": "S2000",
+      "notes": null,
+      "price": 123,
+      "source": "bringatrailer",
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/06/2005_honda_s2000-type-v-jdm_2005_honda_s2000-type-v-jdm_c12b1f22-171e-475b-a485-9547a8bddfdc-Ba1ukP-17413-17414-scaled.jpg?w=470&h=318&crop=1",
+      "title": "Original-Owner 17k-Mile 2005 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2005-honda-s2000-type-v-jdm/",
+      "value_delta": -41977,
+      "value_label": "Great value",
+      "value_score": 100.0,
+      "watch_id": "honda-s2000",
+      "year": 2005
+    },
     "bringatrailer:117699046": {
       "fair_value": 35300,
       "id": "117699046",
@@ -18223,7 +18243,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "Inglewood",
+      "location": "Portland",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -18323,7 +18343,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Union City, NJ",
+      "location": "Mountain Lakes, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -20000,6 +20020,7 @@
     "bringatrailer:117033784",
     "bringatrailer:117186127",
     "bringatrailer:117683493",
+    "bringatrailer:117685224",
     "bringatrailer:117699046",
     "bringatrailer:117808656",
     "bringatrailer:117884640",
