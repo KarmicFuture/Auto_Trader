@@ -9383,11 +9383,11 @@
     "carmax:28533666": {
       "fair_value": 58600,
       "id": "28533666",
-      "location": "Colma, CA",
+      "location": "Pleasanton, CA",
       "make": "Porsche",
       "mileage": 37155,
       "model": "Cayman",
-      "notes": "Serramonte",
+      "notes": "Pleasanton",
       "price": 53998,
       "source": "carmax",
       "status": "active",
@@ -18243,7 +18243,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "Bellflower",
+      "location": "Columbia",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
