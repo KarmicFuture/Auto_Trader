@@ -16931,7 +16931,7 @@
       "price": 59995,
       "source": "ebay",
       "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/mssAAeSwlYhqVP6g/s-l1600.jpg",
+      "thumbnail": "https://i.ebayimg.com/images/g/QwsAAeSwThVqd5Sr/s-l1600.jpg",
       "title": "2014 Porsche Cayman",
       "url": "https://www.ebay.com/itm/137509174011",
       "value_delta": 12895,
@@ -18163,7 +18163,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "Dallas",
+      "location": "Canon City",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -18263,7 +18263,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Garfield, NJ",
+      "location": "Mountain Lakes, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
