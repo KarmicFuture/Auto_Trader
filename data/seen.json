@@ -17000,6 +17000,26 @@
       "watch_id": "porsche-cayman",
       "year": 2014
     },
+    "carvana:cv-3006401056": {
+      "fair_value": 48700,
+      "id": "cv-3006401056",
+      "location": "Chandler, AZ",
+      "make": "Porsche",
+      "mileage": 20332,
+      "model": "Cayman",
+      "notes": "SiriusXM Satellite, CD/MP3 (Single Disc) , AM/FM Stereo, Bluetooth Wireless, Tilt  & Telesco",
+      "price": 51990,
+      "source": "carvana",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/lj97u8f0kwgdqs56qjur.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "title": "2016 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4639932",
+      "value_delta": 3290,
+      "value_label": "Soft value",
+      "value_score": 38.7,
+      "watch_id": "porsche-cayman",
+      "year": 2016
+    },
     "ebay:eb-v1|117310284128|0": {
       "fair_value": 105600,
       "id": "eb-v1|117310284128|0",
@@ -18403,7 +18423,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "McMinnville",
+      "location": "South Pasadena",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -18503,7 +18523,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Linden, NJ",
+      "location": "Union City, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -21092,6 +21112,7 @@
     "carvana:cv-2005115410",
     "carvana:cv-3006345453",
     "carvana:cv-3006363888",
+    "carvana:cv-3006401056",
     "ebay:eb-v1|117310284128|0",
     "ebay:eb-v1|117327472551|0",
     "ebay:eb-v1|127994361411|0",
