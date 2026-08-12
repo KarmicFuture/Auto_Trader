@@ -1880,6 +1880,26 @@
       "watch_id": "honda-s2000",
       "year": 2002
     },
+    "bringatrailer:119910206": {
+      "fair_value": 36900,
+      "id": "119910206",
+      "location": null,
+      "make": "Porsche",
+      "mileage": null,
+      "model": "Cayman",
+      "notes": null,
+      "price": 31,
+      "source": "bringatrailer",
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/IMG_9727-scaled-copy-2026-08-12-0aj-57340.jpg?w=470&h=318&crop=1",
+      "title": "2009 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2009-porsche-cayman-s-44/",
+      "value_delta": -36869,
+      "value_label": "Great value",
+      "value_score": 100.0,
+      "watch_id": "porsche-cayman",
+      "year": 2009
+    },
     "bringatrailer:95828107": {
       "fair_value": 12000,
       "id": "95828107",
@@ -19603,7 +19623,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Linden, NJ",
+      "location": "Union City, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -19643,7 +19663,7 @@
     "ebay:eb-v1|318713461091|0": {
       "fair_value": 54500,
       "id": "eb-v1|318713461091|0",
-      "location": "Palmyra, NJ",
+      "location": "Waterford Works, NJ",
       "make": "Porsche",
       "mileage": 61106,
       "model": "Cayman",
@@ -21556,6 +21576,7 @@
     "bringatrailer:119636642",
     "bringatrailer:119643369",
     "bringatrailer:119793370",
+    "bringatrailer:119910206",
     "bringatrailer:95828107",
     "cargurus:cgu-379893148",
     "cargurus:cgu-405680450",
