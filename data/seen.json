@@ -18631,8 +18631,8 @@
       "price": 39500,
       "source": "ebay",
       "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/jsMAAeSw1stqav40/s-l960.jpg",
-      "title": "2007 Porsche Cayman Base 2dr Coupe",
+      "thumbnail": "https://i.ebayimg.com/images/g/0dMAAeSwk71qfCFp/s-l960.jpg",
+      "title": "2007 Porsche Cayman",
       "url": "https://www.ebay.com/itm/206469576978",
       "value_delta": 14500,
       "value_label": "Stretched",
@@ -19323,7 +19323,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "Rio Rancho",
+      "location": "Bennett",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -19423,7 +19423,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Lyndhurst, NJ",
+      "location": "Linden, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -19463,7 +19463,7 @@
     "ebay:eb-v1|318713461091|0": {
       "fair_value": 54500,
       "id": "eb-v1|318713461091|0",
-      "location": "Waterford Works, NJ",
+      "location": "Burlington, NJ",
       "make": "Porsche",
       "mileage": 61106,
       "model": "Cayman",
@@ -19943,7 +19943,7 @@
     "ebay:eb-v1|358900172156|0": {
       "fair_value": 62600,
       "id": "eb-v1|358900172156|0",
-      "location": "Bountiful, UT",
+      "location": "Lehi, UT",
       "make": "Porsche",
       "mileage": 24000,
       "model": "Cayman",
