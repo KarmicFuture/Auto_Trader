@@ -377,6 +377,10 @@ authForm.addEventListener("submit", async (event) => {
 resumeForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   showError(resumeError, "");
+  if (!fileInput.files?.length) {
+    showError(resumeError, "Choose a resume file first.");
+    return;
+  }
   const body = new FormData(resumeForm);
   try {
     const data = await readJson(await fetch("/api/resume", { method: "POST", body }));
@@ -389,17 +393,29 @@ resumeForm.addEventListener("submit", async (event) => {
 
 contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  await savePerson();
+});
+
+document.getElementById("btn-save-person").addEventListener("click", (event) => {
+  event.preventDefault();
+  savePerson();
+});
+
+async function savePerson() {
   showError(contactError, "");
+  const name = document.getElementById("contact-name").value.trim();
+  const company = document.getElementById("contact-company").value.trim();
+  const relation = document.getElementById("contact-relation").value.trim() || "knows";
+  if (name.length < 2 || company.length < 2) {
+    showError(contactError, "Add a person and the company where you know them.");
+    return;
+  }
   try {
     const data = await readJson(
       await fetch("/api/contacts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: document.getElementById("contact-name").value.trim(),
-          company: document.getElementById("contact-company").value.trim(),
-          relation: document.getElementById("contact-relation").value.trim() || "knows",
-        }),
+        body: JSON.stringify({ name, company, relation }),
       })
     );
     contacts = data.contacts || [];
@@ -408,7 +424,7 @@ contactForm.addEventListener("submit", async (event) => {
   } catch (err) {
     showError(contactError, err.message);
   }
-});
+}
 
 fileInput.addEventListener("change", () => {
   fileName.textContent = fileInput.files[0]?.name || "No file selected";

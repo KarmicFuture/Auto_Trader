@@ -110,9 +110,9 @@
             Job Buddy can work from the same story you tell employers.
           </p>
         </div>
-        <form class="panel form narrow" id="resume-form">
+        <form class="panel form narrow" id="resume-form" novalidate>
           <label class="drop" id="drop-zone">
-            <input id="resume-file" name="file" type="file" accept=".pdf,.doc,.docx,.txt,.rtf" required />
+            <input id="resume-file" name="file" type="file" accept=".pdf,.doc,.docx,.txt,.rtf" />
             <strong>Choose a file</strong>
             <span>PDF, Word, RTF, or text · up to 8 MB</span>
             <em id="file-name">No file selected</em>
@@ -137,21 +137,21 @@
             Add names and where they work — then swipe.
           </p>
         </div>
-        <form class="panel form narrow" id="contact-form">
+        <form class="panel form narrow" id="contact-form" novalidate>
           <label class="field">
             <span>Name</span>
-            <input id="contact-name" name="name" type="text" required placeholder="Maya Patel" />
+            <input id="contact-name" name="name" type="text" placeholder="Maya Patel" autocomplete="off" />
           </label>
           <label class="field">
             <span>Company</span>
-            <input id="contact-company" name="company" type="text" required placeholder="Stripe" />
+            <input id="contact-company" name="company" type="text" placeholder="Stripe" autocomplete="off" />
           </label>
           <label class="field">
             <span>How you know them</span>
             <input id="contact-relation" name="relation" type="text" placeholder="Former teammate" />
           </label>
           <p class="banner" id="contact-error" hidden></p>
-          <button type="submit" class="btn primary">Save person</button>
+          <button type="button" class="btn primary" id="btn-save-person">Save person</button>
         </form>
         <ul class="people-list" id="people-list"></ul>
         <p class="empty" id="people-empty">No one yet. One name is enough to open the deck.</p>
