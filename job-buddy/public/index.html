@@ -37,7 +37,7 @@
           <h2>Create an account to begin.</h2>
           <p class="lede">
             Job Buddy is a job-finding desk: we save your account, you upload a resume,
-            then we walk you through tips that actually move a search.
+            then you swipe jobs at companies where you already know someone.
           </p>
         </div>
 
@@ -93,9 +93,9 @@
             <h3>What Job Buddy helps with</h3>
             <ul class="preview-list">
               <li>Sign in with LinkedIn or email</li>
-              <li>A saved account so your search has a home</li>
               <li>Resume on file — PDF or Word</li>
-              <li>Tips for postings, outreach, and interviews</li>
+              <li>People you know, and jobs only at their companies</li>
+              <li>Swipe for an intro — or pass</li>
             </ul>
           </aside>
         </div>
@@ -120,6 +120,60 @@
           <p class="banner" id="resume-error" hidden></p>
           <button type="submit" class="btn primary" id="resume-submit">Save resume</button>
         </form>
+      </section>
+
+      <nav class="desk-nav" id="desk-nav" hidden>
+        <button type="button" class="chip" data-view="swipe">Swipe</button>
+        <button type="button" class="chip" data-view="network">People</button>
+        <button type="button" class="chip" data-view="desk">Tips</button>
+      </nav>
+
+      <section class="screen" id="screen-network" hidden>
+        <div class="hero">
+          <p class="kicker">Warm path only</p>
+          <h2>Who do you already know?</h2>
+          <p class="lede">
+            Job Buddy only shows roles at companies where you have a person.
+            Add names and where they work — then swipe.
+          </p>
+        </div>
+        <form class="panel form narrow" id="contact-form">
+          <label class="field">
+            <span>Name</span>
+            <input id="contact-name" name="name" type="text" required placeholder="Maya Patel" />
+          </label>
+          <label class="field">
+            <span>Company</span>
+            <input id="contact-company" name="company" type="text" required placeholder="Stripe" />
+          </label>
+          <label class="field">
+            <span>How you know them</span>
+            <input id="contact-relation" name="relation" type="text" placeholder="Former teammate" />
+          </label>
+          <p class="banner" id="contact-error" hidden></p>
+          <button type="submit" class="btn primary">Save person</button>
+        </form>
+        <ul class="people-list" id="people-list"></ul>
+        <p class="empty" id="people-empty">No one yet. One name is enough to open the deck.</p>
+        <button type="button" class="btn primary" id="btn-to-swipe" hidden>Swipe jobs through them</button>
+      </section>
+
+      <section class="screen" id="screen-swipe" hidden>
+        <div class="hero tight">
+          <p class="kicker">Through people you know</p>
+          <h2>Swipe the warm list.</h2>
+          <p class="lede">Right = ask for an intro. Left = pass. Nothing appears unless someone you know works there.</p>
+        </div>
+        <div class="deck-wrap">
+          <div class="deck" id="deck" aria-live="polite"></div>
+          <p class="empty" id="deck-empty" hidden>You’re through this stack. Add another person, or check intros on People.</p>
+        </div>
+        <div class="swipe-actions" id="swipe-actions">
+          <button type="button" class="round pass" id="btn-pass" aria-label="Pass">✕</button>
+          <button type="button" class="round intro" id="btn-intro" aria-label="Want intro">♥</button>
+        </div>
+        <p class="hint center" id="swipe-status"></p>
+        <ul class="liked-list" id="liked-list"></ul>
       </section>
 
       <section class="screen" id="screen-desk" hidden>

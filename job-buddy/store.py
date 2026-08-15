@@ -42,6 +42,28 @@ CREATE TABLE IF NOT EXISTS oauth_states (
     state TEXT PRIMARY KEY,
     created_at TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS contacts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    company TEXT NOT NULL,
+    relation TEXT NOT NULL DEFAULT 'knows',
+    created_at TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS swipes (
+    user_id INTEGER NOT NULL,
+    job_id TEXT NOT NULL,
+    decision TEXT NOT NULL,
+    contact_id INTEGER,
+    title TEXT,
+    company TEXT,
+    created_at TEXT NOT NULL,
+    PRIMARY KEY (user_id, job_id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
 """
 
 
@@ -287,4 +309,97 @@ def public_user(user: dict[str, Any], resume: Optional[dict[str, Any]] = None) -
             "size_bytes": resume["size_bytes"],
             "uploaded_at": resume["uploaded_at"],
         }
+    payload["contact_count"] = count_contacts(user["id"])
     return payload
+
+
+def count_contacts(user_id: int) -> int:
+    with connect() as conn:
+        row = conn.execute(
+            "SELECT COUNT(*) AS n FROM contacts WHERE user_id = ?",
+            (user_id,),
+        ).fetchone()
+        return int(row["n"] if row else 0)
+
+
+def list_contacts(user_id: int) -> list[dict[str, Any]]:
+    with connect() as conn:
+        rows = conn.execute(
+            "SELECT * FROM contacts WHERE user_id = ? ORDER BY id DESC",
+            (user_id,),
+        ).fetchall()
+        return [dict(row) for row in rows]
+
+
+def add_contact(user_id: int, name: str, company: str, relation: str) -> dict[str, Any]:
+    with connect() as conn:
+        cur = conn.execute(
+            """
+            INSERT INTO contacts (user_id, name, company, relation, created_at)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (user_id, name, company, relation, now_iso()),
+        )
+        row = conn.execute("SELECT * FROM contacts WHERE id = ?", (cur.lastrowid,)).fetchone()
+        return dict(row)
+
+
+def delete_contact(user_id: int, contact_id: int) -> bool:
+    with connect() as conn:
+        cur = conn.execute(
+            "DELETE FROM contacts WHERE id = ? AND user_id = ?",
+            (contact_id, user_id),
+        )
+        return cur.rowcount > 0
+
+
+def swiped_ids(user_id: int) -> set[str]:
+    with connect() as conn:
+        rows = conn.execute(
+            "SELECT job_id FROM swipes WHERE user_id = ?",
+            (user_id,),
+        ).fetchall()
+        return {str(row["job_id"]) for row in rows}
+
+
+def record_swipe(
+    user_id: int,
+    *,
+    job_id: str,
+    decision: str,
+    contact_id: int | None,
+    title: str,
+    company: str,
+) -> dict[str, Any]:
+    with connect() as conn:
+        conn.execute(
+            """
+            INSERT INTO swipes (user_id, job_id, decision, contact_id, title, company, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(user_id, job_id) DO UPDATE SET
+                decision = excluded.decision,
+                contact_id = excluded.contact_id,
+                title = excluded.title,
+                company = excluded.company,
+                created_at = excluded.created_at
+            """,
+            (user_id, job_id, decision, contact_id, title, company, now_iso()),
+        )
+        row = conn.execute(
+            "SELECT * FROM swipes WHERE user_id = ? AND job_id = ?",
+            (user_id, job_id),
+        ).fetchone()
+        return dict(row)
+
+
+def liked_swipes(user_id: int) -> list[dict[str, Any]]:
+    with connect() as conn:
+        rows = conn.execute(
+            """
+            SELECT * FROM swipes
+            WHERE user_id = ? AND decision = 'intro'
+            ORDER BY created_at DESC
+            """,
+            (user_id,),
+        ).fetchall()
+        return [dict(row) for row in rows]

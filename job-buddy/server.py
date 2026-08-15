@@ -13,6 +13,7 @@ from urllib.parse import quote
 from fastapi import Cookie, FastAPI, File, Form, Response, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
@@ -26,21 +27,29 @@ from auth import (  # noqa: E402
     verify_password,
 )
 from store import (  # noqa: E402
+    add_contact,
+    count_contacts,
     create_session,
     create_user,
+    delete_contact,
     delete_session,
     get_resume,
     get_user_by_email,
     init_db,
+    liked_swipes,
+    list_contacts,
     pop_oauth_state,
     public_user,
+    record_swipe,
     resume_dir,
     save_oauth_state,
     save_resume,
+    swiped_ids,
     upsert_linkedin_user,
     user_for_session,
 )
 from tips import all_tips  # noqa: E402
+from jobs import jobs_through_people  # noqa: E402
 import linkedin as linkedin_auth  # noqa: E402
 
 PUBLIC = ROOT / "public"
@@ -75,8 +84,37 @@ app = FastAPI(
 )
 
 
+class ContactIn(BaseModel):
+    name: str = Field(min_length=2, max_length=80)
+    company: str = Field(min_length=2, max_length=80)
+    relation: str = Field(default="knows", max_length=40)
+
+
+class SwipeIn(BaseModel):
+    job_id: str
+    decision: str
+    contact_id: int | None = None
+    title: str = ""
+    company: str = ""
+
+
 def _error(message: str, status: int = 400) -> JSONResponse:
     return JSONResponse({"ok": False, "error": message}, status_code=status)
+
+
+def _require_user(jobbuddy_session: str | None):
+    user = user_for_session(jobbuddy_session)
+    if not user:
+        return None, _error("Create an account first.", 401)
+    return user, None
+
+
+def _next_step(user_id: int, has_resume: bool) -> str:
+    if not has_resume:
+        return "resume"
+    if count_contacts(user_id) == 0:
+        return "network"
+    return "swipe"
 
 
 def _set_session(response: Response, token: str) -> None:
@@ -146,7 +184,7 @@ def login(
     return {
         "ok": True,
         "user": public_user(user, resume),
-        "next": "desk" if resume else "resume",
+        "next": _next_step(user["id"], bool(resume)),
     }
 
 
@@ -251,7 +289,7 @@ async def upload_resume(
         content_type=file.content_type or "application/octet-stream",
         size_bytes=len(data),
     )
-    return {"ok": True, "user": public_user(user, record), "next": "desk"}
+    return {"ok": True, "user": public_user(user, record), "next": _next_step(user["id"], True)}
 
 
 @app.get("/api/tips", response_model=None)
@@ -259,6 +297,86 @@ def tips(jobbuddy_session: str | None = Cookie(default=None)):
     if not user_for_session(jobbuddy_session):
         return _error("Create an account to read the full tip library.", 401)
     return {"tips": all_tips()}
+
+
+@app.get("/api/contacts")
+def api_contacts(jobbuddy_session: str | None = Cookie(default=None)):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    return {"contacts": list_contacts(user["id"])}
+
+
+@app.post("/api/contacts", response_model=None)
+def api_add_contact(
+    body: ContactIn,
+    jobbuddy_session: str | None = Cookie(default=None),
+):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    name = body.name.strip()
+    company = body.company.strip()
+    relation = (body.relation or "knows").strip() or "knows"
+    if len(name) < 2 or len(company) < 2:
+        return _error("Add a person and the company where you know them.")
+    contact = add_contact(user["id"], name, company, relation)
+    return {"ok": True, "contact": contact, "contacts": list_contacts(user["id"])}
+
+
+@app.delete("/api/contacts/{contact_id}", response_model=None)
+def api_delete_contact(
+    contact_id: int,
+    jobbuddy_session: str | None = Cookie(default=None),
+):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    if not delete_contact(user["id"], contact_id):
+        return _error("That person was not on your list.", 404)
+    return {"ok": True, "contacts": list_contacts(user["id"])}
+
+
+@app.get("/api/swipe/deck", response_model=None)
+def api_deck(jobbuddy_session: str | None = Cookie(default=None)):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    contacts = list_contacts(user["id"])
+    cards = jobs_through_people(contacts, hidden_ids=swiped_ids(user["id"]))
+    return {"jobs": cards, "remaining": len(cards), "contacts": len(contacts)}
+
+
+@app.post("/api/swipe", response_model=None)
+def api_swipe(
+    body: SwipeIn,
+    jobbuddy_session: str | None = Cookie(default=None),
+):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    decision = body.decision.strip().lower()
+    if decision not in {"pass", "intro"}:
+        return _error("Swipe right for intro, left to pass.")
+    record_swipe(
+        user["id"],
+        job_id=body.job_id,
+        decision=decision,
+        contact_id=body.contact_id,
+        title=body.title.strip(),
+        company=body.company.strip(),
+    )
+    contacts = list_contacts(user["id"])
+    cards = jobs_through_people(contacts, hidden_ids=swiped_ids(user["id"]))
+    return {"ok": True, "remaining": len(cards), "liked": liked_swipes(user["id"])}
+
+
+@app.get("/api/swipe/liked")
+def api_liked(jobbuddy_session: str | None = Cookie(default=None)):
+    user, err = _require_user(jobbuddy_session)
+    if err:
+        return err
+    return {"liked": liked_swipes(user["id"])}
 
 
 @app.get("/")

@@ -76,7 +76,7 @@ def test_login_and_resume_upload(tmp_path, monkeypatch):
     )
     body = upload.json()
     assert upload.status_code == 200
-    assert body["next"] == "desk"
+    assert body["next"] == "network"
     assert body["user"]["has_resume"] is True
     assert body["user"]["resume"]["filename"] == "Ada_Chen.pdf"
 
@@ -91,7 +91,7 @@ def test_login_and_resume_upload(tmp_path, monkeypatch):
         "/api/login",
         data={"email": "ada@example.com", "password": "secret123"},
     )
-    assert login.json()["next"] == "desk"
+    assert login.json()["next"] == "network"
     tips = client.get("/api/tips")
     assert tips.status_code == 200
     assert len(tips.json()["tips"]) >= 8
@@ -240,3 +240,82 @@ def test_linkedin_rejects_bad_state(tmp_path, monkeypatch):
     assert res.status_code == 302
     assert "auth_error=" in res.headers["location"]
     assert client.get("/api/me").json()["user"] is None
+
+
+def _account_with_resume(client):
+    client.post(
+        "/api/register",
+        data={"name": "Ada Chen", "email": "ada@example.com", "password": "secret123"},
+    )
+    client.post(
+        "/api/resume",
+        files={"file": ("Ada_Chen.pdf", b"%PDF-1.4 resume bytes", "application/pdf")},
+    )
+
+
+def test_swipe_only_shows_jobs_through_people_you_know(tmp_path, monkeypatch):
+    client = make_client(tmp_path, monkeypatch)
+    _account_with_resume(client)
+    empty = client.get("/api/swipe/deck")
+    assert empty.status_code == 200
+    assert empty.json()["jobs"] == []
+    assert empty.json()["contacts"] == 0
+
+    added = client.post(
+        "/api/contacts",
+        json={"name": "Maya Patel", "company": "Stripe", "relation": "Former teammate"},
+    )
+    assert added.status_code == 200
+    deck = client.get("/api/swipe/deck").json()["jobs"]
+    assert deck
+    assert all(job["through"]["name"] == "Maya Patel" for job in deck)
+    assert all(job["company"] == "Stripe" for job in deck)
+    assert all("Google" not in job["company"] for job in deck)
+
+    first = deck[0]
+    swiped = client.post(
+        "/api/swipe",
+        json={
+            "job_id": first["id"],
+            "decision": "intro",
+            "contact_id": first["through"]["id"],
+            "title": first["title"],
+            "company": first["company"],
+        },
+    )
+    assert swiped.status_code == 200
+    remaining_ids = {job["id"] for job in client.get("/api/swipe/deck").json()["jobs"]}
+    assert first["id"] not in remaining_ids
+    liked = client.get("/api/swipe/liked").json()["liked"]
+    assert liked[0]["job_id"] == first["id"]
+    assert liked[0]["decision"] == "intro"
+
+
+def test_unknown_company_still_links_to_the_person(tmp_path, monkeypatch):
+    client = make_client(tmp_path, monkeypatch)
+    _account_with_resume(client)
+    client.post(
+        "/api/contacts",
+        json={"name": "Sam Ortiz", "company": "Kiln Robotics", "relation": "Friend"},
+    )
+    deck = client.get("/api/swipe/deck").json()["jobs"]
+    assert len(deck) == 1
+    assert deck[0]["kind"] == "intro"
+    assert "Sam Ortiz" in deck[0]["title"]
+
+
+def test_facebook_alias_maps_to_meta_jobs():
+    import jobs
+
+    cards = jobs.jobs_through_people(
+        [{"id": 2, "name": "Alex", "company": "Facebook", "relation": "knows"}]
+    )
+    assert cards
+    assert all(card["company"] == "Meta" for card in cards)
+    assert all(card["through"]["name"] == "Alex" for card in cards)
+
+
+def test_deck_requires_account(tmp_path, monkeypatch):
+    client = make_client(tmp_path, monkeypatch)
+    assert client.get("/api/swipe/deck").status_code == 401
+    assert client.post("/api/contacts", json={"name": "Maya", "company": "Stripe"}).status_code == 401
