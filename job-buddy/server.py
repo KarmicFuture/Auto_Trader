@@ -3,13 +3,15 @@
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from contextlib import asynccontextmanager
 from pathlib import Path
+from urllib.parse import quote
 
 from fastapi import Cookie, FastAPI, File, Form, Response, UploadFile
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 ROOT = Path(__file__).resolve().parent
@@ -30,12 +32,16 @@ from store import (  # noqa: E402
     get_resume,
     get_user_by_email,
     init_db,
+    pop_oauth_state,
     public_user,
     resume_dir,
+    save_oauth_state,
     save_resume,
+    upsert_linkedin_user,
     user_for_session,
 )
 from tips import all_tips  # noqa: E402
+import linkedin as linkedin_auth  # noqa: E402
 
 PUBLIC = ROOT / "public"
 COOKIE = "jobbuddy_session"
@@ -44,8 +50,20 @@ ALLOWED_SUFFIXES = {".pdf", ".doc", ".docx", ".txt", ".rtf"}
 SAFE_NAME = re.compile(r"[^A-Za-z0-9._-]+")
 
 
+def load_dotenv(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw in path.read_text().splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("'").strip('"'))
+
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
+    load_dotenv(ROOT / ".env")
     init_db()
     yield
 
@@ -85,6 +103,11 @@ def me(jobbuddy_session: str | None = Cookie(default=None)) -> dict:
     return {"user": public_user(user, get_resume(user["id"]))}
 
 
+@app.get("/api/config")
+def api_config() -> dict[str, bool]:
+    return {"linkedin": linkedin_auth.configured()}
+
+
 @app.post("/api/register", response_model=None)
 def register(
     response: Response,
@@ -112,7 +135,9 @@ def login(
     password: str = Form(...),
 ):
     user = get_user_by_email(normalize_email(email))
-    if not user or not verify_password(password, user["password_hash"]):
+    if user and user.get("linkedin_sub") and not user.get("password_hash"):
+        return _error("This account uses LinkedIn. Continue with LinkedIn.", 401)
+    if not user or not user.get("password_hash") or not verify_password(password, user["password_hash"]):
         return _error("Email or password is incorrect.", 401)
     token = new_session_token()
     create_session(user["id"], token)
@@ -133,6 +158,61 @@ def logout(
     delete_session(jobbuddy_session)
     response.delete_cookie(COOKIE, path="/")
     return {"ok": True}
+
+
+@app.get("/api/auth/linkedin")
+def linkedin_start():
+    if not linkedin_auth.configured():
+        return RedirectResponse(
+            "/?auth_error=" + quote("LinkedIn sign-on is not configured yet."),
+            status_code=302,
+        )
+    state = new_session_token()
+    save_oauth_state(state)
+    return RedirectResponse(linkedin_auth.authorization_url(state), status_code=302)
+
+
+@app.get("/api/auth/linkedin/callback")
+def linkedin_callback(
+    code: str | None = None,
+    state: str | None = None,
+    error: str | None = None,
+    error_description: str | None = None,
+):
+    if error:
+        detail = error_description or error
+        return RedirectResponse("/?auth_error=" + quote(detail), status_code=302)
+    if not code or not pop_oauth_state(state):
+        return RedirectResponse(
+            "/?auth_error=" + quote("LinkedIn sign-on expired. Try again."),
+            status_code=302,
+        )
+    try:
+        token = linkedin_auth.exchange_code(code)
+        profile = linkedin_auth.fetch_userinfo(token["access_token"])
+    except Exception:
+        return RedirectResponse(
+            "/?auth_error=" + quote("LinkedIn could not finish sign-on. Try again."),
+            status_code=302,
+        )
+
+    sub = str(profile.get("sub") or "").strip()
+    email = normalize_email(str(profile.get("email") or ""))
+    name = str(profile.get("name") or "").strip()
+    picture = str(profile.get("picture") or "").strip() or None
+    if not sub or not email:
+        return RedirectResponse(
+            "/?auth_error="
+            + quote("LinkedIn did not share your email. Allow email access, or create an account here."),
+            status_code=302,
+        )
+
+    user = upsert_linkedin_user(sub=sub, name=name, email=email, picture=picture)
+    session = new_session_token()
+    create_session(user["id"], session)
+    redirect = RedirectResponse("/", status_code=302)
+    _set_session(redirect, session)
+    return redirect
 
 
 @app.post("/api/resume", response_model=None)

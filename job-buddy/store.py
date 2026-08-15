@@ -14,7 +14,9 @@ CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    password_hash TEXT NOT NULL,
+    password_hash TEXT,
+    linkedin_sub TEXT UNIQUE,
+    picture TEXT,
     created_at TEXT NOT NULL
 );
 
@@ -34,6 +36,11 @@ CREATE TABLE IF NOT EXISTS resumes (
     size_bytes INTEGER NOT NULL,
     uploaded_at TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS oauth_states (
+    state TEXT PRIMARY KEY,
+    created_at TEXT NOT NULL
 );
 """
 
@@ -74,15 +81,111 @@ def connect() -> Iterator[sqlite3.Connection]:
 def init_db() -> None:
     with connect() as conn:
         conn.executescript(SCHEMA)
+        _migrate(conn)
 
 
-def create_user(name: str, email: str, password_hash: str) -> dict[str, Any]:
+def _migrate(conn: sqlite3.Connection) -> None:
+    cols = {row[1] for row in conn.execute("PRAGMA table_info(users)")}
+    if "linkedin_sub" not in cols:
+        conn.execute("ALTER TABLE users ADD COLUMN linkedin_sub TEXT")
+    if "picture" not in cols:
+        conn.execute("ALTER TABLE users ADD COLUMN picture TEXT")
+    conn.execute(
+        "CREATE UNIQUE INDEX IF NOT EXISTS idx_users_linkedin_sub ON users(linkedin_sub)"
+    )
+
+
+def create_user(
+    name: str,
+    email: str,
+    password_hash: str | None = None,
+    *,
+    linkedin_sub: str | None = None,
+    picture: str | None = None,
+) -> dict[str, Any]:
     with connect() as conn:
         cur = conn.execute(
-            "INSERT INTO users (name, email, password_hash, created_at) VALUES (?, ?, ?, ?)",
-            (name, email, password_hash, now_iso()),
+            """
+            INSERT INTO users (name, email, password_hash, linkedin_sub, picture, created_at)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """,
+            (name, email, password_hash, linkedin_sub, picture, now_iso()),
         )
         return get_user_by_id(int(cur.lastrowid), conn)
+
+
+def get_user_by_linkedin(sub: str) -> Optional[dict[str, Any]]:
+    with connect() as conn:
+        row = conn.execute(
+            "SELECT * FROM users WHERE linkedin_sub = ?",
+            (sub,),
+        ).fetchone()
+        return dict(row) if row else None
+
+
+def upsert_linkedin_user(
+    *,
+    sub: str,
+    name: str,
+    email: str,
+    picture: str | None = None,
+) -> dict[str, Any]:
+    existing = get_user_by_linkedin(sub)
+    if existing:
+        with connect() as conn:
+            conn.execute(
+                """
+                UPDATE users
+                SET name = COALESCE(NULLIF(?, ''), name),
+                    picture = COALESCE(?, picture)
+                WHERE id = ?
+                """,
+                (name, picture, existing["id"]),
+            )
+        return get_user_by_id(existing["id"])
+
+    by_email = get_user_by_email(email)
+    if by_email:
+        with connect() as conn:
+            conn.execute(
+                """
+                UPDATE users
+                SET linkedin_sub = ?,
+                    picture = COALESCE(?, picture)
+                WHERE id = ?
+                """,
+                (sub, picture, by_email["id"]),
+            )
+        return get_user_by_id(by_email["id"])
+
+    display = name.strip() or email.split("@")[0]
+    return create_user(
+        display,
+        email,
+        password_hash=None,
+        linkedin_sub=sub,
+        picture=picture,
+    )
+
+
+def save_oauth_state(state: str) -> None:
+    with connect() as conn:
+        conn.execute(
+            "INSERT INTO oauth_states (state, created_at) VALUES (?, ?)",
+            (state, now_iso()),
+        )
+
+
+def pop_oauth_state(state: str | None) -> bool:
+    if not state:
+        return False
+    with connect() as conn:
+        row = conn.execute(
+            "SELECT created_at FROM oauth_states WHERE state = ?",
+            (state,),
+        ).fetchone()
+        conn.execute("DELETE FROM oauth_states WHERE state = ?", (state,))
+        return row is not None
 
 
 def get_user_by_email(email: str) -> Optional[dict[str, Any]]:
@@ -174,6 +277,8 @@ def public_user(user: dict[str, Any], resume: Optional[dict[str, Any]] = None) -
         "email": user["email"],
         "created_at": user["created_at"],
         "has_resume": bool(resume),
+        "linkedin": bool(user.get("linkedin_sub")),
+        "picture": user.get("picture"),
     }
     if resume:
         payload["resume"] = {

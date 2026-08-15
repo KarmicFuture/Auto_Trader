@@ -29,6 +29,23 @@ python3 server.py
 
 Open http://localhost:3040
 
+## LinkedIn sign-on
+
+The landing page offers **Continue with LinkedIn** (OpenID Connect: `openid profile email`).
+
+1. Create an app at [LinkedIn Developers](https://www.linkedin.com/developers/apps)
+2. Add the product **Sign In with LinkedIn using OpenID Connect**
+3. Under Auth, set the redirect URL to `http://localhost:3040/api/auth/linkedin/callback`
+4. Copy `.env.example` to `.env` and fill in the client id and secret
+
+```bash
+cp .env.example .env
+```
+
+Without those values, the LinkedIn button still appears and explains that sign-on is not configured yet. Email signup keeps working.
+
+A LinkedIn login creates (or links) a Job Buddy account, then continues to **resume upload** if none is on file.
+
 ## Flow
 
 1. **Landing** — create an account (or sign in)

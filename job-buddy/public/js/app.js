@@ -57,7 +57,8 @@ function routeUser(user) {
   }
   if (!user.has_resume) {
     const kicker = document.getElementById("resume-kicker");
-    kicker.textContent = `Account saved · ${user.name}`;
+    const via = user.linkedin ? "LinkedIn" : "email";
+    kicker.textContent = `Account saved · ${user.name} · ${via}`;
     show("screen-resume");
     return;
   }
@@ -66,7 +67,9 @@ function routeUser(user) {
 }
 
 function renderDesk(user) {
-  document.getElementById("desk-kicker").textContent = `Hi, ${user.name}`;
+  document.getElementById("desk-kicker").textContent = user.linkedin
+    ? `Hi, ${user.name} · LinkedIn`
+    : `Hi, ${user.name}`;
   document.getElementById("desk-title").textContent = "Tips and tricks to find the job.";
   const resume = user.resume;
   document.getElementById("resume-card").innerHTML = `
@@ -120,10 +123,32 @@ async function readJson(res) {
 }
 
 async function loadMe() {
+  const params = new URLSearchParams(window.location.search);
+  const authError = params.get("auth_error");
+  if (authError) {
+    showError(authErrorEl(), authError);
+    window.history.replaceState({}, "", "/");
+  }
   const res = await fetch("/api/me");
   const data = await res.json();
   routeUser(data.user);
   if (data.user) await loadTips();
+}
+
+function authErrorEl() {
+  return authError;
+}
+
+async function loadConfig() {
+  try {
+    const data = await (await fetch("/api/config")).json();
+    const btn = document.getElementById("btn-linkedin");
+    if (btn && data.linkedin === false) {
+      btn.title = "Add LinkedIn app credentials to enable this.";
+    }
+  } catch {
+    /* keep the button; the server will explain if OAuth is missing */
+  }
 }
 
 async function loadTips() {
@@ -196,4 +221,5 @@ logoutBtn.addEventListener("click", async () => {
 });
 
 setMode("register");
+loadConfig();
 loadMe();
