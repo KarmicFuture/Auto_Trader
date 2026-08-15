@@ -39,13 +39,3 @@ python -m src.main
 ```
 
 Optional secrets: `WATCH_ZIP`, `NOTIFY_EMAIL_TO`, `SMTP_*`, `DISCORD_WEBHOOK_URL`
-
-## Job Buddy
-
-Personal job-search desk (search, fit score, application pipeline):
-
-```bash
-python3 job-buddy/server.py
-```
-
-Open http://localhost:3030 — details in [job-buddy/README.md](job-buddy/README.md).
