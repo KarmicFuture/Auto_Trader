@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Buddy</title>
+    <meta
+      name="description"
+      content="Search roles, score the fit, and keep your applications moving."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <div class="app">
+      <aside class="rail">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">JB</span>
+          <div>
+            <p class="eyebrow">Career desk</p>
+            <h1>Job Buddy</h1>
+          </div>
+        </div>
+        <nav class="tabs" aria-label="Primary">
+          <button type="button" class="tab is-active" data-view="today">Today</button>
+          <button type="button" class="tab" data-view="discover">Discover</button>
+          <button type="button" class="tab" data-view="pipeline">Pipeline</button>
+          <button type="button" class="tab" data-view="profile">Profile</button>
+        </nav>
+        <p class="rail-note" id="rail-note">Your search stays on this device.</p>
+      </aside>
+
+      <main class="stage">
+        <section class="view is-active" id="view-today" aria-label="Today">
+          <header class="view-head">
+            <div>
+              <p class="kicker" id="today-kicker">Good day</p>
+              <h2 id="today-title">Here’s what needs you.</h2>
+            </div>
+          </header>
+          <div class="stats" id="today-stats"></div>
+          <div class="action-list" id="today-actions"></div>
+        </section>
+
+        <section class="view" id="view-discover" aria-label="Discover" hidden>
+          <header class="view-head">
+            <div>
+              <p class="kicker">Find roles</p>
+              <h2>What’s a good next application?</h2>
+            </div>
+            <p class="mode-pill" id="discover-mode" hidden></p>
+          </header>
+          <form class="search" id="search-form">
+            <label class="field grow">
+              <span>Keywords</span>
+              <input id="q" type="search" placeholder="Python, product manager, SRE…" />
+            </label>
+            <label class="field">
+              <span>Location</span>
+              <input id="location" type="text" placeholder="Remote, Austin, NYC…" />
+            </label>
+            <label class="check">
+              <input id="remote-only" type="checkbox" />
+              <span>Remote only</span>
+            </label>
+            <button type="submit" class="btn primary" id="btn-search">Search</button>
+          </form>
+          <p class="banner" id="discover-banner" hidden></p>
+          <div class="job-grid" id="job-grid"></div>
+          <p class="empty" id="discover-empty" hidden>No roles matched. Try a broader keyword.</p>
+        </section>
+
+        <section class="view" id="view-pipeline" aria-label="Pipeline" hidden>
+          <header class="view-head">
+            <div>
+              <p class="kicker">Track the work</p>
+              <h2>Move cards as you hear back.</h2>
+            </div>
+          </header>
+          <div class="board" id="pipeline-board"></div>
+        </section>
+
+        <section class="view" id="view-profile" aria-label="Profile" hidden>
+          <header class="view-head">
+            <div>
+              <p class="kicker">Who you’re looking for</p>
+              <h2>Job Buddy scores listings against this.</h2>
+            </div>
+          </header>
+          <form class="profile-form" id="profile-form">
+            <label class="field">
+              <span>Your name</span>
+              <input id="profile-name" type="text" placeholder="Vinod" autocomplete="name" />
+            </label>
+            <label class="field grow">
+              <span>Target titles</span>
+              <input id="profile-titles" type="text" placeholder="Software engineer, backend engineer" />
+            </label>
+            <label class="field grow">
+              <span>Skills</span>
+              <input id="profile-skills" type="text" placeholder="Python, FastAPI, Postgres, AWS" />
+            </label>
+            <label class="field grow">
+              <span>Cities you’ll consider</span>
+              <input id="profile-locations" type="text" placeholder="Remote, Austin, New York" />
+            </label>
+            <label class="field">
+              <span>Work style</span>
+              <select id="profile-remote">
+                <option value="any">Any</option>
+                <option value="remote">Remote</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="onsite">On-site</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Salary floor (USD)</span>
+              <input id="profile-salary" type="number" min="0" step="1000" placeholder="140000" />
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Save profile</button>
+              <p class="hint" id="profile-saved" hidden>Saved on this device.</p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="drawer" id="job-drawer">
+      <form method="dialog" class="drawer-inner" id="job-form">
+        <header class="drawer-head">
+          <div>
+            <p class="kicker" id="drawer-company">Company</p>
+            <h3 id="drawer-title">Role</h3>
+          </div>
+          <button value="close" class="btn ghost icon" aria-label="Close">✕</button>
+        </header>
+        <p class="drawer-meta" id="drawer-meta"></p>
+        <p class="fit-line" id="drawer-fit"></p>
+        <ul class="reasons" id="drawer-reasons"></ul>
+        <div class="drawer-grid">
+          <label class="field">
+            <span>Status</span>
+            <select id="drawer-status" name="status">
+              <option value="saved">Saved</option>
+              <option value="applied">Applied</option>
+              <option value="interviewing">Interviewing</option>
+              <option value="offer">Offer</option>
+              <option value="closed">Closed</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Applied</span>
+            <input id="drawer-applied" type="date" name="applied_at" />
+          </label>
+          <label class="field">
+            <span>Interview</span>
+            <input id="drawer-interview" type="date" name="interview_at" />
+          </label>
+          <label class="field">
+            <span>Follow up</span>
+            <input id="drawer-follow" type="date" name="follow_up_at" />
+          </label>
+          <label class="field grow">
+            <span>Contact</span>
+            <input id="drawer-contact" type="text" name="contact" placeholder="Recruiter, hiring manager…" />
+          </label>
+          <label class="field grow">
+            <span>Notes</span>
+            <textarea id="drawer-notes" name="notes" rows="4" placeholder="What stood out, questions, next step…"></textarea>
+          </label>
+        </div>
+        <div class="drawer-actions">
+          <a class="btn ghost" id="drawer-link" href="#" target="_blank" rel="noreferrer">Open listing</a>
+          <button type="button" class="btn ghost danger" id="drawer-remove">Remove</button>
+          <button type="submit" class="btn primary" id="drawer-save">Save to pipeline</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/js/app.js" type="module"></script>
+  </body>
+</html>
