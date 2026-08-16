@@ -19280,6 +19280,26 @@
       "watch_id": "porsche-cayman",
       "year": 2014
     },
+    "carvana:cv-3006336164": {
+      "fair_value": 28400,
+      "id": "cv-3006336164",
+      "location": "Chandler, AZ",
+      "make": "Porsche",
+      "mileage": 69372,
+      "model": "Cayman",
+      "notes": "Anti-Theft System, Power Door Locks, Key less Entry, Air Conditioning, Cruise Con trol, Powe",
+      "price": 32990,
+      "source": "carvana",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/kajuro40cnxyu0jl5um6.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "title": "2011 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4616699",
+      "value_delta": 4590,
+      "value_label": "Stretched",
+      "value_score": 23.1,
+      "watch_id": "porsche-cayman",
+      "year": 2011
+    },
     "carvana:cv-3006345453": {
       "fair_value": 40800,
       "id": "cv-3006345453",
@@ -21303,7 +21323,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Linden, NJ",
+      "location": "Union City, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -24266,6 +24286,7 @@
     "carvana:cv-2005090470",
     "carvana:cv-2005093562",
     "carvana:cv-2005115410",
+    "carvana:cv-3006336164",
     "carvana:cv-3006345453",
     "carvana:cv-3006363888",
     "carvana:cv-3006374614",
