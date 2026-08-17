@@ -21483,7 +21483,7 @@
     "ebay:eb-v1|278207319305|0": {
       "fair_value": 32600,
       "id": "eb-v1|278207319305|0",
-      "location": "South Pasadena",
+      "location": "Granada Hills",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
@@ -21503,7 +21503,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "South Pasadena",
+      "location": "Granada Hills",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -21603,7 +21603,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Mountain Lakes, NJ",
+      "location": "Union City, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -21643,7 +21643,7 @@
     "ebay:eb-v1|318713461091|0": {
       "fair_value": 54500,
       "id": "eb-v1|318713461091|0",
-      "location": "Burlington, NJ",
+      "location": "Waterford Works, NJ",
       "make": "Porsche",
       "mileage": 61114,
       "model": "Cayman",
@@ -22379,6 +22379,26 @@
       "value_score": 0.0,
       "watch_id": "honda-s2000",
       "year": 2000
+    },
+    "ebay:eb-v1|407151790080|0": {
+      "fair_value": 63100,
+      "id": "eb-v1|407151790080|0",
+      "location": "Daytona Beach, FL",
+      "make": "Porsche",
+      "mileage": 21977,
+      "model": "Cayman",
+      "notes": "- Carfax Accident Free\n- Florida Driven\n - LIFETIME OIL CHANGES\n- Beige Leather s eat trim\n-",
+      "price": 66500,
+      "source": "ebay",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/XRsAAeSwHdJqghEL/s-l1200.jpg",
+      "title": "2023 Porsche Cayman Base",
+      "url": "https://www.ebay.com/itm/407151790080",
+      "value_delta": 3400,
+      "value_label": "Soft value",
+      "value_score": 41.0,
+      "watch_id": "porsche-cayman",
+      "year": 2023
     },
     "ebay:eb-v1|800386811205|0": {
       "fair_value": 35700,
@@ -24881,6 +24901,7 @@
     "ebay:eb-v1|398209297109|0",
     "ebay:eb-v1|407089592936|0",
     "ebay:eb-v1|407115664279|0",
+    "ebay:eb-v1|407151790080|0",
     "ebay:eb-v1|800386811205|0",
     "ebay:eb-v1|820005122738|0",
     "ebay:eb-v1|820008865789|0",
