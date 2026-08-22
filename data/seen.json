@@ -23020,6 +23020,26 @@
       "watch_id": "honda-s2000",
       "year": 2006
     },
+    "ebay:eb-v1|267764049016|0": {
+      "fair_value": 58300,
+      "id": "eb-v1|267764049016|0",
+      "location": "Houston, TX",
+      "make": "Porsche",
+      "mileage": 43705,
+      "model": "Cayman",
+      "notes": "New Vehicles come with a full-factory wa rranty. Used vehicles may have a remaini ng-factory",
+      "price": 63158,
+      "source": "ebay",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/SkkAAeSw76lqenD1/s-l640.jpg",
+      "title": "2023 Porsche Cayman 4 Wagon 4D",
+      "url": "https://www.ebay.com/itm/267764049016",
+      "value_delta": 4858,
+      "value_label": "Soft value",
+      "value_score": 36.1,
+      "watch_id": "porsche-cayman",
+      "year": 2023
+    },
     "ebay:eb-v1|278199215786|0": {
       "fair_value": 18500,
       "id": "eb-v1|278199215786|0",
@@ -23223,7 +23243,7 @@
     "ebay:eb-v1|318651387448|0": {
       "fair_value": 24100,
       "id": "eb-v1|318651387448|0",
-      "location": "Mountain Lakes, NJ",
+      "location": "Springfield, NJ",
       "make": "Honda",
       "mileage": 117216,
       "model": "S2000",
@@ -23263,7 +23283,7 @@
     "ebay:eb-v1|318713461091|0": {
       "fair_value": 54500,
       "id": "eb-v1|318713461091|0",
-      "location": "Gloucester City, NJ",
+      "location": "Burlington, NJ",
       "make": "Porsche",
       "mileage": 61114,
       "model": "Cayman",
@@ -26953,6 +26973,7 @@
     "ebay:eb-v1|267757071212|0",
     "ebay:eb-v1|267757696820|0",
     "ebay:eb-v1|267761222641|0",
+    "ebay:eb-v1|267764049016|0",
     "ebay:eb-v1|278199215786|0",
     "ebay:eb-v1|278207319305|0",
     "ebay:eb-v1|278253532278|0",
