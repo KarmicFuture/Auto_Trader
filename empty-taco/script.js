@@ -133,6 +133,40 @@ const termLines = [
   { cmd: false, text: "ready. send the address." },
 ];
 
+function bindSend() {
+  const form = document.getElementById("send-form");
+  const status = document.getElementById("send-status");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) {
+      if (status) {
+        status.textContent = "Need you, them, and a place to park the dog.";
+        status.style.color = "#fff6e4";
+      }
+      return;
+    }
+    const values = formValues(form);
+    const body = [
+      "Empty Taco — $20 send a hot dog to a friend",
+      "",
+      `From: ${values.from_name || ""} <${values.from_email || ""}>`,
+      `To: ${values.to_name || ""}`,
+      `Phone: ${values.to_phone || ""}`,
+      `Address: ${values.to_address || ""}`,
+      `Note: ${values.note || "(none)"}`,
+      "",
+      "Amount: $20",
+    ].join("\n");
+    window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco $20 friend dog")}&body=${encodeURIComponent(body)}`;
+    if (status) {
+      status.textContent = "Opening email. We’ll confirm, then you shoot us $20.";
+      status.style.color = "#fff6e4";
+    }
+  });
+}
+
 function bindMerch() {
   const form = document.getElementById("merch-form");
   const status = document.getElementById("merch-status");
@@ -208,6 +242,7 @@ function playTerminal() {
 
 document.addEventListener("DOMContentLoaded", () => {
   bindForm();
+  bindSend();
   bindMerch();
   playTerminal();
 });

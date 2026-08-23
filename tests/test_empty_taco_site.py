@@ -21,6 +21,10 @@ def test_promo_page_covers_booking_menu_story_and_merch():
     assert 'id="merch"' in html
     assert "NO TACOS tee" in html
     assert "Ybor" in html
+    assert 'id="send"' in html
+    assert "$20" in html
+    assert "Send a hot dog to a friend" in html
+    assert 'id="send-form"' in html
 
 
 def test_booking_script_builds_a_mailto():

@@ -16,8 +16,8 @@
 
   <div class="tape" aria-hidden="true">
     <div class="tape__track">
-      <span>Implement fun · $3 dogs · $5 combo · Ridiculous world tour · No tacos · Still standing · Cash · Cash App · Venmo · </span>
-      <span>Implement fun · $3 dogs · $5 combo · Ridiculous world tour · No tacos · Still standing · Cash · Cash App · Venmo · </span>
+      <span>Implement fun · $3 dogs · $5 combo · $20 send a dog to a friend · Ridiculous world tour · No tacos · Cash · Cash App · Venmo · </span>
+      <span>Implement fun · $3 dogs · $5 combo · $20 send a dog to a friend · Ridiculous world tour · No tacos · Cash · Cash App · Venmo · </span>
     </div>
   </div>
 
@@ -36,6 +36,7 @@
     <nav class="nav" aria-label="Primary">
       <a href="#why">Why</a>
       <a href="#menu">Menu</a>
+      <a href="#send">Send $20</a>
       <a href="#merch">Merch</a>
       <a href="#book">Book us</a>
     </nav>
@@ -56,8 +57,8 @@
           forgot how.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--chili" href="#book">Book us to your place</a>
-          <a class="btn btn--ghost" href="#merch">Shop the merch</a>
+          <a class="btn btn--chili" href="#send">Send a dog — $20</a>
+          <a class="btn btn--ghost" href="#book">Book us to your place</a>
         </div>
         <dl class="stats">
           <div>
@@ -142,7 +143,7 @@
     <section class="menu" id="menu">
       <div class="menu__head">
         <p class="eyebrow">The entire menu. We deleted the rest.</p>
-        <h2>Two prices. Don’t make it weird.</h2>
+        <h2>Three prices. Don’t make it weird.</h2>
       </div>
       <div class="receipt">
         <header>
@@ -165,12 +166,81 @@
             </div>
             <b>$5.00</b>
           </li>
+          <li>
+            <div>
+              <strong>Send a hot dog to a friend</strong>
+              <span>Twenty bucks. We take a dog to their door. You look like a legend.</span>
+            </div>
+            <b><a href="#send">$20.00</a></b>
+          </li>
         </ul>
         <footer>
           <span>We priced it so you stop doing math.</span>
           <span>Cash / Cash App / Venmo.</span>
         </footer>
       </div>
+    </section>
+
+    <section class="send" id="send">
+      <div class="send__copy">
+        <p class="eyebrow">The $20 move</p>
+        <h2>Send a hot dog to a friend.</h2>
+        <p>
+          They had a day. You have twenty dollars and a sense of humor.
+          We roll a dog to their place in Tampa / Hillsborough — combo
+          if they want it — and we tell them it came from you. No app.
+          No points. Just a stupidly kind delivery.
+        </p>
+        <p>
+          <a class="btn btn--ghost" href="#send-form">Send the $20 dog</a>
+        </p>
+      </div>
+
+      <form class="ticket" id="send-form" novalidate>
+        <div class="ticket__bar">
+          <span>FRIEND DOG · $20</span>
+          <span>NOT A SUBSCRIPTION</span>
+        </div>
+        <fieldset>
+          <legend>You</legend>
+          <label>
+            Your name
+            <input type="text" name="from_name" required />
+          </label>
+          <label>
+            Your email
+            <input type="email" name="from_email" required />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>The friend</legend>
+          <label>
+            Their name
+            <input type="text" name="to_name" required />
+          </label>
+          <label>
+            Their phone
+            <input type="tel" name="to_phone" required />
+          </label>
+          <label class="wide">
+            Their address
+            <input type="text" name="to_address" placeholder="Street, neighborhood, Tampa" required />
+          </label>
+          <label class="wide">
+            Note on the bag (optional, keep it decent)
+            <textarea name="note" rows="2" placeholder="You looked tired. Eat this."></textarea>
+          </label>
+        </fieldset>
+        <div class="quote">
+          <p class="quote__kicker">The charge</p>
+          <p class="quote__math">$20 — one dog, delivered to a human you like</p>
+          <p class="quote__fine">We confirm by email, then Venmo / Cash App. Tampa first. Further out, we’ll say so.</p>
+        </div>
+        <div class="ticket__actions">
+          <button class="btn btn--chili" type="submit">Email the $20 send</button>
+        </div>
+        <p class="form-status" id="send-status" role="status"></p>
+      </form>
     </section>
 
     <section class="merch" id="merch">
