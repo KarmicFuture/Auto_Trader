@@ -216,6 +216,51 @@ h1 em {
   font-size: 1.28rem;
 }
 
+.styles-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.28rem 0.75rem;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.pill--regular { background: #ffe07a; }
+.pill--vegan { background: #7dffa0; }
+.pill--keto { background: #c8f4ff; }
+
+.diet-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.diet-cards article {
+  border: 3px solid var(--ink);
+  border-radius: 1.5rem;
+  padding: 1.1rem 1.15rem;
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.diet-cards article:nth-child(1) { background: #ffe07a; transform: rotate(-1.2deg); }
+.diet-cards article:nth-child(2) { background: #7dffa0; transform: rotate(1deg); }
+.diet-cards article:nth-child(3) { background: #c8f4ff; transform: rotate(-0.6deg); }
+
+.diet-cards h3 { margin: 0 0 0.4rem; font-size: 1.35rem; }
+.diet-cards p { margin: 0; }
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -826,7 +871,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 980px) {
-  .hero, .split, .book, .who, .foot, .tampa__grid, .merch__grid, .send {
+  .hero, .split, .book, .who, .foot, .tampa__grid, .merch__grid, .send, .diet-cards {
     grid-template-columns: 1fr;
   }
 
