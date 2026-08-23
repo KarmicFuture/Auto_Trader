@@ -190,7 +190,9 @@
           They had a day. You can’t sit with them, but you can feed them.
           For $20 we bring a hot dog to their place in Tampa / Hillsborough,
           tell them it came from you, and leave them with something warm.
-          It is a small thing. Small things fix more than we admit.
+          You can also add a gift to the
+          <a href="https://www.redcross.org/donate/donation.html" target="_blank" rel="noopener noreferrer">American Red Cross</a>
+          — feed a friend, help someone you’ll never meet.
         </p>
         <p>
           <a class="btn btn--ghost" href="#send-form">Send the $20 dog</a>
@@ -232,10 +234,31 @@
             <textarea name="note" rows="2" placeholder="Thinking of you. Eat this. Call me after."></textarea>
           </label>
         </fieldset>
+        <fieldset class="donate-box">
+          <legend>American Red Cross</legend>
+          <label class="check">
+            <input type="checkbox" name="donate_redcross" checked />
+            Add a Red Cross donation with this send
+          </label>
+          <label>
+            Donation amount
+            <select name="donate_amount">
+              <option value="5">$5</option>
+              <option value="10" selected>$10</option>
+              <option value="20">$20</option>
+              <option value="25">$25</option>
+            </select>
+          </label>
+          <p class="donate-note">
+            We don’t take the donation ourselves. If this is checked, we’ll open the
+            official <a href="https://www.redcross.org/donate/donation.html" target="_blank" rel="noopener noreferrer">Red Cross donate page</a>
+            so the gift goes straight to them.
+          </p>
+        </fieldset>
         <div class="quote">
           <p class="quote__kicker">What you pay</p>
-          <p class="quote__math">$20 — one hot dog, delivered to someone you care about</p>
-          <p class="quote__fine">We’ll email you to confirm, then Venmo or Cash App. Tampa first. If they’re farther, we’ll be honest.</p>
+          <p class="quote__math" id="send-math">$20 dog + $10 Red Cross = $30</p>
+          <p class="quote__fine">We’ll email you to confirm the dog, then Venmo or Cash App. The Red Cross gift is on their site. Tampa first.</p>
         </div>
         <div class="ticket__actions">
           <button class="btn btn--chili" type="submit">Send this $20 dog</button>
@@ -251,6 +274,7 @@
         <p>
           Grab it at the window or send the form. Nothing fancy. Just
           shirts and stickers for folks who believe lunch can be a reset.
+          Add a Red Cross donation at checkout if you want the merch to do extra good.
         </p>
       </div>
       <div class="merch__grid">
@@ -306,6 +330,27 @@
             Size / notes (XL, pickup at the cart, mail it)
             <textarea name="notes" rows="2"></textarea>
           </label>
+        </fieldset>
+        <fieldset class="donate-box">
+          <legend>American Red Cross</legend>
+          <label class="check">
+            <input type="checkbox" name="donate_redcross" checked />
+            Add a Red Cross donation with this merch
+          </label>
+          <label>
+            Donation amount
+            <select name="donate_amount">
+              <option value="5" selected>$5</option>
+              <option value="10">$10</option>
+              <option value="20">$20</option>
+              <option value="25">$25</option>
+            </select>
+          </label>
+          <p class="donate-note">
+            Optional, and it goes to them — not to us. Checking this opens the
+            official <a href="https://www.redcross.org/donate/donation.html" target="_blank" rel="noopener noreferrer">Red Cross donate page</a>
+            in a new tab.
+          </p>
         </fieldset>
         <div class="ticket__actions">
           <button class="btn btn--chili" type="submit">Email my merch request</button>
