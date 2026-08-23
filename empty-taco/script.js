@@ -1,16 +1,14 @@
 const BOOKING_EMAIL = "book@emptytaco.com";
 
 const prices = {
-  classic: 5,
-  loaded: 7,
-  combo: 8,
-  mix: 6.5,
+  classic: 3,
+  combo: 5,
+  mix: 4,
 };
 
 const mixLabels = {
-  classic: "classic dogs",
-  loaded: "loaded dogs",
-  combo: "combos",
+  classic: "$3 dogs",
+  combo: "$5 combos",
   mix: "a mix",
 };
 
@@ -125,15 +123,47 @@ function bindForm() {
 
 const termLines = [
   { cmd: true, text: "$ whoami" },
-  { cmd: false, text: "tech-people-who-love-a-hot-dog" },
+  { cmd: false, text: "gen-x-still-here-still-hungry" },
   { cmd: true, text: "$ cat mission.txt" },
-  { cmd: false, text: "Stand up a licensed Tampa food business" },
-  { cmd: false, text: "in ~3 weeks, under $2,000." },
-  { cmd: false, text: "AI on the back office. Humans on the cart." },
+  { cmd: false, text: "Make life easier. Have fun." },
+  { cmd: false, text: "Implement fun in a ridiculous world." },
+  { cmd: false, text: "$3 dog. $5 with chips and a drink." },
   { cmd: true, text: "$ serve --to your-place" },
-  { cmd: false, text: "hitch ok · steamer hot · mustard loaded" },
+  { cmd: false, text: "hitch ok · steamer hot · merch in the tub" },
   { cmd: false, text: "ready. send the address." },
 ];
+
+function bindMerch() {
+  const form = document.getElementById("merch-form");
+  const status = document.getElementById("merch-status");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const values = formValues(form);
+    const items = [...form.querySelectorAll('input[name="item"]:checked')].map((el) => el.value);
+    if (!form.reportValidity() || !items.length) {
+      if (status) {
+        status.textContent = "Pick at least one thing and tell us who you are.";
+        status.style.color = "#8e1c12";
+      }
+      return;
+    }
+    const body = [
+      "Empty Taco merch pile",
+      "",
+      `Name: ${values.name || ""}`,
+      `Email: ${values.email || ""}`,
+      `Items: ${items.join(", ")}`,
+      `Notes: ${values.notes || "(none)"}`,
+    ].join("\n");
+    window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco merch")}&body=${encodeURIComponent(body)}`;
+    if (status) {
+      status.textContent = "Opening email. If nothing happens, copy that and yell at book@emptytaco.com.";
+      status.style.color = "#2f5e32";
+    }
+  });
+}
 
 function playTerminal() {
   const log = document.getElementById("term-log");
@@ -178,5 +208,6 @@ function playTerminal() {
 
 document.addEventListener("DOMContentLoaded", () => {
   bindForm();
+  bindMerch();
   playTerminal();
 });
