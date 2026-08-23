@@ -252,10 +252,10 @@ h1 em {
   rotate: 12deg;
   border: 3px solid var(--chili);
   color: var(--chili);
-  font-family: var(--font-display);
-  font-weight: 800;
+  font-family: "Permanent Marker", var(--font-display);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   padding: 0.35rem 0.55rem;
   background: rgba(243, 230, 201, 0.92);
 }
@@ -363,6 +363,73 @@ h1 em {
   gap: 1rem;
   color: var(--ink-soft);
 }
+
+.merch {
+  padding: 4.5rem 6vw;
+  background: #1c140e;
+  color: #f3e6c9;
+}
+
+.merch__head {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.merch h2 {
+  color: var(--mustard);
+}
+
+.merch__head p { color: #e7d7b4; }
+
+.merch__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.merch__grid article {
+  border: 2px solid var(--mustard);
+  padding: 1rem 1.05rem 1.15rem;
+  background: #2a1f16;
+}
+
+.merch .sku {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--mustard);
+}
+
+.merch h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.25rem;
+}
+
+.merch__grid p { margin: 0 0 0.8rem; color: #e7d7b4; font-size: 1rem; }
+
+.merch__grid strong {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--mustard);
+}
+
+.merch-form { max-width: 44rem; }
+
+.merch-form legend,
+.merch-form label { color: var(--ink); }
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.92rem;
+}
+
+.check input { width: auto; }
 
 .book {
   display: grid;
@@ -566,7 +633,7 @@ input, select, textarea {
 }
 
 @media (max-width: 980px) {
-  .hero, .split, .book, .who, .foot, .tampa__grid {
+  .hero, .split, .book, .who, .foot, .tampa__grid, .merch__grid {
     grid-template-columns: 1fr;
   }
 
