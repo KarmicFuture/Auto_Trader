@@ -12,7 +12,7 @@ def test_empty_taco_site_files_exist():
 def test_promo_page_covers_booking_menu_story_and_merch():
     html = (SITE / "index.html").read_text()
     assert "Empty Taco" in html
-    assert "Schedule us to your place" in html
+    assert "Book the cart for your people" in html
     assert 'id="booking-form"' in html
     assert "$3.00" in html
     assert "$5.00" in html
