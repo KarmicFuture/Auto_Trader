@@ -23583,7 +23583,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "South Pasadena",
+      "location": "",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -23623,7 +23623,7 @@
     "ebay:eb-v1|278302222644|0": {
       "fair_value": 32600,
       "id": "eb-v1|278302222644|0",
-      "location": "South Pasadena",
+      "location": "",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
