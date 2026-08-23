@@ -28,6 +28,10 @@ def test_promo_page_covers_booking_menu_story_and_merch():
     assert 'id="send-form"' in html
     assert "redcross.org/donate" in html
     assert html.count('name="donate_redcross"') >= 2
+    assert "Vegan" in html
+    assert "Regular" in html
+    assert "Keto-friendly" in html
+    assert "name=\"dog_style\"" in html
 
 
 def test_booking_script_builds_a_mailto():
