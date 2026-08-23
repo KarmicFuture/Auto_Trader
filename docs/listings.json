@@ -1,6 +1,6 @@
 {
   "count": 695,
-  "refreshed_at": "2026-08-23T05:25:44.837134+00:00",
+  "refreshed_at": "2026-08-23T05:27:02.018332+00:00",
   "errors": [],
   "watches": [
     {
@@ -628,7 +628,7 @@
       "source": "bringatrailer",
       "title": "28k-Mile 2006 Honda S2000",
       "url": "https://bringatrailer.com/listing/2006-honda-s2000-194/",
-      "price": 26250,
+      "price": 26500,
       "year": 2006,
       "mileage": 28000,
       "location": null,
@@ -641,7 +641,7 @@
       "fair_value": 40600,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -14350
+      "value_delta": -14100
     },
     {
       "id": "cgu-455712675",
