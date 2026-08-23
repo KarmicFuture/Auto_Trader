@@ -31,6 +31,16 @@ Rebuild static docs:
 python scripts/build_static_site.py
 ```
 
+## Empty Taco
+
+Promotional site for the Tampa mobile hot dog cart lives in `empty-taco/`. Local preview:
+
+```bash
+python3 -m http.server 8080 --directory empty-taco
+```
+
+The Pages rebuild copies it to `docs/empty-taco/`.
+
 ## Alerts
 
 ```bash

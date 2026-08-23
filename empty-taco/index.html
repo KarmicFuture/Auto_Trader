@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empty Taco — Tampa hot dogs, booked to your place</title>
+  <meta name="description" content="Empty Taco is a Tampa mobile hot dog cart run by tech people. No tacos. Real dogs. Book us for your office, backyard, brewery, or party." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#book">Skip to booking</a>
+
+  <div class="tape" aria-hidden="true">
+    <div class="tape__track">
+      <span>No tacos · Just dogs · Tampa · Hitch the cart · We come to you · Tech people who love a hot dog · Cash · Cash App · Venmo · </span>
+      <span>No tacos · Just dogs · Tampa · Hitch the cart · We come to you · Tech people who love a hot dog · Cash · Cash App · Venmo · </span>
+    </div>
+  </div>
+
+  <header class="top">
+    <a class="mark" href="#top">
+      <svg class="mark__icon" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M8 20c4-10 28-10 32 0-2 3-6 5-16 5S10 23 8 20Z" fill="#e6b325"/>
+        <path d="M10 21c3.5 7 24.5 7 28 0" fill="none" stroke="#1c140e" stroke-width="1.6"/>
+        <path d="M14 18c6 8 14 8 20 0" fill="none" stroke="#c42b1c" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="18" cy="16" r="1.2" fill="#2f5e32"/>
+        <circle cx="24" cy="15" r="1.2" fill="#2f5e32"/>
+        <circle cx="30" cy="16" r="1.2" fill="#2f5e32"/>
+      </svg>
+      Empty Taco
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#book">Book us</a>
+      <a href="#who">Who we are</a>
+      <a href="#tampa">Tampa</a>
+    </nav>
+    <a class="top__cta" href="#book">Schedule the cart</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Mobile hot dog cart · Hillsborough County</p>
+        <h1>
+          We called it Empty Taco.<br />
+          <em>We sell hot dogs.</em>
+        </h1>
+        <p class="lede">
+          Tech people, a used cart, and a hitch on a regular sedan.
+          We roll to weekday lunch, weekend events, and — if you book us — your driveway.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--chili" href="#book">Book us to your place</a>
+          <a class="btn btn--ghost" href="#who">Meet the humans</a>
+        </div>
+        <dl class="stats">
+          <div>
+            <dt>Classic dog</dt>
+            <dd>$5</dd>
+          </div>
+          <div>
+            <dt>Private booking</dt>
+            <dd>Your address</dd>
+          </div>
+          <div>
+            <dt>Window</dt>
+            <dd>Lunch + nights</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="hero__art" aria-hidden="true">
+        <div class="stamp">No tacos inside</div>
+        <svg class="dog-poster" viewBox="0 0 420 480" role="img">
+          <rect x="18" y="18" width="384" height="444" rx="8" fill="#f3e6c9" stroke="#1c140e" stroke-width="3"/>
+          <rect x="36" y="36" width="348" height="408" fill="none" stroke="#1c140e" stroke-width="1.2"/>
+          <text x="210" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1c140e">TAMPA · HTDG CART</text>
+          <path d="M70 250c20-70 260-70 280 0-18 48-70 78-140 78S88 298 70 250Z" fill="#c9894a" stroke="#1c140e" stroke-width="3"/>
+          <path d="M88 246c16-42 228-42 244 0-14 28-56 46-122 46S102 274 88 246Z" fill="#f0c48a"/>
+          <path d="M108 238c30-18 176-18 206 0-8 22-54 38-103 38s-95-16-103-38Z" fill="#c42b1c" stroke="#1c140e" stroke-width="2"/>
+          <path d="M130 226c8 6 14 18 12 28M180 220c6 8 10 20 8 32M230 220c6 8 10 20 8 32M280 226c-4 8-6 18-4 28" stroke="#8a1c12" stroke-width="2" fill="none"/>
+          <path d="M150 214c20-16 100-16 120 0" stroke="#e6b325" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="168" cy="248" r="5" fill="#2f5e32"/>
+          <circle cx="210" cy="256" r="5" fill="#2f5e32"/>
+          <circle cx="252" cy="248" r="5" fill="#2f5e32"/>
+          <text x="210" y="370" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="42" font-weight="800" fill="#1c140e">$5 DOG</text>
+          <text x="210" y="402" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1c140e">FRANK · BUN · MUSTARD · DONE</text>
+        </svg>
+      </figure>
+    </section>
+
+    <section class="split" id="what">
+      <div class="split__left">
+        <h2>What the cart is doing</h2>
+        <p>
+          Empty Taco is a one-cart, one-owner hot dog stand in Tampa.
+          Weekdays we plant at a lunch spot. Nights and weekends we chase
+          foot traffic — Ybor Saturday Market, local breweries, Gasparilla,
+          Guavaween, and whatever driveway you put on the booking form.
+        </p>
+        <p>
+          The name is a leftover. The license is Florida’s simplest mobile
+          food category: a hot dog cart. The operating model is lean on
+          purpose — used cart, hitch on a car we already own, commissary
+          kitchen by the day, no second employee.
+        </p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="steps__n">01</span>
+          <strong>You send a place and a time.</strong>
+          Office park, backyard, brewery lot, baby shower, Tuesday lunch.
+        </li>
+        <li>
+          <span class="steps__n">02</span>
+          <strong>We confirm dogs and headcount.</strong>
+          You get a simple yes, a menu mix, and a window we can actually hit.
+        </li>
+        <li>
+          <span class="steps__n">03</span>
+          <strong>We hitch up and show up.</strong>
+          Steam, condiments, chips, drinks. Cash, Cash App, or Venmo.
+        </li>
+      </ol>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="menu__head">
+        <p class="eyebrow">The whole menu</p>
+        <h2>Three things. That’s the point.</h2>
+      </div>
+      <div class="receipt">
+        <header>
+          <span>EMPTY TACO</span>
+          <span>TAMPA, FL</span>
+        </header>
+        <p class="receipt__sub">Guest check · no tacos were harmed</p>
+        <ul>
+          <li>
+            <div>
+              <strong>Classic dog</strong>
+              <span>Frank, bun, mustard, ketchup, relish, onions</span>
+            </div>
+            <b>$5.00</b>
+          </li>
+          <li>
+            <div>
+              <strong>Chili-cheese / loaded</strong>
+              <span>Chili, cheese, and the rest of the cart on top</span>
+            </div>
+            <b>$7.00</b>
+          </li>
+          <li>
+            <div>
+              <strong>Combo</strong>
+              <span>Any dog + chips + a drink</span>
+            </div>
+            <b>$8.00</b>
+          </li>
+        </ul>
+        <footer>
+          <span>Food cost stays tight so the cart stays cheap.</span>
+          <span>Pay at the window.</span>
+        </footer>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="book__intro">
+        <p class="eyebrow">Dispatch the cart</p>
+        <h2>Schedule us to your place.</h2>
+        <p>
+          Fill this out and we email you a confirmation — or a honest no if
+          the date is already stacked. Private bookings first in Tampa and
+          nearby Hillsborough. Further out, ask anyway.
+        </p>
+        <ul class="book__rules">
+          <li>48 hours notice when we can; same-week is possible if the cart is free.</li>
+          <li>Private events work best at 20+ dogs. Smaller? We’ll tell you if a pop-up still makes sense.</li>
+          <li>We tow a ~650 lb cart. Need a flat-ish spot, a curb, or a parking stall we can work from.</li>
+          <li>You get a human reply. The form just starts the ticket.</li>
+        </ul>
+      </div>
+
+      <form class="ticket" id="booking-form" novalidate>
+        <div class="ticket__bar">
+          <span>SERVICE TICKET</span>
+          <span id="ticket-id">ET-XXXX</span>
+        </div>
+
+        <fieldset>
+          <legend>Who’s booking</legend>
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" required />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where we roll</legend>
+          <label>
+            Event type
+            <select name="event_type" required>
+              <option value="">Pick one</option>
+              <option>Office lunch</option>
+              <option>Backyard / house party</option>
+              <option>Brewery or bar lot</option>
+              <option>Birthday or celebration</option>
+              <option>Market or public event</option>
+              <option>Something weirder — tell us</option>
+            </select>
+          </label>
+          <label class="wide">
+            Address or venue
+            <input type="text" name="address" autocomplete="street-address" placeholder="Street, neighborhood, Tampa" required />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>When + how many</legend>
+          <label>
+            Date
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            Start time
+            <input type="time" name="time" required />
+          </label>
+          <label>
+            Hours on site
+            <select name="hours">
+              <option value="1">1 hour</option>
+              <option value="2" selected>2 hours</option>
+              <option value="3">3 hours</option>
+              <option value="4">4 hours</option>
+            </select>
+          </label>
+          <label>
+            Hungry people
+            <input type="number" name="headcount" min="8" max="400" value="30" required />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>What to cook</legend>
+          <label>
+            Mostly
+            <select name="mix" id="mix">
+              <option value="classic">Classic dogs</option>
+              <option value="loaded">Chili-cheese / loaded</option>
+              <option value="combo">Combos</option>
+              <option value="mix" selected>A mix — you decide on site</option>
+            </select>
+          </label>
+          <label class="wide">
+            Notes (allergies, parking, gate code, playlist we should ignore)
+            <textarea name="notes" rows="3"></textarea>
+          </label>
+        </fieldset>
+
+        <div class="quote" aria-live="polite">
+          <div>
+            <p class="quote__kicker">Rough ticket</p>
+            <p class="quote__math" id="quote-math">30 people × mix ≈ $195</p>
+          </div>
+          <p class="quote__fine">Estimate only — we lock the number when we confirm. Not a card charge.</p>
+        </div>
+
+        <div class="ticket__actions">
+          <button class="btn btn--chili" type="submit">Email this booking</button>
+          <button class="btn btn--ghost" type="button" id="copy-btn">Copy the request</button>
+        </div>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="who" id="who">
+      <div class="who__copy">
+        <p class="eyebrow">The humans</p>
+        <h2>Tech people who just love a hot dog.</h2>
+        <p>
+          We come from keyboards, not culinary school. Empty Taco is the
+          proof-of-concept: can you stand up a licensed, cash-flowing food
+          business in Tampa for under $2,000, in about three weeks, with
+          an AI system carrying the paperwork, the math, and the weekly
+          schedule?
+        </p>
+        <p>
+          AI drafts the LLC details, the DBPR narrative, the commissary
+          terms, the daily P&amp;L, the social captions, and the reorder
+          list. A human still files the forms, drives the cart, handles
+          the cash, and cooks the dog. Florida law is not optional, and
+          neither is a hot steamer.
+        </p>
+        <p>
+          The owner’s job compresses to the parts that actually need
+          hands: hitch, setup, serve, pack out. If you book us, those
+          hands are the ones that show up at your place.
+        </p>
+      </div>
+      <div class="term" aria-hidden="false">
+        <div class="term__chrome">
+          <span></span><span></span><span></span>
+          <code>empty-taco — zsh</code>
+        </div>
+        <pre id="term-log"></pre>
+      </div>
+    </section>
+
+    <section class="tampa" id="tampa">
+      <h2>Where the cart lives</h2>
+      <div class="tampa__grid">
+        <article>
+          <h3>Weekday lunch</h3>
+          <p>One fixed spot so regulars know where the mustard is. We post the pin the morning of.</p>
+        </article>
+        <article>
+          <h3>Ybor &amp; markets</h3>
+          <p>Saturday Market energy, late nights, and anyone who already came out for a walk.</p>
+        </article>
+        <article>
+          <h3>Breweries</h3>
+          <p>You bring the beer. We bring the thing people eat between pints.</p>
+        </article>
+        <article>
+          <h3>Gasparilla / Guavaween</h3>
+          <p>Tampa’s big days. If the city is already in the street, the cart should be too.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>
+      <strong>Empty Taco</strong>
+      <p>Mobile hot dog cart · Tampa, FL · Single-owner LLC</p>
+    </div>
+    <p class="foot__fine">
+      Planning estimate, August 2026. Permits and fees verified with
+      Florida DBPR, Hillsborough County, and the City of Tampa before
+      we take anyone’s money. The tacos remain empty on purpose.
+    </p>
+    <a href="#book">Schedule us</a>
+  </footer>
+
+  <a class="dock" href="#book">Book the cart</a>
+  <script src="./script.js"></script>
+</body>
+</html>
