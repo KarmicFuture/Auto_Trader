@@ -239,9 +239,31 @@ function playTerminal() {
   writeLine();
 }
 
+function sprinkle(event) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colors = ["#ff3d2e", "#ffc107", "#2f9e44", "#4cc9f0", "#ff6bb5"];
+  const x = event.clientX;
+  const y = event.clientY;
+  for (let i = 0; i < 10; i += 1) {
+    const dot = document.createElement("span");
+    dot.className = "pop";
+    dot.style.left = `${x}px`;
+    dot.style.top = `${y}px`;
+    dot.style.background = colors[i % colors.length];
+    const angle = (Math.PI * 2 * i) / 10;
+    dot.style.setProperty("--x", `${Math.cos(angle) * 70}px`);
+    dot.style.setProperty("--y", `${Math.sin(angle) * 70}px`);
+    document.body.appendChild(dot);
+    window.setTimeout(() => dot.remove(), 720);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   bindForm();
   bindSend();
   bindMerch();
   playTerminal();
+  document.querySelectorAll(".btn, .top__cta").forEach((el) => {
+    el.addEventListener("click", sprinkle);
+  });
 });

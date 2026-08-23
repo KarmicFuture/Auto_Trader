@@ -8,10 +8,10 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fredoka:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Permanent+Marker&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
+<body class="fun">
   <a class="skip" href="#book">Skip to booking</a>
 
   <div class="tape" aria-hidden="true">
@@ -61,15 +61,15 @@
           <a class="btn btn--ghost" href="#book">Book us for your place</a>
         </div>
         <dl class="stats">
-          <div>
+          <div class="stat-pop" style="--tilt:-6deg">
             <dt>The dog</dt>
             <dd>$3</dd>
           </div>
-          <div>
+          <div class="stat-pop" style="--tilt:4deg">
             <dt>Dog + chips + drink</dt>
             <dd>$5</dd>
           </div>
-          <div>
+          <div class="stat-pop" style="--tilt:-3deg">
             <dt>Send to a friend</dt>
             <dd>$20</dd>
           </div>
@@ -77,6 +77,9 @@
       </div>
 
       <figure class="hero__art" aria-hidden="true">
+        <div class="floater floater--mustard">mustard</div>
+        <div class="floater floater--relish">relish</div>
+        <div class="floater floater--heart">♥</div>
         <div class="stamp">Bad-day fix</div>
         <svg class="dog-poster" viewBox="0 0 420 480" role="img">
           <rect x="18" y="18" width="384" height="444" rx="8" fill="#f3e6c9" stroke="#1c140e" stroke-width="3"/>
@@ -251,25 +254,25 @@
         </p>
       </div>
       <div class="merch__grid">
-        <article>
+        <article class="tilt" style="--tilt:-3deg">
           <p class="sku">ET-001</p>
           <h3>NO TACOS tee</h3>
           <p>Soft black tee. Two honest words. Easy to live in.</p>
           <strong>$25</strong>
         </article>
-        <article>
+        <article class="tilt" style="--tilt:3deg">
           <p class="sku">ET-002</p>
           <h3>IMPLEMENT FUN hat</h3>
           <p>For sunny Tampa days and brewery lots. Comfortable on purpose.</p>
           <strong>$18</strong>
         </article>
-        <article>
+        <article class="tilt" style="--tilt:-2deg">
           <p class="sku">ET-003</p>
           <h3>Bad-day-fix stickers</h3>
           <p>Five stickers for a laptop, cooler, or the notebook you actually like.</p>
           <strong>$5</strong>
         </article>
-        <article>
+        <article class="tilt" style="--tilt:4deg">
           <p class="sku">ET-004</p>
           <h3>“$3 DOG” koozie</h3>
           <p>Keeps the combo drink happy. Tiny, useful, a little silly.</p>
