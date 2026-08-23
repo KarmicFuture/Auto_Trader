@@ -17,7 +17,8 @@ def test_promo_page_covers_booking_menu_story_and_merch():
     assert "$3.00" in html
     assert "$5.00" in html
     assert "chips" in html.lower()
-    assert "implement fun" in html.lower()
+    assert "fix a bad day" in html.lower()
+    assert "implement fun" in html.lower() or "put fun" in html.lower()
     assert 'id="merch"' in html
     assert "NO TACOS tee" in html
     assert "Ybor" in html

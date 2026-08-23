@@ -79,7 +79,7 @@ function showStatus(message, ok) {
 
 function validate(form) {
   if (form.reportValidity()) return true;
-  showStatus("Fill the required fields — we need a place, a time, and a way to write back.", false);
+  showStatus("We need a name, a place, a time, and a way to write you back.", false);
   return false;
 }
 
@@ -105,7 +105,7 @@ function bindForm() {
     const subject = `Empty Taco booking — ${values.date} — ${values.address}`;
     const href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = href;
-    showStatus("Opening your email app with the ticket filled in. If nothing opens, use Copy the request.", true);
+    showStatus("Opening your email with the booking filled in. If nothing opens, tap Copy the request.", true);
   });
 
   copyBtn?.addEventListener("click", async () => {
@@ -114,7 +114,7 @@ function bindForm() {
     const body = bookingText(values, id);
     try {
       await navigator.clipboard.writeText(body);
-      showStatus(`Copied. Paste it to ${BOOKING_EMAIL} or text it to us.`, true);
+      showStatus(`Copied. Send it to ${BOOKING_EMAIL} whenever you’re ready.`, true);
     } catch {
       showStatus("Could not copy. Select and copy the email draft instead.", false);
     }
@@ -123,14 +123,13 @@ function bindForm() {
 
 const termLines = [
   { cmd: true, text: "$ whoami" },
-  { cmd: false, text: "gen-x-still-here-still-hungry" },
+  { cmd: false, text: "people-who-believe-in-lunch" },
   { cmd: true, text: "$ cat mission.txt" },
-  { cmd: false, text: "Make life easier. Have fun." },
-  { cmd: false, text: "Implement fun in a ridiculous world." },
-  { cmd: false, text: "$3 dog. $5 with chips and a drink." },
-  { cmd: true, text: "$ serve --to your-place" },
-  { cmd: false, text: "hitch ok · steamer hot · merch in the tub" },
-  { cmd: false, text: "ready. send the address." },
+  { cmd: false, text: "A hot dog can fix a bad day." },
+  { cmd: false, text: "Make life easier. Put fun back in." },
+  { cmd: false, text: "$3 dog. $5 combo. $20 to a friend." },
+  { cmd: true, text: "$ serve --with kindness" },
+  { cmd: false, text: "steamer hot · mustard ready · come as you are" },
 ];
 
 function bindSend() {
@@ -142,8 +141,8 @@ function bindSend() {
     event.preventDefault();
     if (!form.reportValidity()) {
       if (status) {
-        status.textContent = "Need you, them, and a place to park the dog.";
-        status.style.color = "#fff6e4";
+        status.textContent = "We need your name, theirs, and a place to bring the dog.";
+        status.style.color = "#8e1c12";
       }
       return;
     }
@@ -161,8 +160,8 @@ function bindSend() {
     ].join("\n");
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco $20 friend dog")}&body=${encodeURIComponent(body)}`;
     if (status) {
-      status.textContent = "Opening email. We’ll confirm, then you shoot us $20.";
-      status.style.color = "#fff6e4";
+      status.textContent = "Opening email. We’ll confirm, then you can send the $20.";
+      status.style.color = "#2f5e32";
     }
   });
 }
@@ -178,7 +177,7 @@ function bindMerch() {
     const items = [...form.querySelectorAll('input[name="item"]:checked')].map((el) => el.value);
     if (!form.reportValidity() || !items.length) {
       if (status) {
-        status.textContent = "Pick at least one thing and tell us who you are.";
+        status.textContent = "Pick at least one item and leave your name and email.";
         status.style.color = "#8e1c12";
       }
       return;
@@ -193,7 +192,7 @@ function bindMerch() {
     ].join("\n");
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco merch")}&body=${encodeURIComponent(body)}`;
     if (status) {
-      status.textContent = "Opening email. If nothing happens, copy that and yell at book@emptytaco.com.";
+      status.textContent = "Opening email. If nothing happens, write book@emptytaco.com.";
       status.style.color = "#2f5e32";
     }
   });
