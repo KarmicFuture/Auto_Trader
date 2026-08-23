@@ -1,4 +1,16 @@
 const BOOKING_EMAIL = "book@emptytaco.com";
+const RED_CROSS_DONATE = "https://www.redcross.org/donate/donation.html";
+
+function donationFrom(form) {
+  const on = form.querySelector('[name="donate_redcross"]')?.checked;
+  const amount = Number(form.querySelector('[name="donate_amount"]')?.value || 0);
+  return on ? amount : 0;
+}
+
+function openRedCrossIfNeeded(amount) {
+  if (!amount) return;
+  window.open(RED_CROSS_DONATE, "_blank", "noopener");
+}
 
 const prices = {
   classic: 3,
@@ -132,10 +144,23 @@ const termLines = [
   { cmd: false, text: "steamer hot · mustard ready · come as you are" },
 ];
 
+function updateSendTotal(form) {
+  const math = document.getElementById("send-math");
+  if (!math) return;
+  const gift = donationFrom(form);
+  math.textContent = gift
+    ? `$20 dog + $${gift} Red Cross = $${20 + gift}`
+    : "$20 — one hot dog, delivered to someone you care about";
+}
+
 function bindSend() {
   const form = document.getElementById("send-form");
   const status = document.getElementById("send-status");
   if (!form) return;
+
+  form.addEventListener("input", () => updateSendTotal(form));
+  form.addEventListener("change", () => updateSendTotal(form));
+  updateSendTotal(form);
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -147,6 +172,7 @@ function bindSend() {
       return;
     }
     const values = formValues(form);
+    const gift = donationFrom(form);
     const body = [
       "Empty Taco — $20 send a hot dog to a friend",
       "",
@@ -156,11 +182,18 @@ function bindSend() {
       `Address: ${values.to_address || ""}`,
       `Note: ${values.note || "(none)"}`,
       "",
-      "Amount: $20",
+      "Dog: $20",
+      gift
+        ? `Red Cross donation: $${gift} (via redcross.org/donate)`
+        : "Red Cross donation: none",
+      `Total noted: $${20 + gift}`,
     ].join("\n");
+    openRedCrossIfNeeded(gift);
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco $20 friend dog")}&body=${encodeURIComponent(body)}`;
     if (status) {
-      status.textContent = "Opening email. We’ll confirm, then you can send the $20.";
+      status.textContent = gift
+        ? "Opening the Red Cross donate page and your email. Thank you."
+        : "Opening email. We’ll confirm, then you can send the $20.";
       status.style.color = "#2f5e32";
     }
   });
@@ -182,6 +215,7 @@ function bindMerch() {
       }
       return;
     }
+    const gift = donationFrom(form);
     const body = [
       "Empty Taco merch pile",
       "",
@@ -189,10 +223,16 @@ function bindMerch() {
       `Email: ${values.email || ""}`,
       `Items: ${items.join(", ")}`,
       `Notes: ${values.notes || "(none)"}`,
+      gift
+        ? `Red Cross donation: $${gift} (via redcross.org/donate)`
+        : "Red Cross donation: none",
     ].join("\n");
+    openRedCrossIfNeeded(gift);
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent("Empty Taco merch")}&body=${encodeURIComponent(body)}`;
     if (status) {
-      status.textContent = "Opening email. If nothing happens, write book@emptytaco.com.";
+      status.textContent = gift
+        ? "Opening the Red Cross donate page and your email."
+        : "Opening email. If nothing happens, write book@emptytaco.com.";
       status.style.color = "#2f5e32";
     }
   });

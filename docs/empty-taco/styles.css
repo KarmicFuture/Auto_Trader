@@ -574,6 +574,36 @@ h1 em {
 
 .check input { width: auto; accent-color: var(--chili); }
 
+.donate-box {
+  margin: 0.6rem 1.1rem 0;
+  padding: 0.85rem 1rem 1rem;
+  border: 3px solid #c21810 !important;
+  border-radius: 1.1rem;
+  background: #fff5f4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.donate-box legend {
+  color: #c21810;
+}
+
+.donate-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-soft);
+}
+
+.donate-note a {
+  color: #c21810;
+  font-weight: 700;
+}
+
 .book {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;

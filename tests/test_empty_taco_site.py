@@ -26,6 +26,8 @@ def test_promo_page_covers_booking_menu_story_and_merch():
     assert "$20" in html
     assert "Send a hot dog to a friend" in html
     assert 'id="send-form"' in html
+    assert "redcross.org/donate" in html
+    assert html.count('name="donate_redcross"') >= 2
 
 
 def test_booking_script_builds_a_mailto():
@@ -34,3 +36,5 @@ def test_booking_script_builds_a_mailto():
     assert "book@emptytaco.com" in js
     assert "classic: 3" in js
     assert "combo: 5" in js
+    assert "RED_CROSS_DONATE" in js
+    assert "redcross.org/donate" in js
