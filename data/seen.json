@@ -21200,6 +21200,26 @@
       "watch_id": "porsche-cayman",
       "year": 2019
     },
+    "ebay:eb-v1|117373234175|0": {
+      "fair_value": 56600,
+      "id": "eb-v1|117373234175|0",
+      "location": "Marietta, GA",
+      "make": "Porsche",
+      "mileage": 43039,
+      "model": "Cayman",
+      "notes": "This vehicle is being sold as is, where  is with no warranty, expressed written o r implied.",
+      "price": 46979,
+      "source": "ebay",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/1JUAAeSwOwdqfBJ7/s-l1600.jpg",
+      "title": "2018 Porsche Cayman Coupe",
+      "url": "https://www.ebay.com/itm/117373234175",
+      "value_delta": -9621,
+      "value_label": "Good value",
+      "value_score": 78.3,
+      "watch_id": "porsche-cayman",
+      "year": 2018
+    },
     "ebay:eb-v1|127994361411|0": {
       "fair_value": 61200,
       "id": "eb-v1|127994361411|0",
@@ -23583,7 +23603,7 @@
     "ebay:eb-v1|318713461091|0": {
       "fair_value": 54500,
       "id": "eb-v1|318713461091|0",
-      "location": "Waterford Works, NJ",
+      "location": "Burlington, NJ",
       "make": "Porsche",
       "mileage": 61114,
       "model": "Cayman",
@@ -27322,6 +27342,7 @@
     "ebay:eb-v1|117355175302|0",
     "ebay:eb-v1|117356717437|0",
     "ebay:eb-v1|117367948111|0",
+    "ebay:eb-v1|117373234175|0",
     "ebay:eb-v1|127994361411|0",
     "ebay:eb-v1|128003117018|0",
     "ebay:eb-v1|128011567978|0",
