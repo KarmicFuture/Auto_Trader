@@ -20800,6 +20800,26 @@
       "watch_id": "porsche-cayman",
       "year": 2008
     },
+    "cars.com:cmp-d690afad-ddeb-46c6-8220-1369b4a84c8a": {
+      "fair_value": 21100,
+      "id": "cmp-d690afad-ddeb-46c6-8220-1369b4a84c8a",
+      "location": "KELLER, TX",
+      "make": "Honda",
+      "mileage": 105178,
+      "model": "S2000",
+      "notes": "New tires and recent tune up.  Cosmetic  paint repairs needed for minor paint chi pping/ding",
+      "price": 27600,
+      "source": "cars.com",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/a5f0eccf-5220-4342-92a2-e54001ffd00d/7f3fbd49-4ff9-423c-a749-e33e51919608.jpg",
+      "title": "2000 Honda S2000",
+      "url": "https://www.cars.com/vehicledetail/d690afad-ddeb-46c6-8220-1369b4a84c8a/",
+      "value_delta": 6500,
+      "value_label": "Stretched",
+      "value_score": 0.0,
+      "watch_id": "honda-s2000",
+      "year": 2000
+    },
     "cars.com:cmp-d848fd4e-938c-4bbb-a2c3-d975025d34f9": {
       "fair_value": 46000,
       "id": "cmp-d848fd4e-938c-4bbb-a2c3-d975025d34f9",
@@ -24643,7 +24663,7 @@
     "ebay:eb-v1|278253532278|0": {
       "fair_value": 29300,
       "id": "eb-v1|278253532278|0",
-      "location": "Marietta",
+      "location": "Hastings",
       "make": "Porsche",
       "mileage": 59624,
       "model": "Cayman",
@@ -24683,7 +24703,7 @@
     "ebay:eb-v1|278302222644|0": {
       "fair_value": 32600,
       "id": "eb-v1|278302222644|0",
-      "location": "Marietta",
+      "location": "Hastings",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
@@ -28742,6 +28762,7 @@
     "cars.com:cmp-b8c4e540-d0dd-40ba-866a-322f5668b023",
     "cars.com:cmp-b9aa1e2d-a171-4b91-b181-329c25b72b5f",
     "cars.com:cmp-d341d822-69d0-4532-a5b1-32723959a97b",
+    "cars.com:cmp-d690afad-ddeb-46c6-8220-1369b4a84c8a",
     "cars.com:cmp-d848fd4e-938c-4bbb-a2c3-d975025d34f9",
     "cars.com:cmp-da1bc291-ed91-4dd6-9558-485b3969af58",
     "cars.com:cmp-dabc4f87-af03-4d9a-b367-bed99fbdef27",
