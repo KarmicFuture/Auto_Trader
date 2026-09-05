@@ -1,6 +1,6 @@
 {
   "count": 692,
-  "refreshed_at": "2026-09-05T15:18:34.558814+00:00",
+  "refreshed_at": "2026-09-05T20:27:27.214478+00:00",
   "errors": [],
   "watches": [
     {
@@ -23,26 +23,6 @@
     }
   ],
   "listings": [
-    {
-      "id": "121308866",
-      "source": "bringatrailer",
-      "title": "Meyers Manx Signature Series",
-      "url": "https://bringatrailer.com/listing/1999-meyers-manx-signature-series/",
-      "price": 3333,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/IMG_20260815_135003240_HDR-scaled-copy-2026-09-02-9og-77753.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 32000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -28667
-    },
     {
       "id": "120286902",
       "source": "bringatrailer",
@@ -82,6 +62,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -6250
+    },
+    {
+      "id": "121308866",
+      "source": "bringatrailer",
+      "title": "Meyers Manx Signature Series",
+      "url": "https://bringatrailer.com/listing/1999-meyers-manx-signature-series/",
+      "price": 6000,
+      "year": null,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/IMG_20260815_135003240_HDR-scaled-copy-2026-09-02-9og-77753.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Volkswagen",
+      "model": "Dune Buggy",
+      "watch_id": "dune-buggy",
+      "fair_value": 32000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -26000
     },
     {
       "id": "100101511",
@@ -404,26 +404,6 @@
       "value_delta": -8900
     },
     {
-      "id": "121060209",
-      "source": "bringatrailer",
-      "title": "28k-Mile 2010 Porsche Cayman S",
-      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-s-43/",
-      "price": 20000,
-      "year": 2010,
-      "mileage": 28000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/DSC7620-scaled-copy-2026-08-27-tz7-60450.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 40300,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -20300
-    },
-    {
       "id": "108423067",
       "source": "bringatrailer",
       "title": "Meyers Manx Tow\u2019dster w/Surfboard",
@@ -462,6 +442,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -10106
+    },
+    {
+      "id": "121060209",
+      "source": "bringatrailer",
+      "title": "28k-Mile 2010 Porsche Cayman S",
+      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-s-43/",
+      "price": 21000,
+      "year": 2010,
+      "mileage": 28000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/DSC7620-scaled-copy-2026-08-27-tz7-60450.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 40300,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -19300
     },
     {
       "id": "111787033",
@@ -588,7 +588,7 @@
       "source": "bringatrailer",
       "title": "6k-Mile 2014 Porsche Cayman S",
       "url": "https://bringatrailer.com/listing/2014-porsche-cayman-s-116/",
-      "price": 35000,
+      "price": 35250,
       "year": 2014,
       "mileage": 6000,
       "location": null,
@@ -601,7 +601,7 @@
       "fair_value": 55600,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -20600
+      "value_delta": -20350
     },
     {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
@@ -864,26 +864,6 @@
       "value_delta": -4990
     },
     {
-      "id": "121779093",
-      "source": "bringatrailer",
-      "title": "2,300-Mile Grigio Telesto Metallic 2023 Porsche 718 Cayman GT4 RS",
-      "url": "https://bringatrailer.com/listing/2023-porsche-718-cayman-gt4-rs-89/",
-      "price": 140000,
-      "year": 2023,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/IMG_1871jpg_-_Low_Res-scaled-copy-2026-08-31-dlh-12435.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 181000,
-      "value_score": 87.8,
-      "value_label": "Great value",
-      "value_delta": -41000
-    },
-    {
       "id": "cgu-457266178",
       "source": "cargurus",
       "title": "2014 Porsche Cayman Base",
@@ -1102,6 +1082,26 @@
       "value_score": 78.5,
       "value_label": "Good value",
       "value_delta": -9935
+    },
+    {
+      "id": "121779093",
+      "source": "bringatrailer",
+      "title": "2,300-Mile Grigio Telesto Metallic 2023 Porsche 718 Cayman GT4 RS",
+      "url": "https://bringatrailer.com/listing/2023-porsche-718-cayman-gt4-rs-89/",
+      "price": 150000,
+      "year": 2023,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/IMG_1871jpg_-_Low_Res-scaled-copy-2026-08-31-dlh-12435.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 181000,
+      "value_score": 78.5,
+      "value_label": "Good value",
+      "value_delta": -31000
     },
     {
       "id": "cgu-455397430",
@@ -4344,26 +4344,6 @@
       "value_delta": -300
     },
     {
-      "id": "70196376",
-      "source": "carmax",
-      "title": "2018 Porsche 718 Cayman S",
-      "url": "https://www.carmax.com/car/70196376",
-      "price": 59998,
-      "year": 2018,
-      "mileage": 48867,
-      "location": "Glen Allen, VA",
-      "status": "active",
-      "thumbnail": "https://img2.carmax.com/assets/70196376/hero.jpg?width=400&height=300",
-      "notes": "West Broad",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 61300,
-      "value_score": 53.5,
-      "value_label": "Fair value",
-      "value_delta": -1302
-    },
-    {
       "id": "eb-v1|178458719519|0",
       "source": "ebay",
       "title": "2021 Porsche Cayman 4S",
@@ -4971,7 +4951,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Fresno",
+      "location": "Yreka",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/eqwAAeSwieZqiGKI/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -12344,16 +12324,16 @@
       "value_delta": 10000
     },
     {
-      "id": "eb-v1|278253532278|0",
+      "id": "eb-v1|278346491238|0",
       "source": "ebay",
       "title": "2010 Porsche Cayman Carnewal GT Exhaust, Short Shifter,...",
-      "url": "https://www.ebay.com/itm/278253532278",
+      "url": "https://www.ebay.com/itm/278346491238",
       "price": 43000,
       "year": 2010,
       "mileage": 59624,
-      "location": "Fresno",
+      "location": "Yreka",
       "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/KTgAAeSwqXxqdLiO/s-l1200.jpg",
+      "thumbnail": "https://i.ebayimg.com/images/g/ROwAAeSwxZRqnFa~/s-l1200.jpg",
       "notes": "2010 Porsche Cayman\n- Stock\n- 6585\n- VIN \n- 00000000000000000\n- Miles\n- 59,624\n-  Engine Siz",
       "make": "Porsche",
       "model": "Cayman",
@@ -12902,6 +12882,26 @@
       "value_score": 0.0,
       "value_label": "Stretched",
       "value_delta": 29075
+    },
+    {
+      "id": "121502417",
+      "source": "bringatrailer",
+      "title": "7k-Mile 2012 Porsche Cayman R 6-Speed",
+      "url": "https://bringatrailer.com/listing/2012-porsche-cayman-r-88/",
+      "price": 74987,
+      "year": 2012,
+      "mileage": 7000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2012_porsche_cayman-r_2012_porsche_cayman-r_0836555f-3c24-49de-98b9-588cdef184f0-rFMrrf-56618-56619-scaled.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 39100,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 35887
     },
     {
       "id": "cm-9084b7bc-4fad-4bda-a59c-ce9e26ab4041",
