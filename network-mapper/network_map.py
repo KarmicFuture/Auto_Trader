@@ -267,6 +267,63 @@ def _vendor_from_file(path: Path, prefix: str, mac: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def _hex_ipv4(value: str) -> str:
+    raw = bytes.fromhex(value)
+    if len(raw) != 4:
+        return ""
+    return ".".join(str(b) for b in raw[::-1])
+
+
+def _mask_to_prefix(mask: str) -> int:
+    return ipaddress.IPv4Network(f"0.0.0.0/{mask}").prefixlen
+
+
+def _linux_context_from_proc() -> NetworkContext:
+    ctx = NetworkContext()
+    route = Path("/proc/net/route")
+    if route.is_file():
+        for line in route.read_text().splitlines()[1:]:
+            parts = line.split()
+            if len(parts) < 8:
+                continue
+            iface, dest, gateway, mask = parts[0], parts[1], parts[2], parts[7]
+            if dest == "00000000" and mask == "00000000":
+                ctx.interface = iface
+                ctx.gateway = _hex_ipv4(gateway)
+                break
+    skip = {"lo", "docker0", "br-"}
+    ifconfig = _run(["ifconfig", "-a"]) or _run(["/sbin/ifconfig", "-a"]) or _run(["/usr/sbin/ifconfig", "-a"])
+    current = ""
+    for raw in ifconfig.splitlines():
+        if raw and not raw[0].isspace():
+            current = raw.split(":", 1)[0].split()[0]
+        inet = re.search(r"inet (?:addr:)?(\d+\.\d+\.\d+\.\d+).*?(?:netmask|Mask:)(?:\s*)(\d+\.\d+\.\d+\.\d+)", raw)
+        if not inet or not current:
+            continue
+        if current == "lo" or current == "docker0" or current.startswith("br-"):
+            continue
+        if ctx.interface and current != ctx.interface:
+            continue
+        ctx.interface = current
+        ctx.self_ip = inet.group(1)
+        ctx.cidr = f"{ctx.self_ip}/{_mask_to_prefix(inet.group(2))}"
+        break
+    if not ctx.self_ip:
+        for name in Path("/sys/class/net").iterdir() if Path("/sys/class/net").is_dir() else []:
+            if name.name in skip or name.name.startswith("br-"):
+                continue
+            addr_file = name / "address"
+            # fall through to first non-loop IPv4 in hostname -I
+        hosts = _run(["hostname", "-I"]).split()
+        for ip in hosts:
+            if ip.startswith("127.") or ip.startswith("172.17."):
+                continue
+            ctx.self_ip = ip
+            ctx.cidr = ctx.cidr or f"{ip}/24"
+            break
+    return ctx
+
+
 def _linux_context() -> NetworkContext:
     ctx = NetworkContext()
     route = _run(["ip", "-4", "route", "show", "default"])
@@ -279,7 +336,7 @@ def _linux_context() -> NetworkContext:
         if len(parts) < 4:
             continue
         iface, cidr = parts[1], parts[3]
-        if iface == "lo" or "/" not in cidr:
+        if iface == "lo" or iface == "docker0" or iface.startswith("br-") or "/" not in cidr:
             continue
         if ctx.interface and iface != ctx.interface:
             continue
@@ -287,6 +344,12 @@ def _linux_context() -> NetworkContext:
         ctx.cidr = cidr
         ctx.self_ip = cidr.split("/")[0]
         break
+    if not ctx.self_ip or not ctx.gateway:
+        fallback = _linux_context_from_proc()
+        ctx.interface = ctx.interface or fallback.interface
+        ctx.cidr = ctx.cidr or fallback.cidr
+        ctx.self_ip = ctx.self_ip or fallback.self_ip
+        ctx.gateway = ctx.gateway or fallback.gateway
     resolv = Path("/etc/resolv.conf")
     if resolv.is_file():
         ctx.dns = [
@@ -446,6 +509,17 @@ def probe_ports(ip: str, ports: Iterable[int], timeout: float) -> list[int]:
         finally:
             sock.close()
     return open_ports
+
+
+def local_mac(interface: str) -> str:
+    if not interface:
+        return ""
+    path = Path(f"/sys/class/net/{interface}/address")
+    if path.is_file():
+        return normalize_mac(path.read_text())
+    text = _run(["ifconfig", interface]) or _run(["/usr/sbin/ifconfig", interface])
+    match = re.search(r"(?:ether|HWaddr)\s+((?:[0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2})", text)
+    return normalize_mac(match.group(1)) if match else ""
 
 
 def classify_device(device: Device) -> Device:
@@ -918,7 +992,15 @@ def scan_network(
         )
         if device.is_self and not device.hostname:
             device.hostname = ctx.hostname
-        return classify_device(device)
+        if device.is_self and not device.mac:
+            device.mac = local_mac(ctx.interface)
+            device.vendor = lookup_vendor(device.mac)
+        classified = classify_device(device)
+        if classified.is_self and classified.zone == "unknown":
+            classified.kind = "scanner"
+            classified.zone = "work"
+            classified.notes.append("This is the machine that ran the scan; defaulted to the work zone.")
+        return classified
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(8, workers // 2)) as pool:
         devices = list(pool.map(enrich, sorted(alive, key=_ip_sort)))

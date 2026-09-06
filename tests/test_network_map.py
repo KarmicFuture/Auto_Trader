@@ -11,6 +11,10 @@ import network_map  # noqa: E402
 
 
 class NetworkMapTests(unittest.TestCase):
+    def test_hex_ipv4_from_proc_route(self):
+        self.assertEqual(network_map._hex_ipv4("01001EAC"), "172.30.0.1")
+        self.assertEqual(network_map._mask_to_prefix("255.255.255.0"), 24)
+
     def test_normalize_and_lookup_vendor(self):
         self.assertEqual(network_map.normalize_mac("44-d9-e7-00-10-01"), "44:D9:E7:00:10:01")
         self.assertEqual(network_map.lookup_vendor("44:D9:E7:00:10:01"), "Ubiquiti")
