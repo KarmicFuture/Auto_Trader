@@ -14423,11 +14423,11 @@
     "carmax:28510429": {
       "fair_value": 42900,
       "id": "28510429",
-      "location": "El Cajon, CA",
+      "location": "Tampa, FL",
       "make": "Porsche",
       "mileage": 57000,
       "model": "Cayman",
-      "notes": "El Cajon",
+      "notes": "Tampa",
       "price": 44998,
       "source": "carmax",
       "status": "active",
@@ -31883,7 +31883,7 @@
     "ebay:eb-v1|278302222644|0": {
       "fair_value": 32600,
       "id": "eb-v1|278302222644|0",
-      "location": "Marietta",
+      "location": "Thrall",
       "make": "Honda",
       "mileage": 70000,
       "model": "S2000",
@@ -32163,7 +32163,7 @@
     "ebay:eb-v1|318800448430|0": {
       "fair_value": 65700,
       "id": "eb-v1|318800448430|0",
-      "location": "Palmyra, NJ",
+      "location": "Gloucester City, NJ",
       "make": "Porsche",
       "mileage": 10046,
       "model": "Cayman",
@@ -32183,7 +32183,7 @@
     "ebay:eb-v1|318857016167|0": {
       "fair_value": 54500,
       "id": "eb-v1|318857016167|0",
-      "location": "Palmyra, NJ",
+      "location": "Gloucester City, NJ",
       "make": "Porsche",
       "mileage": 61114,
       "model": "Cayman",
