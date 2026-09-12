@@ -49,3 +49,18 @@ python -m src.main
 ```
 
 Optional secrets: `WATCH_ZIP`, `NOTIFY_EMAIL_TO`, `SMTP_*`, `DISCORD_WEBHOOK_URL`
+
+## Inbox agent
+
+Scans **Gmail**, **Discord**, and **WhatsApp** for important conversations and
+alerts you (console / Discord webhook / email). Runs on a 30-minute schedule in
+GitHub Actions. Full setup guide: [docs/INBOX_AGENT.md](docs/INBOX_AGENT.md).
+
+```bash
+python -m src.inbox.main --dry-run   # scan + score without alerting
+python -m src.inbox.main             # scan and alert on important conversations
+```
+
+Secrets: `GMAIL_USER` + `GMAIL_APP_PASSWORD`, `DISCORD_BOT_TOKEN` +
+`DISCORD_CHANNEL_IDS`, WhatsApp Cloud API webhook (see guide), plus
+`INBOX_VIP_SENDERS` / `INBOX_KEYWORDS` to tune what counts as important.
