@@ -1,6 +1,6 @@
 {
-  "count": 673,
-  "refreshed_at": "2026-09-14T21:53:43.885185+00:00",
+  "count": 671,
+  "refreshed_at": "2026-09-15T04:59:53.844669+00:00",
   "errors": [],
   "watches": [
     {
@@ -424,26 +424,6 @@
       "value_delta": -8900
     },
     {
-      "id": "121684212",
-      "source": "bringatrailer",
-      "title": "41k-Mile 2005 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2005-honda-s2000-244/",
-      "price": 20500,
-      "year": 2005,
-      "mileage": 41000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/JCZ8838-scaled-copy-2026-09-10-fdo-98960.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 37800,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -17300
-    },
-    {
       "id": "cgu-445397692",
       "source": "cargurus",
       "title": "2006 Honda S2000 Roadster",
@@ -462,6 +442,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -10106
+    },
+    {
+      "id": "121684212",
+      "source": "bringatrailer",
+      "title": "41k-Mile 2005 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2005-honda-s2000-244/",
+      "price": 21000,
+      "year": 2005,
+      "mileage": 41000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/JCZ8838-scaled-copy-2026-09-10-fdo-98960.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 37800,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -16800
     },
     {
       "id": "111787033",
@@ -568,7 +568,7 @@
       "source": "bringatrailer",
       "title": "19k-Mile 2006 Honda S2000",
       "url": "https://bringatrailer.com/listing/2006-honda-s2000-195/",
-      "price": 29000,
+      "price": 29500,
       "year": 2006,
       "mileage": 19000,
       "location": null,
@@ -581,7 +581,7 @@
       "fair_value": 42200,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -13200
+      "value_delta": -12700
     },
     {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
@@ -648,7 +648,7 @@
       "source": "bringatrailer",
       "title": "2016 Porsche 981 Cayman GT4 Clubsport",
       "url": "https://bringatrailer.com/listing/2016-porsche-981-cayman-gt4-clubsport-2/",
-      "price": 50000,
+      "price": 69420,
       "year": 2016,
       "mileage": null,
       "location": null,
@@ -661,7 +661,7 @@
       "fair_value": 107800,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -57800
+      "value_delta": -38380
     },
     {
       "id": "119304889",
@@ -1504,26 +1504,6 @@
       "value_delta": -5409
     },
     {
-      "id": "cmp-8949792f-7c96-4bf7-adef-fc9bc3ed0ae0",
-      "source": "cars.com",
-      "title": "2006 Honda S2000",
-      "url": "https://www.cars.com/vehicledetail/8949792f-7c96-4bf7-adef-fc9bc3ed0ae0/",
-      "price": 25500,
-      "year": 2006,
-      "mileage": 89600,
-      "location": "TROUTMAN, NC",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/2a48bbe6-175d-485f-a75d-015e0b12d031/e4bc5188-e683-4c3b-9f3a-1a8ac4d480a5.jpg",
-      "notes": "-- PENDING SALE --  Pristine S2K, all st ock/original except for top and maintena nce items.",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 29500,
-      "value_score": 72.6,
-      "value_label": "Good value",
-      "value_delta": -4000
-    },
-    {
       "id": "cm-fc8f3afa-9763-46af-89ea-aad065f4e39a",
       "source": "cars.com",
       "title": "2014 Porsche Cayman",
@@ -2302,6 +2282,26 @@
       "value_score": 66.2,
       "value_label": "Good value",
       "value_delta": -4305
+    },
+    {
+      "id": "cmp-c1f8f50f-f6ec-4723-a9bb-fc28470716f6",
+      "source": "cars.com",
+      "title": "2019 Porsche 718 Cayman 718 Cayman",
+      "url": "https://www.cars.com/vehicledetail/c1f8f50f-f6ec-4723-a9bb-fc28470716f6/",
+      "price": 49800,
+      "year": 2019,
+      "mileage": 53303,
+      "location": "DALLAS, TX",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/4445b44a-b3eb-4759-bbcb-be80f2e1ee41/306f8ec5-8bc0-486c-8c64-3771a9b92730.jpeg",
+      "notes": "BUILT FOR THE PORSCHE ENTHUSIAST  This 7 18 Cayman delivers the balance, handling  and mid-e",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 55100,
+      "value_score": 66.0,
+      "value_label": "Good value",
+      "value_delta": -5300
     },
     {
       "id": "cgu-451049080",
@@ -3142,26 +3142,6 @@
       "value_score": 60.3,
       "value_label": "Fair value",
       "value_delta": -3707
-    },
-    {
-      "id": "cmp-c1f8f50f-f6ec-4723-a9bb-fc28470716f6",
-      "source": "cars.com",
-      "title": "2019 Porsche 718 Cayman 718 Cayman",
-      "url": "https://www.cars.com/vehicledetail/c1f8f50f-f6ec-4723-a9bb-fc28470716f6/",
-      "price": 51900,
-      "year": 2019,
-      "mileage": 53303,
-      "location": "DALLAS, TX",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/4445b44a-b3eb-4759-bbcb-be80f2e1ee41/306f8ec5-8bc0-486c-8c64-3771a9b92730.jpeg",
-      "notes": "BUILT FOR THE PORSCHE ENTHUSIAST  This 7 18 Cayman delivers the balance, handling  and mid-e",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 55100,
-      "value_score": 59.7,
-      "value_label": "Fair value",
-      "value_delta": -3200
     },
     {
       "id": "cgu-455218492",
@@ -4484,26 +4464,6 @@
       "value_delta": 549
     },
     {
-      "id": "28398760",
-      "source": "carmax",
-      "title": "2016 Porsche Cayman",
-      "url": "https://www.carmax.com/car/28398760",
-      "price": 44998,
-      "year": 2016,
-      "mileage": 46061,
-      "location": "Burbank, CA",
-      "status": "active",
-      "thumbnail": "https://img2.carmax.com/assets/28398760/hero.jpg?width=400&height=300",
-      "notes": "Burbank",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 44600,
-      "value_score": 48.5,
-      "value_label": "Fair value",
-      "value_delta": 398
-    },
-    {
       "id": "cm-eec5ac3b-0cd3-4e29-99d5-cbea6461555f",
       "source": "cars.com",
       "title": "2024 Porsche 718 Cayman Style Edition",
@@ -4571,7 +4531,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Milwaukie",
+      "location": "Middleton",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/eqwAAeSwieZqiGKI/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -5842,6 +5802,26 @@
       "value_score": 35.5,
       "value_label": "Soft value",
       "value_delta": 3599
+    },
+    {
+      "id": "cv-3006589819",
+      "source": "carvana",
+      "title": "2016 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4738258",
+      "price": 52990,
+      "year": 2016,
+      "mileage": 21711,
+      "location": "Framingham, MA",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/53pp5ci6f8js96d1bul9.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Dual Air Bags, Knee Air Bags, Side Air B ags, Head Curtain Air Bags, Bi-Xenon Hea dlamps, St",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 48500,
+      "value_score": 34.6,
+      "value_label": "Soft value",
+      "value_delta": 4490
     },
     {
       "id": "cm-4ab97dce-f967-4fde-ad4a-83c80f5e352c",
@@ -8964,26 +8944,6 @@
       "value_delta": 23180
     },
     {
-      "id": "eb-v1|178485378710|0",
-      "source": "ebay",
-      "title": "2008 Porsche Cayman Base 2dr Coupe",
-      "url": "https://www.ebay.com/itm/178485378710",
-      "price": 32500,
-      "year": 2008,
-      "mileage": 28817,
-      "location": "Bellingham, MA",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/osoAAeSwtEFqdYl0/s-l1600.jpg",
-      "notes": "- Exterior Color:\n- Silver\n- Interior Co lor:\n- Black\nMost new vehicles come with  a factory",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 26800,
-      "value_score": 14.6,
-      "value_label": "Stretched",
-      "value_delta": 5700
-    },
-    {
       "id": "cm-814145e2-6bcc-45ae-bda2-47a7cf81c86a",
       "source": "cars.com",
       "title": "2024 Porsche 718 Cayman Style Edition",
@@ -10644,26 +10604,6 @@
       "value_delta": 6623
     },
     {
-      "id": "cmp-831aefcb-cb0c-4414-9587-22c23c1698e5",
-      "source": "cars.com",
-      "title": "2008 Porsche Cayman Cayman",
-      "url": "https://www.cars.com/vehicledetail/831aefcb-cb0c-4414-9587-22c23c1698e5/",
-      "price": 21000,
-      "year": 2008,
-      "mileage": 115300,
-      "location": "BOULDER CITY, NV",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/262bed74-9c4e-4b66-838f-60907d0a9b47/1c9099b5-1bb7-42c4-8b05-8ce377b404f0.jpg",
-      "notes": "This Cayman is a great little car! Engin e runs great, AC works, comfortable leat her seats.",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 14000,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 7000
-    },
-    {
       "id": "112403627",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Sand-Rail Buggy",
@@ -11942,6 +11882,26 @@
       "value_score": 0.0,
       "value_label": "Stretched",
       "value_delta": 16500
+    },
+    {
+      "id": "eb-v1|117413071892|0",
+      "source": "ebay",
+      "title": "2005 Honda S2000",
+      "url": "https://www.ebay.com/itm/117413071892",
+      "price": 45826,
+      "year": 2005,
+      "mileage": null,
+      "location": "Atlanta, GA",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/~R8AAeSw6o5qjl-P/s-l1600.jpg",
+      "notes": "Extended warranties are available on sel ect models. A member of our sales team c an provide",
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 34400,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 11426
     },
     {
       "id": "cgu-452452271",
