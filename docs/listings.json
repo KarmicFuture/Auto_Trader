@@ -1,6 +1,6 @@
 {
-  "count": 692,
-  "refreshed_at": "2026-09-25T21:38:58.782433+00:00",
+  "count": 691,
+  "refreshed_at": "2026-09-26T05:06:43.921779+00:00",
   "errors": [],
   "watches": [
     {
@@ -122,26 +122,6 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -6650
-    },
-    {
-      "id": "121308368",
-      "source": "bringatrailer",
-      "title": "20-Years-Owned 2002 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2002-honda-s2000-250/",
-      "price": 5678,
-      "year": 2002,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2002_honda_s2000_2002_honda_s2000_3833b67f-5523-4a95-8008-a6bcfa87cfad-TSyb8t-12257-12257-scaled.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 29800,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -24122
     },
     {
       "id": "108733126",
@@ -504,6 +484,26 @@
       "value_delta": -15000
     },
     {
+      "id": "121308368",
+      "source": "bringatrailer",
+      "title": "20-Years-Owned 2002 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2002-honda-s2000-250/",
+      "price": 18000,
+      "year": 2002,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2002_honda_s2000_2002_honda_s2000_3833b67f-5523-4a95-8008-a6bcfa87cfad-TSyb8t-12257-12257-scaled.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 29800,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -11800
+    },
+    {
       "id": "115914652",
       "source": "bringatrailer",
       "title": "Meyers Manxter 2+2",
@@ -608,7 +608,7 @@
       "source": "bringatrailer",
       "title": "2023 Porsche 718 Cayman T",
       "url": "https://bringatrailer.com/listing/2023-porsche-718-cayman-t/",
-      "price": 25000,
+      "price": 26000,
       "year": 2023,
       "mileage": null,
       "location": null,
@@ -621,14 +621,14 @@
       "fair_value": 58000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -33000
+      "value_delta": -32000
     },
     {
       "id": "121513159",
       "source": "bringatrailer",
       "title": "14k-Mile 2014 Porsche Cayman S 6-Speed",
       "url": "https://bringatrailer.com/listing/2014-porsche-cayman-s-118/",
-      "price": 32000,
+      "price": 36000,
       "year": 2014,
       "mileage": 14000,
       "location": null,
@@ -641,7 +641,7 @@
       "fair_value": 54400,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -22400
+      "value_delta": -18400
     },
     {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
@@ -4851,7 +4851,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Houston",
+      "location": "Claremore",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/3BYAAeSw0BhqsBEz/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -4962,6 +4962,26 @@
       "value_score": 47.4,
       "value_label": "Fair value",
       "value_delta": 1700
+    },
+    {
+      "id": "122462986",
+      "source": "bringatrailer",
+      "title": "2006 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2006-honda-s2000-196/",
+      "price": 35420,
+      "year": 2006,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/2006_Honda_S2000_MOC_Int_Center_3_4Front_Top_Off_High-2-copy-2026-09-17-1ui-70326.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 34800,
+      "value_score": 47.0,
+      "value_label": "Fair value",
+      "value_delta": 620
     },
     {
       "id": "cgu-451815632",
@@ -6742,26 +6762,6 @@
       "value_score": 30.3,
       "value_label": "Soft value",
       "value_delta": 4898
-    },
-    {
-      "id": "cv-2004276616",
-      "source": "carvana",
-      "title": "2011 Porsche Cayman Coupe 2D",
-      "url": "https://www.carvana.com/vehicle/4036934",
-      "price": 31990,
-      "year": 2011,
-      "mileage": 67943,
-      "location": "Haines City, FL",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/f7yk2v2okfpmrfsciu27.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Rear Spoiler, Fog Lights, Power Steering , Tilt & Telescoping Wheel, Side Air Bag s, Head Cu",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 28600,
-      "value_score": 30.2,
-      "value_label": "Soft value",
-      "value_delta": 3390
     },
     {
       "id": "cm-0f30efe3-a08e-44b3-ad18-fb82eb3f7f2c",
@@ -10184,6 +10184,26 @@
       "value_delta": 10850
     },
     {
+      "id": "eb-v1|327374922129|0",
+      "source": "ebay",
+      "title": "2023 Porsche Cayman GTS Sport Turismo-FRONT PPF-NEPTUNE...",
+      "url": "https://www.ebay.com/itm/327374922129",
+      "price": 96995,
+      "year": 2023,
+      "mileage": 12847,
+      "location": "Aurora, IL",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/Xh0AAeSwJsNqteay/s-l960.jpg",
+      "notes": "- Exterior Color:\n- Neptune Blue\n- Inter ior Color:\n- Black/Bordeaux Red\nMost new  vehicles ",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 77100,
+      "value_score": 7.0,
+      "value_label": "Stretched",
+      "value_delta": 19895
+    },
+    {
       "id": "cm-6b952e22-6188-40e6-8264-912920131d07",
       "source": "cars.com",
       "title": "2024 Porsche 718 Cayman Coupe",
@@ -11464,26 +11484,6 @@
       "value_delta": 12693
     },
     {
-      "id": "eb-v1|198597343885|0",
-      "source": "ebay",
-      "title": "2001 Honda S2000",
-      "url": "https://www.ebay.com/itm/198597343885",
-      "price": 31000,
-      "year": 2001,
-      "mileage": 101000,
-      "location": "Miami, FL",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/k-gAAeSwTsRpHIbp/s-l1600.jpg",
-      "notes": "If you desire a specific photo please le t me know. Happy to answer real question s.. Please",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 22100,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 8900
-    },
-    {
       "id": "cgu-423175648",
       "source": "cargurus",
       "title": "1999 Honda S2000 R-Spec",
@@ -12464,26 +12464,6 @@
       "value_delta": 16690
     },
     {
-      "id": "eb-v1|287595114221|0",
-      "source": "ebay",
-      "title": "2006 Honda S2000 Base",
-      "url": "https://www.ebay.com/itm/287595114221",
-      "price": 54990,
-      "year": 2006,
-      "mileage": 40738,
-      "location": "New Albany, IN",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/gmEAAeSwYspqm3Gz/s-l1600.jpg",
-      "notes": "Most new vehicles come with a factory wa rranty and some used vehicles have a rem aining fac",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 38300,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 16690
-    },
-    {
       "id": "cm-f23e0461-d41c-4387-a437-6dbbaf564512",
       "source": "cars.com",
       "title": "2000 Honda S2000",
@@ -12824,10 +12804,10 @@
       "value_delta": 46300
     },
     {
-      "id": "eb-v1|237080780387|0",
+      "id": "eb-v1|237091068982|0",
       "source": "ebay",
       "title": "2012 Porsche Cayman R",
-      "url": "https://www.ebay.com/itm/237080780387",
+      "url": "https://www.ebay.com/itm/237091068982",
       "price": 85900,
       "year": 2012,
       "mileage": 39063,
@@ -13484,6 +13464,26 @@
       "value_delta": 39750
     },
     {
+      "id": "123192659",
+      "source": "bringatrailer",
+      "title": "14k-Mile 2000 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2000-honda-s2000-295/",
+      "price": null,
+      "year": 2000,
+      "mileage": 14000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/IMG_7874-scaled-97019.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 37500,
+      "value_score": null,
+      "value_label": null,
+      "value_delta": null
+    },
+    {
       "id": "cab-KZlRdQgb",
       "source": "carsandbids",
       "title": "2000 Honda S2000",
@@ -13839,26 +13839,6 @@
       "model": "Cayman",
       "watch_id": "porsche-cayman",
       "fair_value": 58400,
-      "value_score": null,
-      "value_label": null,
-      "value_delta": null
-    },
-    {
-      "id": "118860040",
-      "source": "bringatrailer",
-      "title": "Volkswagen-Powered Dune Buggy",
-      "url": "https://bringatrailer.com/listing/1971-dune-buggy-6/",
-      "price": null,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/07/IMG_1770-scaled-copy-2026-09-21-2x6-04722.jpeg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 12000,
       "value_score": null,
       "value_label": null,
       "value_delta": null
