@@ -9,3 +9,4 @@ config.yaml
 .mypy_cache/
 .DS_Store
 *.log
+network-mapper/output/
