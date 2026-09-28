@@ -1,6 +1,6 @@
 {
   "count": 689,
-  "refreshed_at": "2026-09-27T21:24:52.643083+00:00",
+  "refreshed_at": "2026-09-28T05:31:16.973368+00:00",
   "errors": [],
   "watches": [
     {
@@ -188,7 +188,7 @@
       "source": "bringatrailer",
       "title": "25-Years-Owned 2000 Honda S2000",
       "url": "https://bringatrailer.com/listing/2000-honda-s2000-289/",
-      "price": 6600,
+      "price": 6400,
       "year": 2000,
       "mileage": null,
       "location": null,
@@ -201,7 +201,7 @@
       "fair_value": 29200,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -22600
+      "value_delta": -22800
     },
     {
       "id": "120679296",
@@ -768,7 +768,7 @@
       "source": "bringatrailer",
       "title": "2019 Porsche 718 Cayman GT4 Clubsport Competition",
       "url": "https://bringatrailer.com/listing/2019-porsche-718-cayman-gt4-clubsport-competition/",
-      "price": 55000,
+      "price": 56000,
       "year": 2019,
       "mileage": null,
       "location": null,
@@ -781,7 +781,7 @@
       "fair_value": 109900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -54900
+      "value_delta": -53900
     },
     {
       "id": "119304889",
@@ -1651,10 +1651,10 @@
       "price": 45998,
       "year": 2018,
       "mileage": 56294,
-      "location": "Riverside, CA",
+      "location": "Virginia Beach, VA",
       "status": "active",
       "thumbnail": "https://img2.carmax.com/assets/70156610/hero.jpg?width=400",
-      "notes": "Riverside",
+      "notes": "Virginia Beach",
       "make": "Porsche",
       "model": "Cayman",
       "watch_id": "porsche-cayman",
@@ -4831,7 +4831,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Vancouver",
+      "location": "Middleton",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/3BYAAeSw0BhqsBEz/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -9504,10 +9504,10 @@
       "value_delta": 12950
     },
     {
-      "id": "eb-v1|327367376875|0",
+      "id": "eb-v1|327377712463|0",
       "source": "ebay",
       "title": "2025 Porsche Cayman",
-      "url": "https://www.ebay.com/itm/327367376875",
+      "url": "https://www.ebay.com/itm/327377712463",
       "price": 80995,
       "year": 2025,
       "mileage": 3885,
