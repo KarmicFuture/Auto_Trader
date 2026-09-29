@@ -1,6 +1,6 @@
 {
-  "count": 685,
-  "refreshed_at": "2026-09-28T23:20:47.571689+00:00",
+  "count": 687,
+  "refreshed_at": "2026-09-29T05:49:32.136322+00:00",
   "errors": [],
   "watches": [
     {
@@ -48,7 +48,7 @@
       "source": "bringatrailer",
       "title": "Super-T-Style Dune Buggy Project",
       "url": "https://bringatrailer.com/listing/dune-buggy-6/",
-      "price": 2000,
+      "price": 2100,
       "year": null,
       "mileage": null,
       "location": null,
@@ -61,14 +61,14 @@
       "fair_value": 12000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -10000
+      "value_delta": -9900
     },
     {
       "id": "118860040",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
       "url": "https://bringatrailer.com/listing/1971-dune-buggy-6/",
-      "price": 2180,
+      "price": 2280,
       "year": null,
       "mileage": null,
       "location": null,
@@ -81,7 +81,7 @@
       "fair_value": 12000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -9820
+      "value_delta": -9720
     },
     {
       "id": "120286902",
@@ -224,26 +224,6 @@
       "value_delta": -4400
     },
     {
-      "id": "120679296",
-      "source": "bringatrailer",
-      "title": "65k-Kilometer Supercharged 2000 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2000-honda-s2000-288/",
-      "price": 8000,
-      "year": 2000,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/20260811_175615-scaled-copy-2026-09-18-rcq-07480.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 29200,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -21200
-    },
-    {
       "id": "116399779",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Concept 1 Dune Buggy",
@@ -282,6 +262,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -10000
+    },
+    {
+      "id": "120679296",
+      "source": "bringatrailer",
+      "title": "65k-Kilometer Supercharged 2000 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2000-honda-s2000-288/",
+      "price": 8100,
+      "year": 2000,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/20260811_175615-scaled-copy-2026-09-18-rcq-07480.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 29200,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -21100
     },
     {
       "id": "110998535",
@@ -424,26 +424,6 @@
       "value_delta": -10601
     },
     {
-      "id": "121829721",
-      "source": "bringatrailer",
-      "title": "Corvair-Powered Meyers Manx",
-      "url": "https://bringatrailer.com/listing/1965-meyers-manx-13/",
-      "price": 12500,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2N2A0570-scaled-copy-2026-09-10-g9q-05667.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 32000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -19500
-    },
-    {
       "id": "112742735",
       "source": "bringatrailer",
       "title": "Meyers Manx",
@@ -482,6 +462,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -16200
+    },
+    {
+      "id": "121829721",
+      "source": "bringatrailer",
+      "title": "Corvair-Powered Meyers Manx",
+      "url": "https://bringatrailer.com/listing/1965-meyers-manx-13/",
+      "price": 15500,
+      "year": null,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2N2A0570-scaled-copy-2026-09-10-g9q-05667.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Volkswagen",
+      "model": "Dune Buggy",
+      "watch_id": "dune-buggy",
+      "fair_value": 32000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -16500
     },
     {
       "id": "112679650",
@@ -688,7 +688,7 @@
       "source": "bringatrailer",
       "title": "21k-Mile 2005 Honda S2000",
       "url": "https://bringatrailer.com/listing/2005-honda-s2000-243/",
-      "price": 25000,
+      "price": 25250,
       "year": 2005,
       "mileage": 21000,
       "location": null,
@@ -701,7 +701,7 @@
       "fair_value": 41400,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -16400
+      "value_delta": -16150
     },
     {
       "id": "123435174",
@@ -788,7 +788,7 @@
       "source": "bringatrailer",
       "title": "2019 Porsche 718 Cayman GT4 Clubsport Competition",
       "url": "https://bringatrailer.com/listing/2019-porsche-718-cayman-gt4-clubsport-competition/",
-      "price": 57000,
+      "price": 56000,
       "year": 2019,
       "mileage": null,
       "location": null,
@@ -801,7 +801,7 @@
       "fair_value": 109900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -52900
+      "value_delta": -53900
     },
     {
       "id": "119304889",
@@ -2182,6 +2182,26 @@
       "value_score": 67.6,
       "value_label": "Good value",
       "value_delta": -2001
+    },
+    {
+      "id": "cv-2005078040",
+      "source": "carvana",
+      "title": "2019 Porsche 718 Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4575386",
+      "price": 50590,
+      "year": 2019,
+      "mileage": 47334,
+      "location": "Colonial Heights, VA",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/c51cwzm6a3auomx9gvnw.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "\"Traction Control, Stability Control, AB S (4-Wheel), Side Air Bags, Dual Air Bag s, Backup ",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 56400,
+      "value_score": 67.2,
+      "value_label": "Good value",
+      "value_delta": -5810
     },
     {
       "id": "cgu-458569706",
@@ -4664,6 +4684,26 @@
       "value_delta": 200
     },
     {
+      "id": "28534673",
+      "source": "carmax",
+      "title": "2016 Porsche Cayman S",
+      "url": "https://www.carmax.com/car/28534673",
+      "price": 50998,
+      "year": 2016,
+      "mileage": 46132,
+      "location": "Buena Park, CA",
+      "status": "active",
+      "thumbnail": "https://img2.carmax.com/assets/28534673/hero.jpg?width=400",
+      "notes": "Buena Park",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 50600,
+      "value_score": 48.7,
+      "value_label": "Fair value",
+      "value_delta": 398
+    },
+    {
       "id": "cgu-458584552",
       "source": "cargurus",
       "title": "2018 Porsche 718 Cayman GTS",
@@ -4811,7 +4851,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Roseville",
+      "location": "Fairfield",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/3BYAAeSw0BhqsBEz/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -7264,26 +7304,6 @@
       "value_delta": 8000
     },
     {
-      "id": "eb-v1|117424848741|0",
-      "source": "ebay",
-      "title": "2005 Honda S2000",
-      "url": "https://www.ebay.com/itm/117424848741",
-      "price": 45826,
-      "year": 2005,
-      "mileage": 26679,
-      "location": "Atlanta, GA",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/~R8AAeSw6o5qjl-P/s-l1600.jpg",
-      "notes": "Extended warranties are available on sel ect models. A member of our sales team c an provide",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 40400,
-      "value_score": 27.6,
-      "value_label": "Stretched",
-      "value_delta": 5426
-    },
-    {
       "id": "cgu-458702269",
       "source": "cargurus",
       "title": "2025 Porsche 718 Cayman GTS 4.0",
@@ -7662,26 +7682,6 @@
       "value_score": 24.8,
       "value_label": "Stretched",
       "value_delta": 16606
-    },
-    {
-      "id": "cv-3006427739",
-      "source": "carvana",
-      "title": "2024 Porsche 718 Cayman Coupe 2D",
-      "url": "https://www.carvana.com/vehicle/4680117",
-      "price": 77590,
-      "year": 2024,
-      "mileage": 2572,
-      "location": "Heath, OH",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/pcug59dy16py64rjh3yh.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Alarm System, Air Conditioning, Keyless  Entry, Cruise Control, Adaptive Cruise C ontrol, Po",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 67300,
-      "value_score": 24.5,
-      "value_label": "Stretched",
-      "value_delta": 10290
     },
     {
       "id": "28964346",
@@ -11704,6 +11704,26 @@
       "value_delta": 12691
     },
     {
+      "id": "eb-v1|227536745358|0",
+      "source": "ebay",
+      "title": "2008 Porsche Cayman 6speed Bagged Pandem Widebody with Many...",
+      "url": "https://www.ebay.com/itm/227536745358",
+      "price": 34991,
+      "year": 2008,
+      "mileage": 57000,
+      "location": "Dallas, TX",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/JbAAAeSwo8Jqlf7P/s-l1600.jpg",
+      "notes": "RPM Garage is a specialty car dealership  conveniently located off I-35E in Dalla s, Texas. ",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 22300,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 12691
+    },
+    {
       "id": "cgu-455868954",
       "source": "cargurus",
       "title": "2008 Porsche Cayman Base",
@@ -12122,6 +12142,26 @@
       "value_score": 0.0,
       "value_label": "Stretched",
       "value_delta": 17319
+    },
+    {
+      "id": "eb-v1|117437006958|0",
+      "source": "ebay",
+      "title": "2005 Honda S2000",
+      "url": "https://www.ebay.com/itm/117437006958",
+      "price": 45826,
+      "year": 2005,
+      "mileage": null,
+      "location": "Atlanta, GA",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/~R8AAeSw6o5qjl-P/s-l1600.jpg",
+      "notes": "Extended warranties are available on sel ect models. A member of our sales team c an provide",
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 34400,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 11426
     },
     {
       "id": "hemc-2962165",
