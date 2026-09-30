@@ -9,3 +9,5 @@ config.yaml
 .mypy_cache/
 .DS_Store
 *.log
+# Private message captures for the inbox agent — never commit.
+data/inbox/

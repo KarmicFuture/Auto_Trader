@@ -1,0 +1,76 @@
+name: Inbox agent — important conversation alerts
+
+on:
+  schedule:
+    # Every 30 minutes.
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Scan and score without sending alerts"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run inbox agent
+        env:
+          # Gmail (IMAP app password)
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          # Discord bot
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_IDS: ${{ secrets.DISCORD_CHANNEL_IDS }}
+          DISCORD_MY_USER_ID: ${{ secrets.DISCORD_MY_USER_ID }}
+          # Tuning
+          INBOX_VIP_SENDERS: ${{ secrets.INBOX_VIP_SENDERS }}
+          INBOX_KEYWORDS: ${{ secrets.INBOX_KEYWORDS }}
+          INBOX_MIN_IMPORTANCE: ${{ secrets.INBOX_MIN_IMPORTANCE }}
+          # Alert channels
+          INBOX_DISCORD_WEBHOOK_URL: ${{ secrets.INBOX_DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          NOTIFY_EMAIL_TO: ${{ secrets.NOTIFY_EMAIL_TO }}
+          NOTIFY_EMAIL_FROM: ${{ secrets.NOTIFY_EMAIL_FROM }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run || 'false' }}" = "true" ]; then
+            python -m src.inbox.main --dry-run
+          else
+            python -m src.inbox.main
+          fi
+
+      - name: Commit alerted-message state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/inbox_seen.json || true
+          if git diff --staged --quiet; then
+            echo "No inbox_seen.json changes"
+          else
+            git commit -m "chore: update inbox agent seen state"
+            git push
+          fi
