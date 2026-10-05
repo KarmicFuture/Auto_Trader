@@ -1,6 +1,6 @@
 {
   "count": 694,
-  "refreshed_at": "2026-10-04T21:34:30.348108+00:00",
+  "refreshed_at": "2026-10-05T05:49:21.034212+00:00",
   "errors": [],
   "watches": [
     {
@@ -328,7 +328,7 @@
       "source": "bringatrailer",
       "title": "2007 Porsche Cayman 5-Speed",
       "url": "https://bringatrailer.com/listing/2007-porsche-cayman-102/",
-      "price": 10000,
+      "price": 10500,
       "year": 2007,
       "mileage": null,
       "location": null,
@@ -341,7 +341,7 @@
       "fair_value": 23500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -13500
+      "value_delta": -13000
     },
     {
       "id": "cgu-424077779",
@@ -4284,6 +4284,26 @@
       "value_delta": -850
     },
     {
+      "id": "cv-3006549898",
+      "source": "carvana",
+      "title": "2014 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4738658",
+      "price": 40590,
+      "year": 2014,
+      "mileage": 59322,
+      "location": "Tracy, CA",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/hmxoizpm2ve2gk8yli8p.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Power Windows, Air Conditioning, Anti-Th eft System, Power Door Locks, Keyless En try, Cruis",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 41100,
+      "value_score": 52.1,
+      "value_label": "Fair value",
+      "value_delta": -510
+    },
+    {
       "id": "cgu-458756813",
       "source": "cargurus",
       "title": "2017 Porsche 718 Cayman",
@@ -4851,7 +4871,7 @@
       "price": 33000,
       "year": 2005,
       "mileage": 70000,
-      "location": "Valrico",
+      "location": "Tucumcari",
       "status": "active",
       "thumbnail": "https://i.ebayimg.com/images/g/3BYAAeSw0BhqsBEz/s-l1200.jpg",
       "notes": "2005 Honda S2000\n- Stock\n- 6220\n- VIN\n-  00000000000000000\n- Miles\n- 70,000\n- Eng ine Size\n-",
@@ -11535,26 +11555,6 @@
       "status": "active",
       "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/c77aefb8-6b41-5212-9a45-db548dc7797b/bedb3609-b368-4625-bc9e-6a6051c3abed/YLbvBY_MMDuhLStIa-YGxX8DlBE.jpg",
       "notes": "Vmcautogroup Porsche This 2007 Porsche Cayman 2dr CUSTOM feat ures a 2.7L FLAT 6 CYLINDER 6cyl Gasolin e engine. ",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 16100,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 12895
-    },
-    {
-      "id": "eb-v1|377538858922|0",
-      "source": "ebay",
-      "title": "2007 Porsche Cayman CUSTOM",
-      "url": "https://www.ebay.com/itm/377538858922",
-      "price": 28995,
-      "year": 2007,
-      "mileage": 91207,
-      "location": "Houston, TX",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/pkkAAeSwe1Bqv8rz/s-l1200.jpg",
-      "notes": "VMC Auto Group\n5708 Southwest Freeway St e A, Houston, TX 77057\nPhone: 281-864-18 88\n2007 Po",
       "make": "Porsche",
       "model": "Cayman",
       "watch_id": "porsche-cayman",
