@@ -1,6 +1,6 @@
 {
   "count": 696,
-  "refreshed_at": "2026-10-09T22:43:06.581212+00:00",
+  "refreshed_at": "2026-10-10T05:59:30.471740+00:00",
   "errors": [],
   "watches": [
     {
@@ -28,7 +28,7 @@
       "source": "bringatrailer",
       "title": "22k-Mile 2006 Porsche Cayman S 6-Speed",
       "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-298/",
-      "price": 2200,
+      "price": 2300,
       "year": 2006,
       "mileage": 22000,
       "location": null,
@@ -41,7 +41,7 @@
       "fair_value": 32500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -30300
+      "value_delta": -30200
     },
     {
       "id": "123335333",
@@ -648,7 +648,7 @@
       "source": "bringatrailer",
       "title": "2019 Porsche 718 Cayman GT4 Clubsport Competition MR",
       "url": "https://bringatrailer.com/listing/2019-porsche-718-cayman-gt4-clubsport-3-2/",
-      "price": 31000,
+      "price": 32000,
       "year": 2019,
       "mileage": null,
       "location": null,
@@ -661,7 +661,7 @@
       "fair_value": 109900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -78900
+      "value_delta": -77900
     },
     {
       "id": "cm-6b154a22-ec81-46e1-bfd3-02385ca5a013",
@@ -702,6 +702,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -19551
+    },
+    {
+      "id": "122018521",
+      "source": "bringatrailer",
+      "title": "23k-Kilometer 2016 Porsche Cayman GT4",
+      "url": "https://bringatrailer.com/listing/2016-porsche-cayman-gt4-257/",
+      "price": 42069,
+      "year": 2016,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/tempImagenBwxZ8-scaled-copy-2026-10-06-0aw-19874.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 107800,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -65731
     },
     {
       "id": "123457460",
@@ -2022,26 +2042,6 @@
       "value_score": 69.3,
       "value_label": "Good value",
       "value_delta": -6601
-    },
-    {
-      "id": "cv-2005016423",
-      "source": "carvana",
-      "title": "2018 Porsche 718 Cayman Coupe 2D",
-      "url": "https://www.carvana.com/vehicle/4537181",
-      "price": 45590,
-      "year": 2018,
-      "mileage": 67010,
-      "location": "Bessemer, AL",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/eznqob6d6xjoxa1llpod.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "SiriusXM Satellite, Bluetooth Wireless,  CD/MP3 (Single Disc), AM/FM/HD Radio, Kn ee Air Bag",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 51400,
-      "value_score": 68.8,
-      "value_label": "Good value",
-      "value_delta": -5810
     },
     {
       "id": "eb-v1|128124978237|0",
@@ -4224,6 +4224,26 @@
       "value_delta": -980
     },
     {
+      "id": "cv-3006549898",
+      "source": "carvana",
+      "title": "2014 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4738658",
+      "price": 39990,
+      "year": 2014,
+      "mileage": 59322,
+      "location": "Tracy, CA",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/hmxoizpm2ve2gk8yli8p.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Power Windows, Air Conditioning, Anti-Th eft System, Power Door Locks, Keyless En try, Cruis",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 41100,
+      "value_score": 54.5,
+      "value_label": "Fair value",
+      "value_delta": -1110
+    },
+    {
       "id": "111773060",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
@@ -4371,10 +4391,10 @@
       "price": 59998,
       "year": 2017,
       "mileage": 47421,
-      "location": "McKinney, TX",
+      "location": "Irving, TX",
       "status": "active",
       "thumbnail": "https://img2.carmax.com/assets/70067743/hero.jpg?width=400",
-      "notes": "McKinney",
+      "notes": "Texas Stadium (Irving)",
       "make": "Porsche",
       "model": "Cayman",
       "watch_id": "porsche-cayman",
@@ -10624,6 +10644,26 @@
       "value_delta": 16700
     },
     {
+      "id": "eb-v1|267808928756|0",
+      "source": "ebay",
+      "title": "2021 Porsche Cayman Turbo S Sedan 4D",
+      "url": "https://www.ebay.com/itm/267808928756",
+      "price": 86950,
+      "year": 2021,
+      "mileage": 24702,
+      "location": "Houston, TX",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/fRgAAeSwrFJqUm5q/s-l640.jpg",
+      "notes": "New Vehicles come with a full-factory wa rranty. Used vehicles may have a remaini ng-factory",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 68500,
+      "value_score": 5.1,
+      "value_label": "Stretched",
+      "value_delta": 18450
+    },
+    {
       "id": "118860040",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
@@ -10864,24 +10904,24 @@
       "value_delta": 18275
     },
     {
-      "id": "eb-v1|267808928756|0",
+      "id": "eb-v1|267808290317|0",
       "source": "ebay",
       "title": "2021 Porsche Cayman Turbo S Sedan 4D",
-      "url": "https://www.ebay.com/itm/267808928756",
-      "price": 87758,
+      "url": "https://www.ebay.com/itm/267808290317",
+      "price": 82950,
       "year": 2021,
-      "mileage": 24702,
+      "mileage": 40991,
       "location": "Houston, TX",
       "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/fRgAAeSwrFJqUm5q/s-l640.jpg",
+      "thumbnail": "https://i.ebayimg.com/images/g/YCoAAeSwogFqVXfW/s-l640.jpg",
       "notes": "New Vehicles come with a full-factory wa rranty. Used vehicles may have a remaini ng-factory",
       "make": "Porsche",
       "model": "Cayman",
       "watch_id": "porsche-cayman",
-      "fair_value": 68500,
-      "value_score": 3.1,
+      "fair_value": 64900,
+      "value_score": 3.6,
       "value_label": "Stretched",
-      "value_delta": 19258
+      "value_delta": 18050
     },
     {
       "id": "cm-20aac42c-f9b8-4c5a-b34d-c7e563f77d52",
@@ -10942,26 +10982,6 @@
       "value_score": 2.1,
       "value_label": "Stretched",
       "value_delta": 18522
-    },
-    {
-      "id": "eb-v1|267808290317|0",
-      "source": "ebay",
-      "title": "2021 Porsche Cayman Turbo S Sedan 4D",
-      "url": "https://www.ebay.com/itm/267808290317",
-      "price": 83758,
-      "year": 2021,
-      "mileage": 40991,
-      "location": "Houston, TX",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/YCoAAeSwogFqVXfW/s-l640.jpg",
-      "notes": "New Vehicles come with a full-factory wa rranty. Used vehicles may have a remaini ng-factory",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 64900,
-      "value_score": 1.6,
-      "value_label": "Stretched",
-      "value_delta": 18858
     },
     {
       "id": "cm-0e67a595-4c1d-442a-92aa-941ac128392c",
@@ -13919,26 +13939,6 @@
       "model": "Cayman",
       "watch_id": "porsche-cayman",
       "fair_value": 66500,
-      "value_score": null,
-      "value_label": null,
-      "value_delta": null
-    },
-    {
-      "id": "122018521",
-      "source": "bringatrailer",
-      "title": "23k-Kilometer 2016 Porsche Cayman GT4",
-      "url": "https://bringatrailer.com/listing/2016-porsche-cayman-gt4-257/",
-      "price": null,
-      "year": 2016,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/tempImagenBwxZ8-scaled-copy-2026-10-06-0aw-19874.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 107800,
       "value_score": null,
       "value_label": null,
       "value_delta": null
