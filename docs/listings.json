@@ -1,6 +1,6 @@
 {
-  "count": 704,
-  "refreshed_at": "2026-10-14T21:46:09.877026+00:00",
+  "count": 703,
+  "refreshed_at": "2026-10-15T04:48:41.191691+00:00",
   "errors": [],
   "watches": [
     {
@@ -122,26 +122,6 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -6650
-    },
-    {
-      "id": "123554893",
-      "source": "bringatrailer",
-      "title": "38k-Mile 2014 Porsche Cayman S",
-      "url": "https://bringatrailer.com/listing/2014-porsche-cayman-s-120/",
-      "price": 6100,
-      "year": 2014,
-      "mileage": 38000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/IMG_6129-scaled-copy-2026-09-30-bi4-90560.jpeg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 50500,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -44400
     },
     {
       "id": "118320751",
@@ -324,26 +304,6 @@
       "value_delta": -10601
     },
     {
-      "id": "123836446",
-      "source": "bringatrailer",
-      "title": "32k-Mile 2000 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2000-honda-s2000-297/",
-      "price": 12250,
-      "year": 2000,
-      "mileage": 32000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/203-_DSF0458-scaled-copy-2026-09-30-j97-39914.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 34300,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -22050
-    },
-    {
       "id": "112742735",
       "source": "bringatrailer",
       "title": "Meyers Manx",
@@ -402,6 +362,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -16200
+    },
+    {
+      "id": "123836446",
+      "source": "bringatrailer",
+      "title": "32k-Mile 2000 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2000-honda-s2000-297/",
+      "price": 15000,
+      "year": 2000,
+      "mileage": 32000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/203-_DSF0458-scaled-copy-2026-09-30-j97-39914.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 34300,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -19300
     },
     {
       "id": "112679650",
@@ -528,7 +508,7 @@
       "source": "bringatrailer",
       "title": "16k-Mile 2016 Porsche Cayman 6-Speed",
       "url": "https://bringatrailer.com/listing/2016-porsche-cayman-23/",
-      "price": 22500,
+      "price": 23000,
       "year": 2016,
       "mileage": 16000,
       "location": null,
@@ -541,7 +521,7 @@
       "fair_value": 49400,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -26900
+      "value_delta": -26400
     },
     {
       "id": "123421691",
@@ -1044,6 +1024,26 @@
       "value_delta": -6725
     },
     {
+      "id": "123554893",
+      "source": "bringatrailer",
+      "title": "38k-Mile 2014 Porsche Cayman S",
+      "url": "https://bringatrailer.com/listing/2014-porsche-cayman-s-120/",
+      "price": 41000,
+      "year": 2014,
+      "mileage": 38000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/IMG_6129-scaled-copy-2026-09-30-bi4-90560.jpeg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 50500,
+      "value_score": 81.4,
+      "value_label": "Great value",
+      "value_delta": -9500
+    },
+    {
       "id": "cm-03d89cdf-b416-43ad-8ee0-7ef238d33aa6",
       "source": "cars.com",
       "title": "2004 Honda S2000",
@@ -1362,26 +1362,6 @@
       "value_score": 76.0,
       "value_label": "Good value",
       "value_delta": -5000
-    },
-    {
-      "id": "cv-2005038699",
-      "source": "carvana",
-      "title": "2018 Porsche 718 Cayman Coupe 2D",
-      "url": "https://www.carvana.com/vehicle/4559568",
-      "price": 46990,
-      "year": 2018,
-      "mileage": 48038,
-      "location": "San Diego, CA",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/t12grt3uv9rpbkaafwxr.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Bluetooth Wireless, AM/FM/HD Radio, CD/M P3 (Single Disc), SiriusXM Satellite, Ai r Conditio",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 55500,
-      "value_score": 75.6,
-      "value_label": "Good value",
-      "value_delta": -8510
     },
     {
       "id": "cm-c941b771-8679-4d22-b143-e56dc3ed00f9",
