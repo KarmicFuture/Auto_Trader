@@ -9,3 +9,6 @@ config.yaml
 .mypy_cache/
 .DS_Store
 *.log
+
+# Downloaded third-party OCP slide decks (not part of this repo)
+documents/
