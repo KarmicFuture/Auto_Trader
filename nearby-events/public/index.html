@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nearby Events</title>
+    <meta
+      name="description"
+      content="See what's happening near you — location-aware event dashboard."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <div class="shell">
+      <header class="top">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">Location-aware</p>
+            <h1>Nearby Events</h1>
+          </div>
+        </div>
+        <div class="location-card" id="location-card">
+          <div class="loc-status">
+            <span class="dot" id="loc-dot"></span>
+            <div>
+              <strong id="loc-label">Waiting for location…</strong>
+              <p id="loc-meta">Allow location access to find events near you.</p>
+            </div>
+          </div>
+          <div class="loc-actions">
+            <button type="button" class="btn primary" id="btn-locate">
+              Use my location
+            </button>
+            <button type="button" class="btn ghost" id="btn-watch" hidden>
+              Keep tracking
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Filters">
+        <label class="field">
+          <span>Radius</span>
+          <select id="radius">
+            <option value="10">10 miles</option>
+            <option value="25" selected>25 miles</option>
+            <option value="50">50 miles</option>
+            <option value="100">100 miles</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Category</span>
+          <select id="classification">
+            <option value="">All categories</option>
+            <option>Music</option>
+            <option>Sports</option>
+            <option>Arts & Theatre</option>
+            <option>Film</option>
+            <option>Miscellaneous</option>
+          </select>
+        </label>
+        <label class="field grow">
+          <span>Search</span>
+          <input id="keyword" type="search" placeholder="Artist, venue, keyword…" />
+        </label>
+        <button type="button" class="btn primary" id="btn-refresh">Refresh</button>
+      </section>
+
+      <p class="banner" id="banner" hidden></p>
+
+      <div class="layout">
+        <section class="map-panel" aria-label="Map">
+          <div id="map" role="application" aria-label="Events map"></div>
+        </section>
+
+        <section class="list-panel" aria-label="Event list">
+          <header class="list-head">
+            <h2 id="list-title">Events</h2>
+            <span id="list-count">0 nearby</span>
+          </header>
+          <ul class="event-list" id="event-list"></ul>
+          <p class="empty" id="empty" hidden>
+            No events in this radius yet. Try widening the search or refreshing after location locks in.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <dialog class="manual-dialog" id="manual-dialog">
+      <form method="dialog" id="manual-form">
+        <h3>Enter a location</h3>
+        <p>If GPS is unavailable, drop pins with latitude and longitude.</p>
+        <label>
+          Latitude
+          <input name="lat" type="number" step="any" required placeholder="27.9506" />
+        </label>
+        <label>
+          Longitude
+          <input name="lon" type="number" step="any" required placeholder="-82.4572" />
+        </label>
+        <div class="dialog-actions">
+          <button value="cancel" class="btn ghost">Cancel</button>
+          <button value="ok" class="btn primary">Show events</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/js/app.js" type="module"></script>
+  </body>
+</html>
