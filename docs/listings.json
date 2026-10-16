@@ -1,6 +1,6 @@
 {
-  "count": 704,
-  "refreshed_at": "2026-10-16T11:31:53.722199+00:00",
+  "count": 706,
+  "refreshed_at": "2026-10-16T16:44:15.444332+00:00",
   "errors": [],
   "watches": [
     {
@@ -124,26 +124,6 @@
       "value_delta": -8050
     },
     {
-      "id": "124049456",
-      "source": "bringatrailer",
-      "title": "Karma Coachworks Manx SR2",
-      "url": "https://bringatrailer.com/listing/1970-meyers-manx-2-2/",
-      "price": 5050,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/1000024446-scaled-copy-2026-10-14-b7x-ce77cdf319e6abaee2d0e7f755eef5d4.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 32000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -26950
-    },
-    {
       "id": "121790035",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
@@ -162,6 +142,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -6650
+    },
+    {
+      "id": "124049456",
+      "source": "bringatrailer",
+      "title": "Karma Coachworks Manx SR2",
+      "url": "https://bringatrailer.com/listing/1970-meyers-manx-2-2/",
+      "price": 5771,
+      "year": null,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/1000024446-scaled-copy-2026-10-14-b7x-ce77cdf319e6abaee2d0e7f755eef5d4.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Volkswagen",
+      "model": "Dune Buggy",
+      "watch_id": "dune-buggy",
+      "fair_value": 32000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -26229
     },
     {
       "id": "118320751",
@@ -708,7 +708,7 @@
       "source": "bringatrailer",
       "title": "23k-Kilometer 2016 Porsche Cayman GT4",
       "url": "https://bringatrailer.com/listing/2016-porsche-cayman-gt4-257/",
-      "price": 60000,
+      "price": 65000,
       "year": 2016,
       "mileage": null,
       "location": null,
@@ -721,7 +721,7 @@
       "fair_value": 107800,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -47800
+      "value_delta": -42800
     },
     {
       "id": "124337498",
@@ -1364,26 +1364,6 @@
       "value_delta": -8920
     },
     {
-      "id": "122269218",
-      "source": "bringatrailer",
-      "title": "Original-Owner, 14k-Mile 2003 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2003-honda-s2000-226/",
-      "price": 32000,
-      "year": 2003,
-      "mileage": 14000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/gcc.mmason.red_.honda_.s2000.2003.car_.09162026-254-scaled-copy-2026-09-18-4kn-65071.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 38300,
-      "value_score": 77.4,
-      "value_label": "Good value",
-      "value_delta": -6300
-    },
-    {
       "id": "cm-e8696f1a-66b6-4676-9ed3-f6ed91c7e99f",
       "source": "cars.com",
       "title": "2019 Porsche 718 Cayman Base 2dr Coupe",
@@ -1442,6 +1422,26 @@
       "value_score": 76.5,
       "value_label": "Good value",
       "value_delta": -8555
+    },
+    {
+      "id": "122269218",
+      "source": "bringatrailer",
+      "title": "Original-Owner, 14k-Mile 2003 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2003-honda-s2000-226/",
+      "price": 32250,
+      "year": 2003,
+      "mileage": 14000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/gcc.mmason.red_.honda_.s2000.2003.car_.09162026-254-scaled-copy-2026-09-18-4kn-65071.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 38300,
+      "value_score": 76.3,
+      "value_label": "Good value",
+      "value_delta": -6050
     },
     {
       "id": "116202722",
@@ -4182,6 +4182,26 @@
       "value_score": 57.6,
       "value_label": "Fair value",
       "value_delta": -2605
+    },
+    {
+      "id": "cv-2004879347",
+      "source": "carvana",
+      "title": "2016 Porsche Cayman Coupe 2D",
+      "url": "https://www.carvana.com/vehicle/4427348",
+      "price": 42990,
+      "year": 2016,
+      "mileage": 43555,
+      "location": "Belton, MO",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/w2236f3hoxub82q7qfuc.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Keyless Entry, Cruise Control, Air Condi tioning, Adaptive Cruise Control, Power  Windows, P",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 45000,
+      "value_score": 57.4,
+      "value_label": "Fair value",
+      "value_delta": -2010
     },
     {
       "id": "cgu-458486917",
@@ -8662,6 +8682,26 @@
       "value_score": 24.2,
       "value_label": "Stretched",
       "value_delta": 10198
+    },
+    {
+      "id": "70280620",
+      "source": "carmax",
+      "title": "2025 Porsche 718 Cayman Style Edition",
+      "url": "https://www.carmax.com/car/70280620",
+      "price": 84998,
+      "year": 2025,
+      "mileage": 1360,
+      "location": "Burbank, CA",
+      "status": "active",
+      "thumbnail": "https://img2.carmax.com/assets/70280620/hero.jpg?width=400",
+      "notes": "Burbank",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 73600,
+      "value_score": 24.2,
+      "value_label": "Stretched",
+      "value_delta": 11398
     },
     {
       "id": "cgu-454364648",
