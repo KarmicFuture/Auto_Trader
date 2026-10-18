@@ -1,6 +1,6 @@
 {
-  "count": 688,
-  "refreshed_at": "2026-10-17T20:40:57.331877+00:00",
+  "count": 689,
+  "refreshed_at": "2026-10-18T04:41:32.810688+00:00",
   "errors": [],
   "watches": [
     {
@@ -24,26 +24,6 @@
   ],
   "listings": [
     {
-      "id": "124249937",
-      "source": "bringatrailer",
-      "title": "Volkswagen-Powered Dune Buggy",
-      "url": "https://bringatrailer.com/listing/volkswagen-powered-dune-buggy-43/",
-      "price": 2100,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_2149-scaled-copy-2026-10-09-cej-85710.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 12000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -9900
-    },
-    {
       "id": "124344324",
       "source": "bringatrailer",
       "title": "20\u2033 Forged Alloy Porsche 718 Cayman GT4 RS/Spyder RS Wheels",
@@ -62,6 +42,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -172500
+    },
+    {
+      "id": "124249937",
+      "source": "bringatrailer",
+      "title": "Volkswagen-Powered Dune Buggy",
+      "url": "https://bringatrailer.com/listing/volkswagen-powered-dune-buggy-43/",
+      "price": 2600,
+      "year": null,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_2149-scaled-copy-2026-10-09-cej-85710.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Volkswagen",
+      "model": "Dune Buggy",
+      "watch_id": "dune-buggy",
+      "fair_value": 12000,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -9400
     },
     {
       "id": "122519937",
@@ -122,6 +122,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -8050
+    },
+    {
+      "id": "124267503",
+      "source": "bringatrailer",
+      "title": "2008 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2008-porsche-cayman-s-123/",
+      "price": 4016,
+      "year": 2008,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_0938-scaled-copy-2026-10-14-65l-fd53bb76b17065940aa011d88ee264e8.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 30200,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -26184
     },
     {
       "id": "124589153",
@@ -448,7 +468,7 @@
       "source": "bringatrailer",
       "title": "15k-Mile 2006 Honda S2000",
       "url": "https://bringatrailer.com/listing/2006-honda-s2000-197/",
-      "price": 18500,
+      "price": 18750,
       "year": 2006,
       "mileage": 15000,
       "location": null,
@@ -461,7 +481,7 @@
       "fair_value": 42900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -24400
+      "value_delta": -24150
     },
     {
       "id": "115914652",
@@ -568,7 +588,7 @@
       "source": "bringatrailer",
       "title": "32k-Mile 2000 Honda S2000",
       "url": "https://bringatrailer.com/listing/2000-honda-s2000-297/",
-      "price": 22750,
+      "price": 23000,
       "year": 2000,
       "mileage": 32000,
       "location": null,
@@ -581,14 +601,14 @@
       "fair_value": 34300,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -11550
+      "value_delta": -11300
     },
     {
       "id": "124151210",
       "source": "bringatrailer",
       "title": "16k-Mile 2016 Porsche Cayman 6-Speed",
       "url": "https://bringatrailer.com/listing/2016-porsche-cayman-23/",
-      "price": 25000,
+      "price": 30000,
       "year": 2016,
       "mileage": 16000,
       "location": null,
@@ -601,7 +621,7 @@
       "fair_value": 49400,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -24400
+      "value_delta": -19400
     },
     {
       "id": "cgu-461734233",
@@ -762,26 +782,6 @@
       "value_score": 97.6,
       "value_label": "Great value",
       "value_delta": -4000
-    },
-    {
-      "id": "123772259",
-      "source": "bringatrailer",
-      "title": "19k-Mile 2016 Porsche Cayman GT4",
-      "url": "https://bringatrailer.com/listing/2016-porsche-cayman-gt4-260/",
-      "price": 80000,
-      "year": 2016,
-      "mileage": 19000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/2016_porsche_cayman-gt4_2016_porsche_cayman-gt4_b2ea6414-f41e-404e-8003-bba943c5e4e2-tAceWf-98765-98766-scaled.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 112000,
-      "value_score": 97.6,
-      "value_label": "Great value",
-      "value_delta": -32000
     },
     {
       "id": "117186127",
@@ -4064,6 +4064,26 @@
       "value_delta": -2605
     },
     {
+      "id": "cv-3006870146",
+      "source": "carvana",
+      "title": "2014 Porsche Cayman",
+      "url": "https://www.carvana.com/vehicle/4841781",
+      "price": 38990,
+      "year": 2014,
+      "mileage": 61532,
+      "location": "Tolleson, AZ",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/r68y3burdc97rl2x3jx2.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "CD/MP3 (Single Disc), Communication Mana gement, SiriusXM Satellite, AM/FM Stereo , Bluetoot",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 40800,
+      "value_score": 57.4,
+      "value_label": "Fair value",
+      "value_delta": -1810
+    },
+    {
       "id": "cv-2004879347",
       "source": "carvana",
       "title": "2016 Porsche Cayman",
@@ -4642,26 +4662,6 @@
       "value_score": 52.2,
       "value_label": "Fair value",
       "value_delta": -810
-    },
-    {
-      "id": "cv-3006707087",
-      "source": "carvana",
-      "title": "2014 Porsche Cayman",
-      "url": "https://www.carvana.com/vehicle/4776137",
-      "price": 39590,
-      "year": 2014,
-      "mileage": 65879,
-      "location": "University Park, IL",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/0if1aid07226rh3osx1s.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "SiriusXM Satellite, Bluetooth Wireless,  Communication Management, AM/FM Stereo,  CD/MP3 (Si",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 40100,
-      "value_score": 52.1,
-      "value_label": "Fair value",
-      "value_delta": -510
     },
     {
       "id": "cgu-451429383",
@@ -7222,6 +7222,26 @@
       "value_score": 32.9,
       "value_label": "Soft value",
       "value_delta": 10995
+    },
+    {
+      "id": "cmp-88755f87-c74c-495a-b524-d579789db6f0",
+      "source": "cars.com",
+      "title": "2009 Porsche Cayman Cayman",
+      "url": "https://www.cars.com/vehicledetail/88755f87-c74c-495a-b524-d579789db6f0/",
+      "price": 27500,
+      "year": 2009,
+      "mileage": 82700,
+      "location": "",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/7a6210fd-0ca9-4cbb-92f1-5cfdf60b9879/6f71ee87-ad9f-4ccb-a1b6-d6f5acca3a1c",
+      "notes": "Exceptionally maintained 2009 Porsche Ca yman.  Black on black, 6 speed manual.   2 owner, a",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 24900,
+      "value_score": 32.6,
+      "value_label": "Soft value",
+      "value_delta": 2600
     },
     {
       "id": "cgu-415749711",
