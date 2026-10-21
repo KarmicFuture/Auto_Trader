@@ -1,6 +1,6 @@
 {
   "count": 686,
-  "refreshed_at": "2026-10-20T21:41:38.871892+00:00",
+  "refreshed_at": "2026-10-21T04:57:14.421485+00:00",
   "errors": [],
   "watches": [
     {
@@ -23,6 +23,26 @@
     }
   ],
   "listings": [
+    {
+      "id": "124766239",
+      "source": "bringatrailer",
+      "title": "30k-Mile 2011 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2011-porsche-cayman-s-31/",
+      "price": 23,
+      "year": 2011,
+      "mileage": 30000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_1728_2-scaled-copy-2026-10-20-yc0-1384cc83dad2df7f7e301baf59adcdb3.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 40700,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -40677
+    },
     {
       "id": "123274259",
       "source": "bringatrailer",
@@ -128,7 +148,7 @@
       "source": "bringatrailer",
       "title": "Meyers Manx",
       "url": "https://bringatrailer.com/listing/meyers-manx-65/",
-      "price": 5100,
+      "price": 5250,
       "year": null,
       "mileage": null,
       "location": null,
@@ -141,7 +161,7 @@
       "fair_value": 32000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -26900
+      "value_delta": -26750
     },
     {
       "id": "121790035",
@@ -448,7 +468,7 @@
       "source": "bringatrailer",
       "title": "27k-Mile 2003 Honda S2000",
       "url": "https://bringatrailer.com/listing/2003-honda-s2000-229/",
-      "price": 15250,
+      "price": 15750,
       "year": 2003,
       "mileage": 27000,
       "location": null,
@@ -461,7 +481,7 @@
       "fair_value": 35900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -20650
+      "value_delta": -20150
     },
     {
       "id": "112679650",
@@ -1142,26 +1162,6 @@
       "value_score": 83.5,
       "value_label": "Great value",
       "value_delta": -8800
-    },
-    {
-      "id": "124151210",
-      "source": "bringatrailer",
-      "title": "16k-Mile 2016 Porsche Cayman 6-Speed",
-      "url": "https://bringatrailer.com/listing/2016-porsche-cayman-23/",
-      "price": 40000,
-      "year": 2016,
-      "mileage": 16000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/L1020140-scaled-copy-2026-10-12-h1c-31671.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 49400,
-      "value_score": 81.7,
-      "value_label": "Great value",
-      "value_delta": -9400
     },
     {
       "id": "cm-03d89cdf-b416-43ad-8ee0-7ef238d33aa6",
@@ -1882,26 +1882,6 @@
       "value_score": 72.9,
       "value_label": "Good value",
       "value_delta": -8200
-    },
-    {
-      "id": "cv-3006456251",
-      "source": "carvana",
-      "title": "2018 Porsche 718 Cayman",
-      "url": "https://www.carvana.com/vehicle/4687154",
-      "price": 47590,
-      "year": 2018,
-      "mileage": 50074,
-      "location": "Colonial Heights, VA",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/ajgh53hnu89vuwavi1xv.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "ABS (4-Wheel), Stability Control, Tracti on Control, Daytime Running Lights, Bi-X enon Headl",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 55100,
-      "value_score": 72.7,
-      "value_label": "Good value",
-      "value_delta": -7510
     },
     {
       "id": "cm-fc7643d4-8ac5-425a-8bb0-7f463742dee6",
@@ -4404,26 +4384,6 @@
       "value_delta": -1585
     },
     {
-      "id": "cv-2005093562",
-      "source": "carvana",
-      "title": "2022 Porsche 718 Cayman",
-      "url": "https://www.carvana.com/vehicle/4649945",
-      "price": 64590,
-      "year": 2022,
-      "mileage": 7377,
-      "location": "Akron, NY",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/z05905nv4issjh2gno79.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Alarm System, Power Windows, Air Conditi oning, Power Trunk Release, Power Door L ocks, Keyl",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 66300,
-      "value_score": 54.3,
-      "value_label": "Fair value",
-      "value_delta": -1710
-    },
-    {
       "id": "111773060",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
@@ -4502,6 +4462,26 @@
       "value_score": 53.4,
       "value_label": "Fair value",
       "value_delta": -910
+    },
+    {
+      "id": "cv-2005090470",
+      "source": "carvana",
+      "title": "2014 Porsche Cayman",
+      "url": "https://www.carvana.com/vehicle/4626185",
+      "price": 40590,
+      "year": 2014,
+      "mileage": 57354,
+      "location": "Tooele, UT",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/kya91saxow5uxlosafgw.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Hill Start Assist, Traction Control, ABS  (4-Wheel), Bluetooth Wireless, Communic ation Mana",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 41400,
+      "value_score": 53.3,
+      "value_label": "Fair value",
+      "value_delta": -810
     },
     {
       "id": "cgu-460278104",
@@ -4922,6 +4902,26 @@
       "value_score": 50.8,
       "value_label": "Fair value",
       "value_delta": -500
+    },
+    {
+      "id": "cv-3006763334",
+      "source": "carvana",
+      "title": "2022 Porsche 718 Cayman",
+      "url": "https://www.carvana.com/vehicle/4808518",
+      "price": 62990,
+      "year": 2022,
+      "mileage": 21321,
+      "location": "Fort Worth, TX",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/wqdt94snpc265cq006u8.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Dual Power Seats, Heated Seats, Leather,  Ventilated Seats, Keyless Entry, Power  Trunk Rele",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 63200,
+      "value_score": 50.6,
+      "value_label": "Fair value",
+      "value_delta": -210
     },
     {
       "id": "cgu-445991493",
@@ -10464,10 +10464,10 @@
       "value_delta": 17258
     },
     {
-      "id": "eb-v1|327406988000|0",
+      "id": "eb-v1|327415476250|0",
       "source": "ebay",
       "title": "2023 Porsche Cayman GTS Sport Turismo-FRONT PPF-NEPTUNE...",
-      "url": "https://www.ebay.com/itm/327406988000",
+      "url": "https://www.ebay.com/itm/327415476250",
       "price": 96995,
       "year": 2023,
       "mileage": 12847,
@@ -12588,7 +12588,7 @@
       "source": "cars.com",
       "title": "2016 Porsche Cayman Cayman Black Edition",
       "url": "https://www.cars.com/vehicledetail/55393cfe-bde2-4853-a3b7-78f886484b04/",
-      "price": 68950,
+      "price": 66950,
       "year": 2016,
       "mileage": 16964,
       "location": "RINGGOLD, GA",
@@ -12601,7 +12601,7 @@
       "fair_value": 49300,
       "value_score": 0.0,
       "value_label": "Stretched",
-      "value_delta": 19650
+      "value_delta": 17650
     },
     {
       "id": "eb-v1|267792756104|0",
@@ -12704,10 +12704,10 @@
       "value_delta": 39900
     },
     {
-      "id": "eb-v1|237126112197|0",
+      "id": "eb-v1|237134920722|0",
       "source": "ebay",
       "title": "2012 Porsche Cayman R",
-      "url": "https://www.ebay.com/itm/237126112197",
+      "url": "https://www.ebay.com/itm/237134920722",
       "price": 84900,
       "year": 2012,
       "mileage": 39063,
