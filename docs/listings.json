@@ -1,6 +1,6 @@
 {
   "count": 697,
-  "refreshed_at": "2026-10-21T21:47:32.013088+00:00",
+  "refreshed_at": "2026-10-22T04:57:46.200674+00:00",
   "errors": [],
   "watches": [
     {
@@ -48,7 +48,7 @@
       "source": "bringatrailer",
       "title": "2007 Porsche Cayman S 6-Speed",
       "url": "https://bringatrailer.com/listing/2007-porsche-cayman-s-159/",
-      "price": 3000,
+      "price": 3500,
       "year": 2007,
       "mileage": null,
       "location": null,
@@ -61,7 +61,7 @@
       "fair_value": 29500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -26500
+      "value_delta": -26000
     },
     {
       "id": "122519937",
@@ -488,7 +488,7 @@
       "source": "bringatrailer",
       "title": "27k-Mile 2003 Honda S2000",
       "url": "https://bringatrailer.com/listing/2003-honda-s2000-229/",
-      "price": 18250,
+      "price": 18500,
       "year": 2003,
       "mileage": 27000,
       "location": null,
@@ -501,7 +501,7 @@
       "fair_value": 35900,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -17650
+      "value_delta": -17400
     },
     {
       "id": "124488824",
@@ -568,7 +568,7 @@
       "source": "bringatrailer",
       "title": "2014 Porsche Cayman",
       "url": "https://bringatrailer.com/listing/2014-porsche-cayman-67/",
-      "price": 20231,
+      "price": 21500,
       "year": 2014,
       "mileage": null,
       "location": null,
@@ -581,7 +581,7 @@
       "fair_value": 43400,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -23169
+      "value_delta": -21900
     },
     {
       "id": "124409100",
@@ -604,24 +604,24 @@
       "value_delta": -10500
     },
     {
-      "id": "123202899",
+      "id": "125001322",
       "source": "bringatrailer",
-      "title": "15k-Mile 2006 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2006-honda-s2000-197/",
-      "price": 30000,
-      "year": 2006,
-      "mileage": 15000,
+      "title": "31k-Mile, Supercharged 2002 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2002-honda-s2000-253-2/",
+      "price": 22000,
+      "year": 2002,
+      "mileage": 31000,
       "location": null,
       "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/449-scaled-copy-2026-10-15-tvo-4fdd1e7733fbbd009a7c2393e480d338.jpg?w=470&h=318&crop=1",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2676_-_2002_Honda_S2000_107_of_193-scaled-54837-SQnsj5-1-copy-2026-10-21-liu-df241dce68f81f0dffae594c68c78596.jpg?w=470&h=318&crop=1",
       "notes": null,
       "make": "Honda",
       "model": "S2000",
       "watch_id": "honda-s2000",
-      "fair_value": 42900,
+      "fair_value": 35000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -12900
+      "value_delta": -13000
     },
     {
       "id": "cgu-461734233",
@@ -884,6 +884,26 @@
       "value_delta": -8000
     },
     {
+      "id": "123202899",
+      "source": "bringatrailer",
+      "title": "15k-Mile 2006 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2006-honda-s2000-197/",
+      "price": 32251,
+      "year": 2006,
+      "mileage": 15000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/449-scaled-copy-2026-10-15-tvo-4fdd1e7733fbbd009a7c2393e480d338.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 42900,
+      "value_score": 91.4,
+      "value_label": "Great value",
+      "value_delta": -10649
+    },
+    {
       "id": "eb-v1|267794771793|0",
       "source": "ebay",
       "title": "2004 Honda S2000",
@@ -1122,26 +1142,6 @@
       "value_score": 83.5,
       "value_label": "Great value",
       "value_delta": -6725
-    },
-    {
-      "id": "121591530",
-      "source": "bringatrailer",
-      "title": "12k-Mile 2007 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2007-honda-s2000-204/",
-      "price": 35000,
-      "year": 2007,
-      "mileage": 12000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/08/2007_honda_s2000_IMG_8291-73848-scaled-1-copy-2026-10-01-s3t-79038.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 43800,
-      "value_score": 83.5,
-      "value_label": "Great value",
-      "value_delta": -8800
     },
     {
       "id": "cm-03d89cdf-b416-43ad-8ee0-7ef238d33aa6",
@@ -3524,26 +3524,6 @@
       "value_delta": -2226
     },
     {
-      "id": "124337498",
-      "source": "bringatrailer",
-      "title": "194-Mile 2016 Porsche Cayman GT4",
-      "url": "https://bringatrailer.com/listing/2016-porsche-cayman-gt4-256-2/",
-      "price": 100981,
-      "year": 2016,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/gt4_second_shot_2-81-scaled-51328-3nZMCx-1-copy-2026-10-13-4w9-bd075726b5c6cfcbfaed893ac73cfbf3.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 107800,
-      "value_score": 60.5,
-      "value_label": "Fair value",
-      "value_delta": -6819
-    },
-    {
       "id": "113437291",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Fiber Jet Industries Cobra Dune Buggy",
@@ -4524,26 +4504,6 @@
       "value_delta": -1585
     },
     {
-      "id": "cv-2005093562",
-      "source": "carvana",
-      "title": "2022 Porsche 718 Cayman",
-      "url": "https://www.carvana.com/vehicle/4649945",
-      "price": 64590,
-      "year": 2022,
-      "mileage": 7377,
-      "location": "Akron, NY",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/z05905nv4issjh2gno79.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Alarm System, Power Windows, Air Conditi oning, Power Trunk Release, Power Door L ocks, Keyl",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 66300,
-      "value_score": 54.3,
-      "value_label": "Fair value",
-      "value_delta": -1710
-    },
-    {
       "id": "111773060",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
@@ -5284,6 +5244,26 @@
       "value_delta": 193
     },
     {
+      "id": "cmp-927c837d-b222-47c9-ad48-d72b8e96f064",
+      "source": "cars.com",
+      "title": "2003 Honda S2000",
+      "url": "https://www.cars.com/vehicledetail/927c837d-b222-47c9-ad48-d72b8e96f064/",
+      "price": 20500,
+      "year": 2003,
+      "mileage": 113272,
+      "location": "CLEARWATER, FL",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/1af2d5eb-9458-4e1f-9449-94529aef8be3/1d72e01e-5e3b-4f04-ba1d-49cdc467d1e9.jpg",
+      "notes": "Clean S2000 AP1. 6-speed manual converti ble, high-revving 2.0-liter naturally as pirated in",
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 20400,
+      "value_score": 49.2,
+      "value_label": "Fair value",
+      "value_delta": 100
+    },
+    {
       "id": "tc-WP0AA2A81MK260371",
       "source": "truecar",
       "title": "2021 Porsche 718 Cayman T",
@@ -5382,6 +5362,26 @@
       "value_score": 48.6,
       "value_label": "Fair value",
       "value_delta": 604
+    },
+    {
+      "id": "28398760",
+      "source": "carmax",
+      "title": "2016 Porsche Cayman",
+      "url": "https://www.carmax.com/car/28398760",
+      "price": 44998,
+      "year": 2016,
+      "mileage": 46187,
+      "location": "Sacramento, CA",
+      "status": "active",
+      "thumbnail": "https://img2.carmax.com/assets/28398760/hero.jpg?width=400",
+      "notes": "Sacramento South",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 44600,
+      "value_score": 48.5,
+      "value_label": "Fair value",
+      "value_delta": 398
     },
     {
       "id": "cm-822fcac6-56c8-4f5d-8ff7-988bd1c80254",
@@ -7482,26 +7482,6 @@
       "value_score": 31.9,
       "value_label": "Soft value",
       "value_delta": 11944
-    },
-    {
-      "id": "70270668",
-      "source": "carmax",
-      "title": "2016 Porsche Cayman GT4",
-      "url": "https://www.carmax.com/car/70270668",
-      "price": 124998,
-      "year": 2016,
-      "mileage": 14711,
-      "location": "Inglewood, CA",
-      "status": "active",
-      "thumbnail": "https://img2.carmax.com/assets/70270668/hero.jpg?width=400",
-      "notes": "LAX",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 112600,
-      "value_score": 31.6,
-      "value_label": "Soft value",
-      "value_delta": 12398
     },
     {
       "id": "cm-c62aa15d-ec9b-4b9d-b5dd-b28d95120241",
@@ -10124,10 +10104,10 @@
       "value_delta": 15559
     },
     {
-      "id": "eb-v1|327408734079|0",
+      "id": "eb-v1|327417284171|0",
       "source": "ebay",
       "title": "2001 Honda S2000",
-      "url": "https://www.ebay.com/itm/327408734079",
+      "url": "https://www.ebay.com/itm/327417284171",
       "price": 46995,
       "year": 2001,
       "mileage": 7503,
@@ -12424,26 +12404,6 @@
       "value_delta": 10000
     },
     {
-      "id": "cmp-349f6fb8-93c9-4cf6-8d34-b366265be420",
-      "source": "cars.com",
-      "title": "2002 Honda S2000",
-      "url": "https://www.cars.com/vehicledetail/349f6fb8-93c9-4cf6-8d34-b366265be420/",
-      "price": 42500,
-      "year": 2002,
-      "mileage": 58125,
-      "location": "SPRINGFIELD, VA",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/c007f0a7-8ca9-4bdd-b638-3a1661a46c9f/c36c56bf-a174-4acd-8e0e-1723a8eba429.jpg",
-      "notes": "1 of 275 berlina black with full red int erior oem release it has a paint matched  oem hardt",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 30100,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 12400
-    },
-    {
       "id": "118895992",
       "source": "bringatrailer",
       "title": "2,177cc-Powered Meyers Manxter 2+2",
@@ -13428,7 +13388,7 @@
       "source": "ebay",
       "title": "2021 Porsche Cayman Turbo S $213,094 MSRP New",
       "url": "https://www.ebay.com/itm/257807488185",
-      "price": 98560,
+      "price": 98573,
       "year": 2021,
       "mileage": 4144,
       "location": "Carrollton, TX",
@@ -13441,7 +13401,7 @@
       "fair_value": 73000,
       "value_score": 0.0,
       "value_label": "Stretched",
-      "value_delta": 25560
+      "value_delta": 25573
     },
     {
       "id": "eb-v1|137857330391|0",
@@ -13524,10 +13484,10 @@
       "value_delta": 74200
     },
     {
-      "id": "eb-v1|206572990431|0",
+      "id": "eb-v1|206644375569|0",
       "source": "ebay",
       "title": "2024 Porsche Cayman Turbo S Wagon 4D",
-      "url": "https://www.ebay.com/itm/206572990431",
+      "url": "https://www.ebay.com/itm/206644375569",
       "price": 121999,
       "year": 2024,
       "mileage": 6144,
@@ -13824,6 +13784,26 @@
       "value_delta": null
     },
     {
+      "id": "cab-9WYm6lXw",
+      "source": "carsandbids",
+      "title": "2008 Porsche 987 Cayman",
+      "url": "https://carsandbids.com/auctions/9WYm6lXw/2008-porsche-cayman-s",
+      "price": null,
+      "year": 2008,
+      "mileage": 46500,
+      "location": "Huntingdon Valley, PA",
+      "status": "active",
+      "thumbnail": "https://media.carsandbids.com/cdn-cgi/image/width=540,quality=90/9004500a220bf3a3d455d15ee052cf8c332606f8/photos/KZRmZJXk-6xlsPMQ/edit/69sfU.jpg?t=179246750933",
+      "notes": "47k Miles, 6-Speed Manual, Preferred Pac kage Plus, Unmodified",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 24000,
+      "value_score": null,
+      "value_label": null,
+      "value_delta": null
+    },
+    {
       "id": "cm-e9f93397-852a-4bb4-8554-8db6ae25ec49",
       "source": "cars.com",
       "title": "2009 Honda S2000 CR",
@@ -13959,6 +13939,26 @@
       "model": "Cayman",
       "watch_id": "porsche-cayman",
       "fair_value": 62700,
+      "value_score": null,
+      "value_label": null,
+      "value_delta": null
+    },
+    {
+      "id": "124803652",
+      "source": "bringatrailer",
+      "title": "40k-Mile 2006 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-303/",
+      "price": null,
+      "year": 2006,
+      "mileage": 40000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/DSC03780-scaled-copy-2026-10-13-dj7-251eea3a6ffa23b1fe249648411c580b.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 29600,
       "value_score": null,
       "value_label": null,
       "value_delta": null
