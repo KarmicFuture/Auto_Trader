@@ -1,6 +1,6 @@
 {
   "count": 695,
-  "refreshed_at": "2026-10-22T17:16:13.156148+00:00",
+  "refreshed_at": "2026-10-22T21:42:06.926271+00:00",
   "errors": [],
   "watches": [
     {
@@ -128,7 +128,7 @@
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Dune Buggy",
       "url": "https://bringatrailer.com/listing/volkswagen-powered-dune-buggy-43/",
-      "price": 6000,
+      "price": 6200,
       "year": null,
       "mileage": null,
       "location": null,
@@ -141,7 +141,7 @@
       "fair_value": 12000,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -6000
+      "value_delta": -5800
     },
     {
       "id": "124267503",
@@ -604,26 +604,6 @@
       "value_delta": -21900
     },
     {
-      "id": "124409100",
-      "source": "bringatrailer",
-      "title": "Meyers Manx Signature Series",
-      "url": "https://bringatrailer.com/listing/meyers-manx-6-3/",
-      "price": 21500,
-      "year": null,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_2106-scaled-copy-2026-10-14-wy6-7af3164eb769a3b7aae5f68ab4b25e7c.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Volkswagen",
-      "model": "Dune Buggy",
-      "watch_id": "dune-buggy",
-      "fair_value": 32000,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -10500
-    },
-    {
       "id": "125001322",
       "source": "bringatrailer",
       "title": "31k-Mile, Supercharged 2002 Honda S2000",
@@ -842,6 +822,26 @@
       "value_score": 94.0,
       "value_label": "Great value",
       "value_delta": -3700
+    },
+    {
+      "id": "124409100",
+      "source": "bringatrailer",
+      "title": "Meyers Manx Signature Series",
+      "url": "https://bringatrailer.com/listing/meyers-manx-6-3/",
+      "price": 23911,
+      "year": null,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_2106-scaled-copy-2026-10-14-wy6-7af3164eb769a3b7aae5f68ab4b25e7c.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Volkswagen",
+      "model": "Dune Buggy",
+      "watch_id": "dune-buggy",
+      "fair_value": 32000,
+      "value_score": 92.1,
+      "value_label": "Great value",
+      "value_delta": -8089
     },
     {
       "id": "119643369",
@@ -1524,6 +1524,26 @@
       "value_delta": -8263
     },
     {
+      "id": "123202899",
+      "source": "bringatrailer",
+      "title": "15k-Mile 2006 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2006-honda-s2000-197/",
+      "price": 36250,
+      "year": 2006,
+      "mileage": 15000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/449-scaled-copy-2026-10-15-tvo-4fdd1e7733fbbd009a7c2393e480d338.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 42900,
+      "value_score": 75.8,
+      "value_label": "Good value",
+      "value_delta": -6650
+    },
+    {
       "id": "cm-c941b771-8679-4d22-b143-e56dc3ed00f9",
       "source": "cars.com",
       "title": "2018 Porsche 718 Cayman GTS",
@@ -2022,26 +2042,6 @@
       "value_score": 72.2,
       "value_label": "Good value",
       "value_delta": -7513
-    },
-    {
-      "id": "123202899",
-      "source": "bringatrailer",
-      "title": "15k-Mile 2006 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2006-honda-s2000-197/",
-      "price": 37250,
-      "year": 2006,
-      "mileage": 15000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/449-scaled-copy-2026-10-15-tvo-4fdd1e7733fbbd009a7c2393e480d338.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 42900,
-      "value_score": 72.0,
-      "value_label": "Good value",
-      "value_delta": -5650
     },
     {
       "id": "cgu-453047536",
@@ -9744,26 +9744,6 @@
       "value_delta": 12398
     },
     {
-      "id": "eb-v1|237136325848|0",
-      "source": "ebay",
-      "title": "2024 Porsche Cayman Base",
-      "url": "https://www.ebay.com/itm/237136325848",
-      "price": 69900,
-      "year": 2024,
-      "mileage": 43243,
-      "location": "Portland, OR",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/t6kAAeSwy5ZqtyA1/s-l1600.jpg",
-      "notes": "- Exterior Color:\n- GT Silver Metallic\n-  Interior Color:\n- Black\nMost new vehicl es come wi",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 58400,
-      "value_score": 17.2,
-      "value_label": "Stretched",
-      "value_delta": 11500
-    },
-    {
       "id": "cgu-459976493",
       "source": "cargurus",
       "title": "2011 Porsche Cayman Base",
@@ -12224,6 +12204,26 @@
       "value_delta": 12100
     },
     {
+      "id": "eb-v1|206645157838|0",
+      "source": "ebay",
+      "title": "2007 Porsche Cayman Base 2dr Coupe",
+      "url": "https://www.ebay.com/itm/206645157838",
+      "price": 39500,
+      "year": 2007,
+      "mileage": 35500,
+      "location": "Sarasota, FL",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/D~0AAeSwG5pqfXMD/s-l960.jpg",
+      "notes": "- Exterior Color:\n- Black\n- Interior Col or:\n- Black\nNew Vehicles come with a ful l-factory ",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 25000,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 14500
+    },
+    {
       "id": "cm-9d0d8189-ad85-438f-9dbe-cbf6805fe8f8",
       "source": "cars.com",
       "title": "2006 Honda S2000",
@@ -12764,16 +12764,16 @@
       "value_delta": 17650
     },
     {
-      "id": "eb-v1|267792756104|0",
+      "id": "eb-v1|267820980591|0",
       "source": "ebay",
       "title": "2009 Honda S2000 *2009 S2K* *Last Year* *1 of 324* *Only 6k...",
-      "url": "https://www.ebay.com/itm/267792756104",
+      "url": "https://www.ebay.com/itm/267820980591",
       "price": 69900,
       "year": 2009,
       "mileage": 6188,
       "location": "Naperville, IL",
       "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/DJwAAeSw3T1qssfQ/s-l1200.jpg",
+      "thumbnail": "https://i.ebayimg.com/images/g/eS4AAeSwfoJq2mGt/s-l1200.jpg",
       "notes": "Gold Coast Motors Inc\n1570 W Ogden Ave #  112, Naperville, IL 60540\nPhone: 1-877- 601-2961\n2",
       "make": "Honda",
       "model": "S2000",
