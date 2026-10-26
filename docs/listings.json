@@ -1,6 +1,6 @@
 {
-  "count": 690,
-  "refreshed_at": "2026-10-25T20:56:17.271066+00:00",
+  "count": 691,
+  "refreshed_at": "2026-10-26T04:55:38.440886+00:00",
   "errors": [],
   "watches": [
     {
@@ -244,26 +244,6 @@
       "value_delta": -3800
     },
     {
-      "id": "124471286",
-      "source": "bringatrailer",
-      "title": "2001 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2001-honda-s2000-255/",
-      "price": 8575,
-      "year": 2001,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/photo_8_2026-10-18_17-41-29-copy-2026-10-19-v1y-dac0f00eecce0cf80a0bde5d6c85539e.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 29500,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -20925
-    },
-    {
       "id": "125163478",
       "source": "bringatrailer",
       "title": "2007 Porsche Cayman 5-Speed for the Special Olympics",
@@ -348,7 +328,7 @@
       "source": "bringatrailer",
       "title": "7k-Mile 2003 Honda S2000",
       "url": "https://bringatrailer.com/listing/2003-honda-s2000-230/",
-      "price": 10555,
+      "price": 11000,
       "year": 2003,
       "mileage": 7000,
       "location": null,
@@ -361,7 +341,7 @@
       "fair_value": 39500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -28945
+      "value_delta": -28500
     },
     {
       "id": "cgu-424077779",
@@ -384,24 +364,24 @@
       "value_delta": -10601
     },
     {
-      "id": "123316525",
+      "id": "124471286",
       "source": "bringatrailer",
-      "title": "44k-Mile 2015 Porsche Cayman",
-      "url": "https://bringatrailer.com/listing/2015-porsche-cayman-17/",
-      "price": 13500,
-      "year": 2015,
-      "mileage": 44000,
+      "title": "2001 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2001-honda-s2000-255/",
+      "price": 12000,
+      "year": 2001,
+      "mileage": null,
       "location": null,
       "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/2015_porsche_cayman_2015_porsche_cayman_7f5955ec-4eda-4987-a96f-e4158dc06ddf-BI9vsj-73208-73209-scaled-1-copy-2026-10-15-3m9-8aaa6c54315a5ad63f76060c7dad83fd.jpg?w=470&h=318&crop=1",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/photo_8_2026-10-18_17-41-29-copy-2026-10-19-v1y-dac0f00eecce0cf80a0bde5d6c85539e.jpg?w=470&h=318&crop=1",
       "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 44300,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 29500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -30800
+      "value_delta": -17500
     },
     {
       "id": "112742735",
@@ -464,11 +444,31 @@
       "value_delta": -16200
     },
     {
+      "id": "123316525",
+      "source": "bringatrailer",
+      "title": "44k-Mile 2015 Porsche Cayman",
+      "url": "https://bringatrailer.com/listing/2015-porsche-cayman-17/",
+      "price": 15000,
+      "year": 2015,
+      "mileage": 44000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/2015_porsche_cayman_2015_porsche_cayman_7f5955ec-4eda-4987-a96f-e4158dc06ddf-BI9vsj-73208-73209-scaled-1-copy-2026-10-15-3m9-8aaa6c54315a5ad63f76060c7dad83fd.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 44300,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -29300
+    },
+    {
       "id": "124193245",
       "source": "bringatrailer",
       "title": "11k-Mile 2000 Honda S2000",
       "url": "https://bringatrailer.com/listing/2000-honda-s2000-299/",
-      "price": 15250,
+      "price": 15500,
       "year": 2000,
       "mileage": 11000,
       "location": null,
@@ -481,7 +481,7 @@
       "fair_value": 38100,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -22850
+      "value_delta": -22600
     },
     {
       "id": "124049456",
@@ -724,26 +724,6 @@
       "value_delta": -43311
     },
     {
-      "id": "123698702",
-      "source": "bringatrailer",
-      "title": "27k-Mile 2003 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2003-honda-s2000-229/",
-      "price": 25250,
-      "year": 2003,
-      "mileage": 27000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/20260922_124241-copy-2026-10-05-ez9-35434.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 35900,
-      "value_score": 99.4,
-      "value_label": "Great value",
-      "value_delta": -10650
-    },
-    {
       "id": "119304889",
       "source": "bringatrailer",
       "title": "Volkswagen-Powered Sand-Rail Buggy",
@@ -782,6 +762,26 @@
       "value_score": 97.2,
       "value_label": "Great value",
       "value_delta": -3400
+    },
+    {
+      "id": "123698702",
+      "source": "bringatrailer",
+      "title": "27k-Mile 2003 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2003-honda-s2000-229/",
+      "price": 26000,
+      "year": 2003,
+      "mileage": 27000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/20260922_124241-copy-2026-10-05-ez9-35434.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 35900,
+      "value_score": 96.0,
+      "value_label": "Great value",
+      "value_delta": -9900
     },
     {
       "id": "124409100",
@@ -982,6 +982,26 @@
       "value_score": 86.4,
       "value_label": "Great value",
       "value_delta": -7913
+    },
+    {
+      "id": "cmp-5d4fd6f4-7762-4d94-83d1-b29a278e66cb",
+      "source": "cars.com",
+      "title": "2018 Porsche 718 Cayman 718 Cayman",
+      "url": "https://www.cars.com/vehicledetail/5d4fd6f4-7762-4d94-83d1-b29a278e66cb/",
+      "price": 44450,
+      "year": 2018,
+      "mileage": 42056,
+      "location": "LOUISVILLE, KY",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/39d7877c-2839-4230-8e40-48a71676121b/040eac3f-e7d3-4752-bdd7-005af291e36b.JPG",
+      "notes": "One of the best-maintained 718 Caymans o n the market. Meticulously cared for, pr ofessional",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 56800,
+      "value_score": 86.2,
+      "value_label": "Great value",
+      "value_delta": -12350
     },
     {
       "id": "tc-WP0AA2A84EK173730",
@@ -3584,26 +3604,6 @@
       "value_delta": -1400
     },
     {
-      "id": "cv-3006549898",
-      "source": "carvana",
-      "title": "2014 Porsche Cayman",
-      "url": "https://www.carvana.com/vehicle/4738658",
-      "price": 38990,
-      "year": 2014,
-      "mileage": 59322,
-      "location": "Tracy, CA",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/hmxoizpm2ve2gk8yli8p.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Power Windows, Air Conditioning, Anti-Th eft System, Power Door Locks, Keyless En try, Cruis",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 41100,
-      "value_score": 58.6,
-      "value_label": "Fair value",
-      "value_delta": -2110
-    },
-    {
       "id": "cmp-4de0c57a-fbca-450a-8bf8-2b01790bef41",
       "source": "cars.com",
       "title": "2019 Porsche 718 Cayman 718 Cayman",
@@ -4422,6 +4422,26 @@
       "value_score": 52.7,
       "value_label": "Fair value",
       "value_delta": -1002
+    },
+    {
+      "id": "cmp-14520bae-2c21-4bb4-827a-d6b936b3e664",
+      "source": "cars.com",
+      "title": "2015 Porsche Cayman Cayman",
+      "url": "https://www.cars.com/vehicledetail/14520bae-2c21-4bb4-827a-d6b936b3e664/",
+      "price": 40000,
+      "year": 2015,
+      "mileage": 66973,
+      "location": "OILVILLE, VA",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/5e5da5fd-79a2-46be-ac87-728901ea7d68/5f806833-2e38-446c-a4c7-730af90b6e95.jpg",
+      "notes": "This is a 2015 Porsche Cayman in Agate G rey.  No Accidents, full service by Pors che and in",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 40600,
+      "value_score": 52.5,
+      "value_label": "Fair value",
+      "value_delta": -600
     },
     {
       "id": "cgu-461715160",
@@ -5622,26 +5642,6 @@
       "value_score": 44.3,
       "value_label": "Soft value",
       "value_delta": 898
-    },
-    {
-      "id": "cmp-14520bae-2c21-4bb4-827a-d6b936b3e664",
-      "source": "cars.com",
-      "title": "2015 Porsche Cayman Cayman",
-      "url": "https://www.cars.com/vehicledetail/14520bae-2c21-4bb4-827a-d6b936b3e664/",
-      "price": 42000,
-      "year": 2015,
-      "mileage": 66973,
-      "location": "OILVILLE, VA",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/5e5da5fd-79a2-46be-ac87-728901ea7d68/5f806833-2e38-446c-a4c7-730af90b6e95.jpg",
-      "notes": "This is a 2015 Porsche Cayman in Agate G rey.  No Accidents, full service by Pors che and in",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 40600,
-      "value_score": 44.3,
-      "value_label": "Soft value",
-      "value_delta": 1400
     },
     {
       "id": "eb-v1|128153376939|0",
@@ -10324,6 +10324,26 @@
       "value_delta": 14700
     },
     {
+      "id": "cmp-5bef3210-ffb1-4fc6-a842-6bb482521ab3",
+      "source": "cars.com",
+      "title": "2024 Porsche 718 Cayman Cayman",
+      "url": "https://www.cars.com/vehicledetail/5bef3210-ffb1-4fc6-a842-6bb482521ab3/",
+      "price": 82000,
+      "year": 2024,
+      "mileage": 7351,
+      "location": "FOOTHILL RANCH, CA",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/74767166-a697-4b99-b365-6055a96df9b0/0b4b9077-945a-4dc8-8bd5-54359c0229a4.jpeg",
+      "notes": "I am selling my meticulously maintained,  pristine condition 2024 Porsche Cayman.  This car ",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 66300,
+      "value_score": 10.5,
+      "value_label": "Stretched",
+      "value_delta": 15700
+    },
+    {
       "id": "cgu-459584180",
       "source": "cargurus",
       "title": "2024 Porsche 718 Cayman",
@@ -10544,10 +10564,10 @@
       "value_delta": 16890
     },
     {
-      "id": "eb-v1|327415476250|0",
+      "id": "eb-v1|327423940436|0",
       "source": "ebay",
       "title": "2023 Porsche Cayman GTS Sport Turismo-FRONT PPF-NEPTUNE...",
-      "url": "https://www.ebay.com/itm/327415476250",
+      "url": "https://www.ebay.com/itm/327423940436",
       "price": 96995,
       "year": 2023,
       "mileage": 12847,
@@ -12684,10 +12704,10 @@
       "value_delta": 39900
     },
     {
-      "id": "eb-v1|237134920722|0",
+      "id": "eb-v1|237144298621|0",
       "source": "ebay",
       "title": "2012 Porsche Cayman R",
-      "url": "https://www.ebay.com/itm/237134920722",
+      "url": "https://www.ebay.com/itm/237144298621",
       "price": 84900,
       "year": 2012,
       "mileage": 39063,
