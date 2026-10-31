@@ -1,6 +1,6 @@
 {
-  "count": 694,
-  "refreshed_at": "2026-10-30T22:26:36.659113+00:00",
+  "count": 696,
+  "refreshed_at": "2026-10-31T05:53:12.216635+00:00",
   "errors": [],
   "watches": [
     {
@@ -408,7 +408,7 @@
       "source": "bringatrailer",
       "title": "2001 Honda S2000",
       "url": "https://bringatrailer.com/listing/2001-honda-s2000-255/",
-      "price": 17000,
+      "price": 19000,
       "year": 2001,
       "mileage": null,
       "location": null,
@@ -421,7 +421,7 @@
       "fair_value": 29500,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -12500
+      "value_delta": -10500
     },
     {
       "id": "124589153",
@@ -522,6 +522,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -85800
+    },
+    {
+      "id": "125591850",
+      "source": "bringatrailer",
+      "title": "8k-Mile 2020 Porsche 718 Cayman GT4 6-Speed",
+      "url": "https://bringatrailer.com/listing/2020-porsche-718-cayman-gt4-46/",
+      "price": 30000,
+      "year": 2020,
+      "mileage": 8000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/GT4-20-copy-2026-10-26-e2c-07218f50dac02f8c07f79c07cc856b5f.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 118700,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -88700
     },
     {
       "id": "cgu-461734233",
@@ -1504,6 +1524,26 @@
       "value_delta": -4300
     },
     {
+      "id": "cv-3006845584",
+      "source": "carvana",
+      "title": "2018 Porsche 718 Cayman",
+      "url": "https://www.carvana.com/vehicle/4877996",
+      "price": 46990,
+      "year": 2018,
+      "mileage": 48652,
+      "location": "Greenfield, IN",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/nsxeoga9x909zegttzsa.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Tilt & Telescoping Wheel, Electromechani cal Steering, Dual Air Bags, Backup Came ra, Side A",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 55400,
+      "value_score": 75.3,
+      "value_label": "Good value",
+      "value_delta": -8410
+    },
+    {
       "id": "cgu-458242707",
       "source": "cargurus",
       "title": "2018 Porsche 718 Cayman",
@@ -2442,26 +2482,6 @@
       "value_score": 66.7,
       "value_label": "Good value",
       "value_delta": -4728
-    },
-    {
-      "id": "124909424",
-      "source": "bringatrailer",
-      "title": "Oak Green Metallic 2024 Porsche 718 Cayman GT4 RS Weissach",
-      "url": "https://bringatrailer.com/listing/2024-porsche-718-cayman-gt4-rs-31/",
-      "price": 163000,
-      "year": 2024,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2024_Porsche_718_GT4_RS_OGM_-_18_of_84-copy-2026-10-16-7td-d4818ea20ba021f47accd0983b6640b3.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 181000,
-      "value_score": 66.6,
-      "value_label": "Good value",
-      "value_delta": -18000
     },
     {
       "id": "118462191",
@@ -4202,6 +4222,26 @@
       "value_score": 55.9,
       "value_label": "Fair value",
       "value_delta": -2006
+    },
+    {
+      "id": "124909424",
+      "source": "bringatrailer",
+      "title": "Oak Green Metallic 2024 Porsche 718 Cayman GT4 RS Weissach",
+      "url": "https://bringatrailer.com/listing/2024-porsche-718-cayman-gt4-rs-31/",
+      "price": 175000,
+      "year": 2024,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2024_Porsche_718_GT4_RS_OGM_-_18_of_84-copy-2026-10-16-7td-d4818ea20ba021f47accd0983b6640b3.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 181000,
+      "value_score": 55.5,
+      "value_label": "Fair value",
+      "value_delta": -6000
     },
     {
       "id": "cgu-461385567",
@@ -9884,6 +9924,26 @@
       "value_delta": 7093
     },
     {
+      "id": "eb-v1|168793258036|0",
+      "source": "ebay",
+      "title": "2008 Porsche Cayman 2008 PORSCHE CAYMAN ONLY 15808 MILES...",
+      "url": "https://www.ebay.com/itm/168793258036",
+      "price": 34500,
+      "year": 2008,
+      "mileage": 15808,
+      "location": "Arlington, TX",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/lx4AAeSw-YBqs~QC/s-l1600.jpg",
+      "notes": "THIS IS MY WIFES CAR VERY LOW MILES JUST  HAD NEW OIL CHANGE PUT NEW TPCM MONITOR  AND ALL N",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 28900,
+      "value_score": 17.7,
+      "value_label": "Stretched",
+      "value_delta": 5600
+    },
+    {
       "id": "cm-9b470dd7-e131-47f3-8f29-c6be85ddc140",
       "source": "cars.com",
       "title": "2008 Porsche Cayman Cayman",
@@ -10484,26 +10544,6 @@
       "value_delta": 14612
     },
     {
-      "id": "eb-v1|168793258036|0",
-      "source": "ebay",
-      "title": "2008 Porsche Cayman 2008 PORSCHE CAYMAN ONLY 15808 MILES...",
-      "url": "https://www.ebay.com/itm/168793258036",
-      "price": 35500,
-      "year": 2008,
-      "mileage": 15808,
-      "location": "Arlington, TX",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/lx4AAeSw-YBqs~QC/s-l1600.jpg",
-      "notes": "THIS IS MY WIFES CAR VERY LOW MILES JUST  HAD NEW OIL CHANGE PUT NEW TPCM MONITOR  AND ALL N",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 28900,
-      "value_score": 11.9,
-      "value_label": "Stretched",
-      "value_delta": 6600
-    },
-    {
       "id": "cmp-5bef3210-ffb1-4fc6-a842-6bb482521ab3",
       "source": "cars.com",
       "title": "2024 Porsche 718 Cayman Cayman",
@@ -10884,10 +10924,10 @@
       "value_delta": 7698
     },
     {
-      "id": "eb-v1|327423940436|0",
+      "id": "eb-v1|327431393738|0",
       "source": "ebay",
       "title": "2023 Porsche Cayman GTS Sport Turismo-FRONT PPF-NEPTUNE...",
-      "url": "https://www.ebay.com/itm/327423940436",
+      "url": "https://www.ebay.com/itm/327431393738",
       "price": 96995,
       "year": 2023,
       "mileage": 12847,
@@ -12424,26 +12464,6 @@
       "value_delta": 19309
     },
     {
-      "id": "eb-v1|257775917631|0",
-      "source": "ebay",
-      "title": "2000 Honda S2000",
-      "url": "https://www.ebay.com/itm/257775917631",
-      "price": 49999,
-      "year": 2000,
-      "mileage": 19863,
-      "location": "Fort Lauderdale, FL",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/Fz4AAeSwvqJqbqvm/s-l1200.jpg",
-      "notes": "Exotic Car Trader makes car buying safe  and secure. Our Team Members are experts  at sellin",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 36500,
-      "value_score": 0.0,
-      "value_label": "Stretched",
-      "value_delta": 13499
-    },
-    {
       "id": "hemc-2958403",
       "source": "hemmings",
       "title": "2000 Honda S2000",
@@ -12784,10 +12804,10 @@
       "value_delta": 24547
     },
     {
-      "id": "eb-v1|237144298621|0",
+      "id": "eb-v1|237153576490|0",
       "source": "ebay",
       "title": "2012 Porsche Cayman R",
-      "url": "https://www.ebay.com/itm/237144298621",
+      "url": "https://www.ebay.com/itm/237153576490",
       "price": 83900,
       "year": 2012,
       "mileage": 39063,
@@ -13899,6 +13919,26 @@
       "model": "Cayman",
       "watch_id": "porsche-cayman",
       "fair_value": 67200,
+      "value_score": null,
+      "value_label": null,
+      "value_delta": null
+    },
+    {
+      "id": "124892253",
+      "source": "bringatrailer",
+      "title": "47k-Mile 2006 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-304/",
+      "price": null,
+      "year": 2006,
+      "mileage": 47000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2783_-_2006_Porsche_Cayman_S_29_of_344-scaled-copy-2026-10-15-6tw-62ce45952459a43f4cb570bb16fab622.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 28500,
       "value_score": null,
       "value_label": null,
       "value_delta": null
