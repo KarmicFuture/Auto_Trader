@@ -1,6 +1,6 @@
 {
-  "count": 717,
-  "refreshed_at": "2026-11-01T22:07:40.787070+00:00",
+  "count": 714,
+  "refreshed_at": "2026-11-02T06:18:57.291935+00:00",
   "errors": [],
   "watches": [
     {
@@ -364,26 +364,6 @@
       "value_delta": -14200
     },
     {
-      "id": "123665830",
-      "source": "bringatrailer",
-      "title": "One-Family-Owned 2000 Honda S2000",
-      "url": "https://bringatrailer.com/listing/2000-honda-s2000-296/",
-      "price": 15250,
-      "year": 2000,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/DSC01077-copy-2026-10-21-l4q-12aa935dad5618b484cb55b087449a61.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 29200,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -13950
-    },
-    {
       "id": "124049456",
       "source": "bringatrailer",
       "title": "Karma Coachworks Manx SR2",
@@ -402,6 +382,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -16500
+    },
+    {
+      "id": "123665830",
+      "source": "bringatrailer",
+      "title": "One-Family-Owned 2000 Honda S2000",
+      "url": "https://bringatrailer.com/listing/2000-honda-s2000-296/",
+      "price": 16000,
+      "year": 2000,
+      "mileage": null,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/09/DSC01077-copy-2026-10-21-l4q-12aa935dad5618b484cb55b087449a61.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 29200,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -13200
     },
     {
       "id": "124589153",
@@ -488,7 +488,7 @@
       "source": "bringatrailer",
       "title": "2016 Porsche Cayman GT4 Clubsport",
       "url": "https://bringatrailer.com/listing/2016-porsche-981-cayman-gt4-clubsport-3/",
-      "price": 24000,
+      "price": 24500,
       "year": 2016,
       "mileage": null,
       "location": null,
@@ -501,7 +501,7 @@
       "fair_value": 107800,
       "value_score": 100.0,
       "value_label": "Great value",
-      "value_delta": -83800
+      "value_delta": -83300
     },
     {
       "id": "121823548",
@@ -962,26 +962,6 @@
       "value_score": 85.3,
       "value_label": "Great value",
       "value_delta": -7105
-    },
-    {
-      "id": "124441107",
-      "source": "bringatrailer",
-      "title": "45k-Mile 2010 Porsche Cayman 6-Speed",
-      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-14/",
-      "price": 25000,
-      "year": 2010,
-      "mileage": 45000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2010_porsche_cayman_2010_porsche_cayman_7d01f2ba-bc46-44aa-9adb-21a855626c6c-6HgLE3-d4c833503ba98f9cc7eeac7e862bdf65-7c42340aebe7046bed85e088ae9c8867-scale-892b9f4f605052f8a946d36e42a997f1.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 31600,
-      "value_score": 84.8,
-      "value_label": "Great value",
-      "value_delta": -6600
     },
     {
       "id": "eb-v1|820288357825|0",
@@ -3684,6 +3664,26 @@
       "value_delta": -1906
     },
     {
+      "id": "cv-2004879347",
+      "source": "carvana",
+      "title": "2016 Porsche Cayman",
+      "url": "https://www.carvana.com/vehicle/4427348",
+      "price": 42590,
+      "year": 2016,
+      "mileage": 43555,
+      "location": "Belton, MO",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/w2236f3hoxub82q7qfuc.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Keyless Entry, Cruise Control, Air Condi tioning, Adaptive Cruise Control, Power  Windows, P",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 45000,
+      "value_score": 58.9,
+      "value_label": "Fair value",
+      "value_delta": -2410
+    },
+    {
       "id": "cmp-fea334cf-1a05-40d7-adfc-6481a48ad7d3",
       "source": "cars.com",
       "title": "2009 Porsche Cayman Cayman",
@@ -3822,6 +3822,26 @@
       "value_score": 58.5,
       "value_label": "Fair value",
       "value_delta": -5489
+    },
+    {
+      "id": "124441107",
+      "source": "bringatrailer",
+      "title": "45k-Mile 2010 Porsche Cayman 6-Speed",
+      "url": "https://bringatrailer.com/listing/2010-porsche-cayman-14/",
+      "price": 30000,
+      "year": 2010,
+      "mileage": 45000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/2010_porsche_cayman_2010_porsche_cayman_7d01f2ba-bc46-44aa-9adb-21a855626c6c-6HgLE3-d4c833503ba98f9cc7eeac7e862bdf65-7c42340aebe7046bed85e088ae9c8867-scale-892b9f4f605052f8a946d36e42a997f1.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 31600,
+      "value_score": 58.4,
+      "value_label": "Fair value",
+      "value_delta": -1600
     },
     {
       "id": "cm-b373f096-c11a-455c-8a79-d9f2b6c9d19d",
@@ -4042,26 +4062,6 @@
       "value_score": 57.1,
       "value_label": "Fair value",
       "value_delta": -2435
-    },
-    {
-      "id": "cv-2005093562",
-      "source": "carvana",
-      "title": "2022 Porsche 718 Cayman",
-      "url": "https://www.carvana.com/vehicle/4649945",
-      "price": 63590,
-      "year": 2022,
-      "mileage": 7377,
-      "location": "Akron, NY",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/z05905nv4issjh2gno79.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "Alarm System, Power Windows, Air Conditi oning, Power Trunk Release, Power Door L ocks, Keyl",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 66300,
-      "value_score": 56.8,
-      "value_label": "Fair value",
-      "value_delta": -2710
     },
     {
       "id": "cm-9bc7cb78-87cd-4727-b95d-f0c44bab0e17",
@@ -5422,26 +5422,6 @@
       "value_score": 47.6,
       "value_label": "Fair value",
       "value_delta": 500
-    },
-    {
-      "id": "cv-2005091273",
-      "source": "carvana",
-      "title": "2018 Porsche 718 Cayman GTS",
-      "url": "https://www.carvana.com/vehicle/4590459",
-      "price": 67990,
-      "year": 2018,
-      "mileage": 50637,
-      "location": "Framingham, MA",
-      "status": "active",
-      "thumbnail": "https://partners.fastly.carvana.io/render/kmn10a4juz4paukuggo1.jpg?o=BF-SecondaryLogo-WhiteText2-B",
-      "notes": "\"Side Air Bags, Head Curtain Air Bags, D ual Air Bags, F&R Park Assist, Knee Air  Bags, Back",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 67000,
-      "value_score": 47.5,
-      "value_label": "Fair value",
-      "value_delta": 990
     },
     {
       "id": "tc-JHMAP11423T002020",
@@ -8484,26 +8464,6 @@
       "value_delta": 9198
     },
     {
-      "id": "abt-557291139",
-      "source": "autobytel",
-      "title": "2004 Honda S2000 Base",
-      "url": "//www.autotempest.com/details/abt-557291139",
-      "price": 37171,
-      "year": 2004,
-      "mileage": 66554,
-      "location": "Glen Cove, NY",
-      "status": "active",
-      "thumbnail": "https://listings-prod.tcimg.net/listings/26210/11/30/JHMAP21474T003011/001_2026103010.jpg",
-      "notes": "North Coast Subaru 12V power outlets 1 12V power outlet,  4  Speakers,  4-Wheel Disc Brakes,  ABS br akes,  ABS",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 32800,
-      "value_score": 27.8,
-      "value_label": "Stretched",
-      "value_delta": 4371
-    },
-    {
       "id": "cgu-462495273",
       "source": "cargurus",
       "title": "2001 Honda S2000 Roadster",
@@ -10164,10 +10124,10 @@
       "value_delta": 7325
     },
     {
-      "id": "eb-v1|287623041991|0",
+      "id": "eb-v1|287698270598|0",
       "source": "ebay",
       "title": "2001 Honda S2000",
-      "url": "https://www.ebay.com/itm/287623041991",
+      "url": "https://www.ebay.com/itm/287698270598",
       "price": 43394,
       "year": 2001,
       "mileage": 19820,
@@ -14319,26 +14279,6 @@
       "model": "Cayman",
       "watch_id": "porsche-cayman",
       "fair_value": 104800,
-      "value_score": null,
-      "value_label": null,
-      "value_delta": null
-    },
-    {
-      "id": "eb-v1|147647879097|0",
-      "source": "ebay",
-      "title": "2024 Porsche Cayman",
-      "url": "https://www.ebay.com/itm/147647879097",
-      "price": null,
-      "year": 2024,
-      "mileage": 6553,
-      "location": "San Diego, CA",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/0PIAAeSwpNZq2ouR/s-l1600.jpg",
-      "notes": "Experience the thrill of driving with th e 2024 Porsche 718 Cayman GT4 RS Coupe.  This stunn",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 66500,
       "value_score": null,
       "value_label": null,
       "value_delta": null
