@@ -5,8 +5,7 @@ import { PODS, SHELL, YARD, deviceRackId, entityById, entityScore, heatBand, inf
 import { waiting } from "../domain/failover";
 import { openSession } from "../domain/sessions";
 import { runtime, state } from "../state";
-import { activeAlarms, watchTable } from "../ui/alarms";
-import { alarmInput, explainHtml } from "../ui/explain";
+import { activeAlarms, alarmBanner, watchTable } from "../ui/alarms";
 import { clamp, esc } from "../ui/format";
 import { render } from "../ui/schedule";
 import { elevationIndex, elevationNavHtml, ELEVATION_STEPS } from "../ui/elevations";
@@ -637,9 +636,11 @@ export function renderLibrary() {
     amps += specItem.amps;
   });
   const power = watts >= 1000 ? (watts / 1000).toFixed(1) + " kW" : watts + " W";
-  const open = state.libOpen ? " open" : "";
-  return '<aside class="lib' + open + '"><button type="button" class="lib-toggle" data-act="lib-toggle" aria-expanded="' +
-    (state.libOpen ? "true" : "false") + '" aria-controls="floor-lib-body">Device library</button><div class="lib-body" id="floor-lib-body"><h2>Device library</h2><p class="fine">Drag a tile. Outside gear lands in the yard. Floor gear lands in the hall. Rack gear mounts in an enclosure.</p><div class="lib-filters">' +
+  const desktop = typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches;
+  const expanded = desktop ? state.libOpen !== false : !!state.libOpen;
+  const klass = (expanded ? " open" : "") + (state.libOpen === false ? " closed" : "");
+  return '<aside class="lib' + klass + '"><button type="button" class="lib-toggle" data-act="lib-toggle" aria-expanded="' +
+    (expanded ? "true" : "false") + '" aria-controls="floor-lib-body">Device library</button><div class="lib-body" id="floor-lib-body"><h2>Device library</h2><p class="fine">Drag a tile. Outside gear lands in the yard. Floor gear lands in the hall. Rack gear mounts in an enclosure.</p><div class="lib-filters">' +
     filters + "</div>" + groups + '<p class="lib-total"><b>' + state.plan.placements.length + '</b><span>placed</span><b>' +
     power + "</b><b>" + amps.toFixed(1) + " A</b></p></div></aside>";
 }
@@ -1164,15 +1165,6 @@ export function planSheet() {
   return "";
 }
 
-export function explainRest() {
-  const rest = activeAlarms().slice(3);
-  if (!rest.length) return "";
-  const cards = rest.map((alarm) => '<article class="explain-alarm"><h3>' + esc(alarm.asset) + "</h3><p>" +
-    esc(alarm.text) + "</p>" + explainHtml(alarmInput(alarm)) + "</article>").join("");
-  return '<section class="panel explain-rest"><div class="panel-head"><h2>Other alarms</h2><p class="fine">Each alarm has an Explain panel. The banner keeps the first three. The rest are here.</p></div>' +
-    cards + "</section>";
-}
-
 export function renderFloor() {
   const planOpen = placementById(state.floor.rackId);
   const deep = state.floor.level === "rack" || state.floor.level === "server" || state.floor.level === "part";
@@ -1189,8 +1181,25 @@ export function renderFloor() {
     ? "Future state of the whole system. Live control is unchanged. Hall 2, the second feeder, and restored BMC paths are shown as planned."
     : (outside ? "Click the grid, the feeder, a pipe, or the compute hall to open that part." : "Click a pod, a row, a rack, or a server. The next click opens the inlet, exhaust, BMC, or DC feed.");
   const showFace = ["row", "rack", "server", "part"].indexOf(state.floor.level) >= 0;
-  return '<div class="floor-page"><div class="page-head"><div class="top"><div><h1>' + title + '</h1><p class="sub">' + sub + "</p></div></div>" +
-    pills() + elevationNavHtml({ face: showFace }) + '</div><div class="plan-layout">' + renderLibrary() + '<div class="floor-layout" data-floor-level="' + esc(state.floor.level) + '">' + scene + renderInspector() + "</div></div>" + watchTable() + explainRest() + "</div>";
+  const desktop = typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches;
+  const dockOpen = desktop ? state.watchOpen !== false : !!state.watchOpen;
+  const dockTab = state.dockTab === "watch" ? "watch" : "alarms";
+  const alarmCount = activeAlarms().length;
+  const alarmsPressed = dockTab === "alarms" ? " aria-pressed=\"true\"" : "";
+  const watchPressed = dockTab === "watch" ? " aria-pressed=\"true\"" : "";
+  const dockLabel = dockOpen ? "Hide panel" : "Show panel";
+  return "<div class=\"floor-page" + (state.watchOpen === false ? " collapsed" : "") + "\" data-dock=\"" + dockTab +
+    "\"><div class=\"floor-alarms\">" + alarmBanner() + "</div><div class=\"page-head\"><div class=\"top\"><div><h1>" +
+    title + "</h1><p class=\"sub\">" + sub + "</p></div></div>" + pills() + elevationNavHtml({ face: showFace }) +
+    "</div><div class=\"plan-layout\">" + renderLibrary() + "<div class=\"floor-layout\" data-floor-level=\"" +
+    esc(state.floor.level) + "\">" + scene + renderInspector() + "</div></div><aside class=\"floor-dock" +
+    (dockOpen ? " open" : "") + (state.watchOpen === false ? " collapsed" : "") +
+    "\"><div class=\"dock-tabs\"><button type=\"button\" class=\"dock-tab\" data-act=\"dock-tab\" data-tab=\"alarms\"" +
+    alarmsPressed + ">Alarms" + (alarmCount ? " · " + alarmCount : "") +
+    "</button><button type=\"button\" class=\"dock-tab\" data-act=\"dock-tab\" data-tab=\"watch\"" + watchPressed +
+    ">Serial watch</button><button type=\"button\" class=\"dock-toggle\" data-act=\"dock-toggle\" aria-expanded=\"" +
+    (dockOpen ? "true" : "false") + "\">" + dockLabel + "</button></div><div class=\"dock-body\">" +
+    watchTable() + "</div></aside></div>";
 }
 
 export function zoomFloor(dir) {

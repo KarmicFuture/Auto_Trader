@@ -66,9 +66,9 @@ export const state: AppState = {
   demoId: "",
   demoStep: 0,
   demoDone: false,
-  libOpen: false,
+  libOpen: null,
   alarmOpen: "",
-  watchOpen: false,
-  dockTab: "watch",
+  watchOpen: null,
+  dockTab: "alarms",
   outletGate: null,
 };

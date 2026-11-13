@@ -161,7 +161,7 @@ export function alarmBanner() {
   if (!alarms.length) {
     return '<div class="alarm-banner quiet"><span class="pri-mark pri-0" aria-hidden="true">—</span><p>No abnormal conditions. The last automatic serial login on every ACS port read nominal.</p></div>';
   }
-  const shown = alarms.slice(0, 3).map((alarm) => {
+  const shown = alarms.map((alarm) => {
     const unacked = !state.acked[alarm.id];
     const open = state.alarmOpen === alarm.id;
     return '<div class="alarm-stack' + (open ? " open" : "") + '"><div class="alarm-row pri-' + alarm.pri + (unacked ? " unacked" : "") +
@@ -172,8 +172,7 @@ export function alarmBanner() {
       alarm.id + '"' + (unacked ? "" : " disabled") + '>Ack</button><button type="button" class="act primary" data-act="alarm-go" data-alarm="' +
       alarm.id + '">' + esc(alarm.response) + "</button></div>" + explainHtml(alarmInput(alarm)) + "</div>";
   }).join("");
-  const more = alarms.length > 3 ? '<p class="fine alarm-more">' + (alarms.length - 3) + " more on the overview.</p>" : "";
-  return '<div class="alarm-banner" aria-label="Abnormal conditions">' + shown + more + "</div>";
+  return '<div class="alarm-banner" aria-label="Abnormal conditions">' + shown + "</div>";
 }
 
 export function ackAlarm(id) {

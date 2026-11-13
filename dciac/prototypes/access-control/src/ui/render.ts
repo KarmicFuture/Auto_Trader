@@ -71,7 +71,8 @@ function paint() {
   const scrollX = window.scrollX;
   const scrollY = window.scrollY;
   runtime.lastRenderedView = viewKey;
-  litRender(html`${unsafeHTML('<a class="skip" href="#content">Skip to content</a>')}<div class="shell" data-screen="app" data-view=${state.view} data-menu=${state.menuOpen ? "open" : "closed"}>${unsafeHTML(rail())}<main id="content" tabindex="-1">${unsafeHTML(topbar())}<div data-slot="alarm" aria-live="polite" aria-atomic="false">${unsafeHTML(alarmBanner())}</div><div data-slot="toast" aria-live="polite" aria-atomic="true">${unsafeHTML(toastHtml())}</div><div class="view">${unsafeHTML(viewHtml())}</div>${unsafeHTML(tabbar())}</main>${unsafeHTML(state.labOpen ? lab() : "")}</div>`, root);
+  const alarmHtml = state.view === "floor" ? "" : alarmBanner();
+  litRender(html`${unsafeHTML('<a class="skip" href="#content">Skip to content</a>')}<div class="shell" data-screen="app" data-view=${state.view} data-menu=${state.menuOpen ? "open" : "closed"}>${unsafeHTML(rail())}<main id="content" tabindex="-1">${unsafeHTML(topbar())}<div data-slot="alarm" aria-live="polite" aria-atomic="false">${unsafeHTML(alarmHtml)}</div><div data-slot="toast" aria-live="polite" aria-atomic="true">${unsafeHTML(toastHtml())}</div><div class="view">${unsafeHTML(viewHtml())}</div>${unsafeHTML(tabbar())}</main>${unsafeHTML(state.labOpen ? lab() : "")}</div>`, root);
   if (viewChanged) window.scrollTo(0, 0);
   else window.scrollTo(scrollX, scrollY);
   hydrateFields();
@@ -179,13 +180,21 @@ export function onClick(event) {
     render();
   }
   else if (act === "floor-zoom") zoomFloor(el.dataset.dir);
-  else if (act === "lib-toggle") { state.libOpen = !state.libOpen; render(); }
+  else if (act === "lib-toggle") {
+    const desktop = window.matchMedia("(min-width: 1024px)").matches;
+    state.libOpen = desktop ? state.libOpen === false : !state.libOpen;
+    render();
+  }
   else if (act === "alarm-toggle") {
     state.alarmOpen = state.alarmOpen === el.dataset.alarm ? "" : (el.dataset.alarm || "");
     render();
   }
-  else if (act === "dock-toggle") { state.watchOpen = !state.watchOpen; render(); }
-  else if (act === "dock-tab") { state.dockTab = el.dataset.tab || "watch"; state.watchOpen = true; render(); }
+  else if (act === "dock-toggle") {
+    const desktop = window.matchMedia("(min-width: 1024px)").matches;
+    state.watchOpen = desktop ? state.watchOpen === false : !state.watchOpen;
+    render();
+  }
+  else if (act === "dock-tab") { state.dockTab = el.dataset.tab || "alarms"; state.watchOpen = true; render(); }
   else if (act === "alarm-ack") ackAlarm(el.dataset.alarm);
   else if (act === "alarm-go") goAlarm(el.dataset.alarm);
   else if (act === "explain-run") runExplain(el.dataset.explainKind, el.dataset.explainId);

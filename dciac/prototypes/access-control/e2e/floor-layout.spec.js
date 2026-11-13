@@ -69,6 +69,8 @@ test("scene stays clipped and centred at 1440 and 390", async ({ page }) => {
     if (size.width >= 1440) {
       expect(metrics.overlapLib).toBeFalsy();
       expect(metrics.lib.x + metrics.lib.w).toBeLessThanOrEqual(metrics.scene.x + 2);
+      expect(metrics.scene.y).toBeLessThan(280);
+      expect(metrics.pageH).toBeLessThanOrEqual(size.height + 8);
     } else {
       expect(metrics.scene.x).toBeGreaterThanOrEqual(-1);
       expect(metrics.sceneBottom).toBeLessThan(844 * 2);
@@ -104,4 +106,19 @@ test("NOC theme colours the scene, legend, and spec chips", async ({ page }) => 
   expect(colors.legendBg).not.toMatch(/rgb\(246,243,238\)|rgb\(255,255,255\)/i);
   expect(colors.chipBg).not.toMatch(/rgb\(243,238,232\)|rgb\(255,255,255\)/i);
   expect(colors.legendFg).not.toMatch(/rgb\(255,255,255\)/);
+});
+
+test("alarms are one-line, unique, and explain opens on click", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await signIn(page);
+  await expect(page.locator("text=Other alarms")).toHaveCount(0);
+  const stacks = page.locator(".alarm-stack");
+  await expect(stacks.first()).toBeVisible();
+  const count = await stacks.count();
+  expect(count).toBeGreaterThan(3);
+  await expect(page.locator(".alarm-stack .explain").first()).toBeHidden();
+  await page.locator(".alarm-msg").first().click();
+  await expect(page.locator(".alarm-stack.open .explain")).toBeVisible();
+  await expect(page.locator(".dock-tabs")).toBeVisible();
+  await expect(page.locator(".scene")).toBeInViewport();
 });
