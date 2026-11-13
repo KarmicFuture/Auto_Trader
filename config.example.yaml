@@ -48,3 +48,60 @@ notifications:
 # On first run, record current listings as seen without notifying (avoids spam).
 # Set to true once if you want an immediate digest of everything currently listed.
 notify_existing: false
+
+# ---------------------------------------------------------------------------
+# Inbox agent: scan Discord, WhatsApp, and Gmail for important conversations.
+# Run with: python -m src.inbox.main   (see docs/INBOX_AGENT.md for setup)
+# ---------------------------------------------------------------------------
+inbox:
+  enabled: true
+  # How far back to scan on each run.
+  lookback_hours: 24
+  # Alert when a message scores at or above this (0-10).
+  min_importance: 3
+  # Substring matches against sender names/addresses. Big score boost.
+  vip_senders: []
+  #  - "boss@company.com"
+  #  - "Mom"
+  # Extra keywords that matter to you (substring match, +3).
+  keywords: []
+  #  - "s2000"
+  #  - "offer accepted"
+  # Never alert for these senders / conversations.
+  muted_senders: []
+  muted_conversations: []
+
+  # Gmail over IMAP. Use a Google app password (env GMAIL_APP_PASSWORD).
+  gmail:
+    enabled: false
+    imap_host: imap.gmail.com
+    user: ""
+    app_password: ""
+    folders: ["INBOX"]
+    # Only scan unread mail (recommended; read mail was presumably handled).
+    unread_only: true
+
+  # Discord bot (env DISCORD_BOT_TOKEN). The bot must be invited to the
+  # servers/channels you want scanned; bots cannot read your personal DMs.
+  discord:
+    enabled: false
+    bot_token: ""
+    # Channel IDs to monitor (enable Developer Mode -> right click -> Copy ID).
+    channel_ids: []
+    # Your Discord user ID, so @mentions of you score higher.
+    my_user_id: ""
+
+  # WhatsApp Business Cloud API. Messages arrive via webhook — run
+  # `python -m uvicorn src.inbox.whatsapp_webhook:app` (see docs) — and are
+  # stored in the JSONL file below, which the scanner reads.
+  whatsapp:
+    enabled: false
+    inbox_file: data/inbox/whatsapp.jsonl
+
+  alerts:
+    # Push alerts to a Discord channel via incoming webhook
+    # (env INBOX_DISCORD_WEBHOOK_URL; falls back to notifications.discord).
+    discord_webhook_url: ""
+    # Email alerts reuse notifications.email SMTP settings above.
+    # Leave null to follow notifications.email.enabled; set true/false to force.
+    email: null
