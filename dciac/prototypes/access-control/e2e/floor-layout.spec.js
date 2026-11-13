@@ -122,3 +122,20 @@ test("alarms are one-line, unique, and explain opens on click", async ({ page })
   await expect(page.locator(".dock-tabs")).toBeVisible();
   await expect(page.locator(".scene")).toBeInViewport();
 });
+
+test("scene controls are segmented and nominal chips stay quiet", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await signIn(page);
+  await expect(page.locator('.seg[aria-label="Time horizon"]')).toBeVisible();
+  await expect(page.locator('.seg[aria-label="Site or hall"]')).toBeVisible();
+  await expect(page.locator('.hud-zoom[aria-label="Zoom"]')).toBeVisible();
+  const chip = page.locator(".pill.ok").first();
+  await expect(chip).toBeVisible();
+  const styles = await chip.evaluate((el) => {
+    const s = getComputedStyle(el);
+    return { bg: s.backgroundColor, color: s.color };
+  });
+  expect(styles.bg).toMatch(/rgba\(0, 0, 0, 0\)|transparent|rgba\(0,0,0,0\)/);
+  const face = await page.locator(".cap-label").first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  expect(face).toBeGreaterThanOrEqual(11);
+});

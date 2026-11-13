@@ -8,7 +8,7 @@ import { runtime, state } from "../state";
 import { activeAlarms, alarmBanner, watchTable } from "../ui/alarms";
 import { clamp, esc } from "../ui/format";
 import { render } from "../ui/schedule";
-import { elevationIndex, elevationNavHtml, ELEVATION_STEPS } from "../ui/elevations";
+import { elevationFromLevel, elevationIndex, elevationNavHtml, ELEVATION_STEPS } from "../ui/elevations";
 import { pills } from "../ui/shell";
 import { futureHallHtml, futureOn, futureYardHtml } from "./manage";
 import { deviceFaces, faceplate, thermalCard, thermalReading } from "./rack";
@@ -517,10 +517,21 @@ export function hudHtml() {
     feed: "Power feed",
   };
   const level = levelName[state.floor.level] || "Hall";
+  const atSite = elevationFromLevel(state.floor.level) === "site";
+  const nowOn = state.horizon !== "future";
   return '<div class="hud"><div class="hud-score"><b data-abnormal>' + alarms.length +
     '</b><span>Abnormal</span></div><p class="hud-mission">' + esc(level) +
     '. Color is reserved for conditions that need a response. Gray is nominal.</p>' +
-    '<div class="hud-zoom"><button type="button" data-act="horizon" data-horizon="now"' + (state.horizon === "future" ? "" : ' aria-pressed="true"') + '>Now</button><button type="button" data-act="horizon" data-horizon="future"' + (state.horizon === "future" ? ' aria-pressed="true"' : "") + '>Future</button><button type="button" data-act="floor-zoom" data-dir="out" aria-label="Zoom out">−</button><button type="button" data-act="floor-zoom" data-dir="in" aria-label="Zoom in">+</button><button type="button" data-act="floor-zoom" data-dir="reset">Reset view</button></div></div>';
+    '<div class="hud-controls"><div class="seg" role="group" aria-label="Time horizon">' +
+    '<button type="button" data-act="horizon" data-horizon="now"' + (nowOn ? ' aria-pressed="true"' : "") +
+    '>Now</button><button type="button" data-act="horizon" data-horizon="future"' + (nowOn ? "" : ' aria-pressed="true"') +
+    '>Future</button></div><div class="seg" role="group" aria-label="Site or hall">' +
+    '<button type="button" data-act="floor-elevation" data-level="site"' + (atSite ? ' aria-pressed="true"' : "") +
+    '>Outside</button><button type="button" data-act="floor-elevation" data-level="hall"' + (atSite ? "" : ' aria-pressed="true"') +
+    '>Hall</button></div><div class="hud-zoom" role="group" aria-label="Zoom">' +
+    '<button type="button" data-act="floor-zoom" data-dir="in" aria-label="Zoom in">+</button>' +
+    '<button type="button" data-act="floor-zoom" data-dir="out" aria-label="Zoom out">−</button>' +
+    '<button type="button" data-act="floor-zoom" data-dir="reset">Reset</button></div></div></div>';
 }
 
 export function makerColor(maker) {
