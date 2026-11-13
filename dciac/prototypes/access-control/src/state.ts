@@ -6,6 +6,8 @@ export const runtime = {
   lastRenderedView: "",
   dragToken: "",
   orbit: null as any,
+  stageFit: 1,
+  stageObs: null as ResizeObserver | null,
 };
 
 export const state: AppState = {
@@ -64,5 +66,9 @@ export const state: AppState = {
   demoId: "",
   demoStep: 0,
   demoDone: false,
+  libOpen: false,
+  alarmOpen: "",
+  watchOpen: false,
+  dockTab: "watch",
   outletGate: null,
 };

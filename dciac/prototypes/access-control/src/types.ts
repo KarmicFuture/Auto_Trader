@@ -172,6 +172,10 @@ export interface AppState {
   demoId: string;
   demoStep: number;
   demoDone: boolean;
+  libOpen: boolean;
+  alarmOpen: string;
+  watchOpen: boolean;
+  dockTab: string;
   outletGate: {
     phase: string;
     n: number;

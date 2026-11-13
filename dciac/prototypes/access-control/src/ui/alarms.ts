@@ -150,6 +150,12 @@ export function activeAlarms(): Alarm[] {
   return list.sort((a, b) => a.pri - b.pri || a.asset.localeCompare(b.asset));
 }
 
+export function alarmLine(alarm: Alarm) {
+  const raw = String(alarm.text || "").replace(/\s+/g, " ").trim();
+  const cut = raw.split(". ")[0] || raw;
+  return cut.length > 88 ? cut.slice(0, 85) + "…" : cut;
+}
+
 export function alarmBanner() {
   const alarms = activeAlarms();
   if (!alarms.length) {
@@ -157,9 +163,12 @@ export function alarmBanner() {
   }
   const shown = alarms.slice(0, 3).map((alarm) => {
     const unacked = !state.acked[alarm.id];
-    return '<div class="alarm-stack"><div class="alarm-row pri-' + alarm.pri + (unacked ? " unacked" : "") + '"><span class="pri-mark pri-' + alarm.pri +
-      '" aria-hidden="true">' + alarm.pri + '</span><p><b>' + esc(alarm.asset) + "</b> " + esc(alarm.text) +
-      (unacked ? " Unacknowledged." : " Acknowledged.") + '</p><button type="button" class="act" data-act="alarm-ack" data-alarm="' +
+    const open = state.alarmOpen === alarm.id;
+    return '<div class="alarm-stack' + (open ? " open" : "") + '"><div class="alarm-row pri-' + alarm.pri + (unacked ? " unacked" : "") +
+      '"><button type="button" class="alarm-msg" data-act="alarm-toggle" data-alarm="' + alarm.id + '" aria-expanded="' +
+      (open ? "true" : "false") + '"><span class="pri-mark pri-' + alarm.pri +
+      '" aria-hidden="true">' + alarm.pri + '</span><p><b>' + esc(alarm.asset) + "</b> " + esc(alarmLine(alarm)) +
+      "</p></button><button type=\"button\" class=\"act\" data-act=\"alarm-ack\" data-alarm=\"" +
       alarm.id + '"' + (unacked ? "" : " disabled") + '>Ack</button><button type="button" class="act primary" data-act="alarm-go" data-alarm="' +
       alarm.id + '">' + esc(alarm.response) + "</button></div>" + explainHtml(alarmInput(alarm)) + "</div>";
   }).join("");

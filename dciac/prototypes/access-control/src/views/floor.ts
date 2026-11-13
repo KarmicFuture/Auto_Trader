@@ -82,24 +82,59 @@ export function missionText() {
   return "Hall is cool. Drag to orbit. Scroll to zoom in.";
 }
 
+export const WORLD_W = 1280;
+export const WORLD_H = 960;
+
+export function fitStage() {
+  const stage = document.querySelector(".stage") as HTMLElement | null;
+  if (!stage || !stage.clientWidth || !stage.clientHeight) {
+    runtime.stageFit = runtime.stageFit || 1;
+    return runtime.stageFit;
+  }
+  const pad = 28;
+  const fit = Math.min(
+    Math.max(0.18, (stage.clientWidth - pad) / WORLD_W),
+    Math.max(0.18, (stage.clientHeight - pad) / WORLD_H)
+  );
+  runtime.stageFit = fit;
+  return fit;
+}
+
 export function cameraTransform() {
   const floor = state.floor;
-  return "translate(" + floor.panX + "px," + floor.panY + "px) rotateX(" + floor.pitch +
-    "deg) rotateZ(" + floor.yaw + "deg) scale(" + floor.zoom + ")";
+  const fit = runtime.stageFit || 1;
+  return "translate(-50%, -50%) translate(" + floor.panX + "px," + floor.panY + "px) rotateX(" +
+    floor.pitch + "deg) rotateZ(" + floor.yaw + "deg) scale(" + (floor.zoom * fit) + ")";
 }
 
 export function applyCamera() {
+  fitStage();
   const world = document.querySelector(".world");
   if (world) {
     world.style.transform = cameraTransform();
     world.style.setProperty("--pitch", state.floor.pitch + "deg");
     world.style.setProperty("--yaw", state.floor.yaw + "deg");
+    world.style.setProperty("--world-w", WORLD_W + "px");
+    world.style.setProperty("--world-h", WORLD_H + "px");
   }
   const chassis = document.querySelector(".chassis");
   if (chassis) {
     chassis.style.transform = "rotateX(" + state.floor.chassisPitch + "deg) rotateY(" +
       state.floor.chassisYaw + "deg) scale(" + state.floor.chassisZoom + ")";
   }
+}
+
+export function observeStage() {
+  if (typeof ResizeObserver === "undefined") {
+    window.addEventListener("resize", applyCamera);
+    return;
+  }
+  if (!runtime.stageObs) {
+    runtime.stageObs = new ResizeObserver(() => applyCamera());
+  }
+  const stage = document.querySelector(".stage");
+  runtime.stageObs.disconnect();
+  if (stage) runtime.stageObs.observe(stage);
 }
 
 export function paintHeat() {
@@ -602,9 +637,11 @@ export function renderLibrary() {
     amps += specItem.amps;
   });
   const power = watts >= 1000 ? (watts / 1000).toFixed(1) + " kW" : watts + " W";
-  return '<aside class="lib"><h2>Device library</h2><p class="fine">Drag a tile. Outside gear lands in the yard. Floor gear lands in the hall. Rack gear mounts in an enclosure.</p><div class="lib-filters">' +
+  const open = state.libOpen ? " open" : "";
+  return '<aside class="lib' + open + '"><button type="button" class="lib-toggle" data-act="lib-toggle" aria-expanded="' +
+    (state.libOpen ? "true" : "false") + '" aria-controls="floor-lib-body">Device library</button><div class="lib-body" id="floor-lib-body"><h2>Device library</h2><p class="fine">Drag a tile. Outside gear lands in the yard. Floor gear lands in the hall. Rack gear mounts in an enclosure.</p><div class="lib-filters">' +
     filters + "</div>" + groups + '<p class="lib-total"><b>' + state.plan.placements.length + '</b><span>placed</span><b>' +
-    power + "</b><b>" + amps.toFixed(1) + " A</b></p></aside>";
+    power + "</b><b>" + amps.toFixed(1) + " A</b></p></div></aside>";
 }
 
 export function renderPlanChassis(item) {
@@ -1152,8 +1189,8 @@ export function renderFloor() {
     ? "Future state of the whole system. Live control is unchanged. Hall 2, the second feeder, and restored BMC paths are shown as planned."
     : (outside ? "Click the grid, the feeder, a pipe, or the compute hall to open that part." : "Click a pod, a row, a rack, or a server. The next click opens the inlet, exhaust, BMC, or DC feed.");
   const showFace = ["row", "rack", "server", "part"].indexOf(state.floor.level) >= 0;
-  return '<div class="page-head"><div class="top"><div><h1>' + title + '</h1><p class="sub">' + sub + "</p></div></div>" +
-    pills() + elevationNavHtml({ face: showFace }) + '</div><div class="plan-layout">' + renderLibrary() + '<div class="floor-layout" data-floor-level="' + esc(state.floor.level) + '">' + scene + renderInspector() + "</div></div>" + watchTable() + explainRest();
+  return '<div class="floor-page"><div class="page-head"><div class="top"><div><h1>' + title + '</h1><p class="sub">' + sub + "</p></div></div>" +
+    pills() + elevationNavHtml({ face: showFace }) + '</div><div class="plan-layout">' + renderLibrary() + '<div class="floor-layout" data-floor-level="' + esc(state.floor.level) + '">' + scene + renderInspector() + "</div></div>" + watchTable() + explainRest() + "</div>";
 }
 
 export function zoomFloor(dir) {

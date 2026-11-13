@@ -18,7 +18,7 @@ import { bindRender, render } from "./schedule";
 import { go, viewHtml } from "./shell";
 import { rail, tabbar, topbar } from "./rail";
 import { toastHtml } from "./toast";
-import { applyCamera, floorSerial, goElevation, goFloor, nudgePlan, onDragEnd, onDragOver, onDragStart, onDrop, onPointerDown, onPointerMove, onPointerUp, onWheel, openFeed, openFloorServer, openPart, openPlan, openPod, openRack, openRow, paintHeat, pickDrill, removePlan, setRackFace, stepElevation, zoomFloor } from "../views/floor";
+import { applyCamera, floorSerial, goElevation, goFloor, nudgePlan, observeStage, onDragEnd, onDragOver, onDragStart, onDrop, onPointerDown, onPointerMove, onPointerUp, onWheel, openFeed, openFloorServer, openPart, openPlan, openPod, openRack, openRow, paintHeat, pickDrill, removePlan, setRackFace, stepElevation, zoomFloor } from "../views/floor";
 import { advanceDemo, loadTheme, startDemo, stopDemo, toggleTheme } from "../domain/demo";
 import { lab, resetWorld, saveAsset, toggleMaint } from "../views/lab";
 import { login, signIn, signOut } from "../views/login";
@@ -79,6 +79,8 @@ function paint() {
   markScrollers();
   settle();
   applyCamera();
+  observeStage();
+  requestAnimationFrame(() => applyCamera());
   paintHeat();
   syncHash();
   saveWorld();
@@ -177,6 +179,13 @@ export function onClick(event) {
     render();
   }
   else if (act === "floor-zoom") zoomFloor(el.dataset.dir);
+  else if (act === "lib-toggle") { state.libOpen = !state.libOpen; render(); }
+  else if (act === "alarm-toggle") {
+    state.alarmOpen = state.alarmOpen === el.dataset.alarm ? "" : (el.dataset.alarm || "");
+    render();
+  }
+  else if (act === "dock-toggle") { state.watchOpen = !state.watchOpen; render(); }
+  else if (act === "dock-tab") { state.dockTab = el.dataset.tab || "watch"; state.watchOpen = true; render(); }
   else if (act === "alarm-ack") ackAlarm(el.dataset.alarm);
   else if (act === "alarm-go") goAlarm(el.dataset.alarm);
   else if (act === "explain-run") runExplain(el.dataset.explainKind, el.dataset.explainId);
