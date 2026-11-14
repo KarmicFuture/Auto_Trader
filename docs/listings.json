@@ -1,6 +1,6 @@
 {
-  "count": 738,
-  "refreshed_at": "2026-11-14T18:13:22.759602+00:00",
+  "count": 740,
+  "refreshed_at": "2026-11-14T22:30:50.258798+00:00",
   "errors": [],
   "watches": [
     {
@@ -4324,6 +4324,26 @@
       "value_delta": -1380
     },
     {
+      "id": "cv-3006797633",
+      "source": "carvana",
+      "title": "2014 Porsche Cayman",
+      "url": "https://www.carvana.com/vehicle/4843263",
+      "price": 42990,
+      "year": 2014,
+      "mileage": 37955,
+      "location": "Riverside, NJ",
+      "status": "active",
+      "thumbnail": "https://partners.fastly.carvana.io/render/xpm0g86vcvcozlia0vbq.jpg?o=BF-SecondaryLogo-WhiteText2-B",
+      "notes": "Anti-Theft System, Power Windows, Keyles s Entry, Cruise Control, Power Door Lock s, Air Con",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 44500,
+      "value_score": 55.7,
+      "value_label": "Fair value",
+      "value_delta": -1510
+    },
+    {
       "id": "cgu-461385567",
       "source": "cargurus",
       "title": "2015 Porsche Cayman Base",
@@ -8004,6 +8024,26 @@
       "value_delta": 3995
     },
     {
+      "id": "eb-v1|860143914326|0",
+      "source": "ebay",
+      "title": "2001 Honda S2000 Base",
+      "url": "https://www.ebay.com/itm/860143914326",
+      "price": 39995,
+      "year": 2001,
+      "mileage": 23882,
+      "location": "Waldorf, MD",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/WSQAAeSw8ZNq63iD/s-l960.jpg",
+      "notes": "Most new vehicles come with a factory wa rranty and some used vehicles have a rem aining fac",
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 36000,
+      "value_score": 31.5,
+      "value_label": "Soft value",
+      "value_delta": 3995
+    },
+    {
       "id": "70347560",
       "source": "carmax",
       "title": "2022 Porsche 718 Cayman T",
@@ -10042,26 +10082,6 @@
       "value_score": 21.7,
       "value_label": "Stretched",
       "value_delta": 12590
-    },
-    {
-      "id": "eb-v1|147675707175|0",
-      "source": "ebay",
-      "title": "2002 Honda S2000",
-      "url": "https://www.ebay.com/itm/147675707175",
-      "price": 43110,
-      "year": 2002,
-      "mileage": 20905,
-      "location": "Grand Rapids, MI",
-      "status": "active",
-      "thumbnail": "https://i.ebayimg.com/images/g/nK8AAeSwK7pqqjVU/s-l1200.jpg",
-      "notes": "- Exterior Color:\n- Suzuka Blue\n- Interi or Color:\n- Blue\nNew Vehicles come with  a full-fac",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 36800,
-      "value_score": 21.4,
-      "value_label": "Stretched",
-      "value_delta": 6310
     },
     {
       "id": "cgu-453890103",
@@ -13942,6 +13962,26 @@
       "value_score": 0.0,
       "value_label": "Stretched",
       "value_delta": 27066
+    },
+    {
+      "id": "eb-v1|137931117025|0",
+      "source": "ebay",
+      "title": "2023 Porsche Cayman 4S",
+      "url": "https://www.ebay.com/itm/137931117025",
+      "price": 92950,
+      "year": 2023,
+      "mileage": 3588,
+      "location": "Bellevue, WA",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/cbsAAeSwaCdq2sKs/s-l1600.jpg",
+      "notes": "Placing a Bid:\nYour bid constitutes a le gally binding contract to purchase this  vehicle. P",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 67100,
+      "value_score": 0.0,
+      "value_label": "Stretched",
+      "value_delta": 25850
     },
     {
       "id": "cm-65f53bd3-c9a4-45ac-95fc-f22aaef7501e",
