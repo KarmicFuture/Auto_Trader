@@ -1,6 +1,6 @@
 {
-  "count": 740,
-  "refreshed_at": "2026-11-14T22:30:50.258798+00:00",
+  "count": 739,
+  "refreshed_at": "2026-11-15T06:43:40.074497+00:00",
   "errors": [],
   "watches": [
     {
@@ -584,26 +584,6 @@
       "value_delta": -19551
     },
     {
-      "id": "126979319",
-      "source": "bringatrailer",
-      "title": "9k-Mile 2021 Porsche 718 Cayman GT4 6-Speed",
-      "url": "https://bringatrailer.com/listing/2021-porsche-718-cayman-gt4-38/",
-      "price": 50000,
-      "year": 2021,
-      "mileage": 9000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/11/2021_Porsche_718_GT4_BaT_Resolution-0014-scaled-copy-2026-11-12-hic-aaaa4ef154fba797e594e918f3c6c801.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 118900,
-      "value_score": 100.0,
-      "value_label": "Great value",
-      "value_delta": -68900
-    },
-    {
       "id": "eb-v1|168861131340|0",
       "source": "ebay",
       "title": "2008 Honda S2000 2dr Conv CR",
@@ -622,6 +602,26 @@
       "value_score": 100.0,
       "value_label": "Great value",
       "value_delta": -48402
+    },
+    {
+      "id": "126979319",
+      "source": "bringatrailer",
+      "title": "9k-Mile 2021 Porsche 718 Cayman GT4 6-Speed",
+      "url": "https://bringatrailer.com/listing/2021-porsche-718-cayman-gt4-38/",
+      "price": 60000,
+      "year": 2021,
+      "mileage": 9000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/11/2021_Porsche_718_GT4_BaT_Resolution-0014-scaled-copy-2026-11-12-hic-aaaa4ef154fba797e594e918f3c6c801.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 118900,
+      "value_score": 100.0,
+      "value_label": "Great value",
+      "value_delta": -58900
     },
     {
       "id": "119304889",
@@ -1182,26 +1182,6 @@
       "value_score": 79.3,
       "value_label": "Good value",
       "value_delta": -4901
-    },
-    {
-      "id": "126290695",
-      "source": "bringatrailer",
-      "title": "Original-Owner 2012 Porsche Cayman S 6-Speed",
-      "url": "https://bringatrailer.com/listing/2012-porsche-cayman-s-13/",
-      "price": 32250,
-      "year": 2012,
-      "mileage": null,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_4258-scaled-copy-2026-11-05-1jb-b8dd608e0eddd9c9fd6dbc34c785967f.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 39000,
-      "value_score": 78.8,
-      "value_label": "Good value",
-      "value_delta": -6750
     },
     {
       "id": "tc-WP0AA2A89KS261278",
@@ -2124,10 +2104,10 @@
       "value_delta": -4409
     },
     {
-      "id": "eb-v1|327448890816|0",
+      "id": "eb-v1|327457075722|0",
       "source": "ebay",
       "title": "2020 Porsche Cayman 4S",
-      "url": "https://www.ebay.com/itm/327448890816",
+      "url": "https://www.ebay.com/itm/327457075722",
       "price": 41995,
       "year": 2020,
       "mileage": 87000,
@@ -2382,26 +2362,6 @@
       "value_score": 70.8,
       "value_label": "Good value",
       "value_delta": -4000
-    },
-    {
-      "id": "126028597",
-      "source": "bringatrailer",
-      "title": "One-Owner, 11k-Mile 2006 Porsche Cayman S 6-Speed",
-      "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-305/",
-      "price": 30000,
-      "year": 2006,
-      "mileage": 11000,
-      "location": null,
-      "status": "live",
-      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_6335-2-scaled-copy-2026-11-02-j36-e520343041adb60db32d1a72e9d84546.jpg?w=470&h=318&crop=1",
-      "notes": null,
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 34200,
-      "value_score": 70.5,
-      "value_label": "Good value",
-      "value_delta": -4200
     },
     {
       "id": "cgu-463698796",
@@ -2782,6 +2742,26 @@
       "value_score": 66.7,
       "value_label": "Good value",
       "value_delta": -4728
+    },
+    {
+      "id": "126028597",
+      "source": "bringatrailer",
+      "title": "One-Owner, 11k-Mile 2006 Porsche Cayman S 6-Speed",
+      "url": "https://bringatrailer.com/listing/2006-porsche-cayman-s-305/",
+      "price": 31000,
+      "year": 2006,
+      "mileage": 11000,
+      "location": null,
+      "status": "live",
+      "thumbnail": "https://bringatrailer.com/wp-content/uploads/2026/10/IMG_6335-2-scaled-copy-2026-11-02-j36-e520343041adb60db32d1a72e9d84546.jpg?w=470&h=318&crop=1",
+      "notes": null,
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 34200,
+      "value_score": 65.6,
+      "value_label": "Good value",
+      "value_delta": -3200
     },
     {
       "id": "tc-WP0AA2A88JK261643",
@@ -10084,6 +10064,26 @@
       "value_delta": 12590
     },
     {
+      "id": "eb-v1|147675707175|0",
+      "source": "ebay",
+      "title": "2002 Honda S2000",
+      "url": "https://www.ebay.com/itm/147675707175",
+      "price": 43110,
+      "year": 2002,
+      "mileage": 20905,
+      "location": "Grand Rapids, MI",
+      "status": "active",
+      "thumbnail": "https://i.ebayimg.com/images/g/nK8AAeSwK7pqqjVU/s-l1200.jpg",
+      "notes": "- Exterior Color:\n- Suzuka Blue\n- Interi or Color:\n- Blue\nNew Vehicles come with  a full-fac",
+      "make": "Honda",
+      "model": "S2000",
+      "watch_id": "honda-s2000",
+      "fair_value": 36800,
+      "value_score": 21.4,
+      "value_label": "Stretched",
+      "value_delta": 6310
+    },
+    {
       "id": "cgu-453890103",
       "source": "cargurus",
       "title": "2023 Porsche 718 Cayman",
@@ -10502,26 +10502,6 @@
       "value_score": 19.1,
       "value_label": "Stretched",
       "value_delta": 6795
-    },
-    {
-      "id": "cmp-4b48a855-43ea-4db8-8008-508327a8f4d1",
-      "source": "cars.com",
-      "title": "2000 Honda S2000",
-      "url": "https://www.cars.com/vehicledetail/4b48a855-43ea-4db8-8008-508327a8f4d1/",
-      "price": 41999,
-      "year": 2000,
-      "mileage": 25887,
-      "location": "MANVEL, TX",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/24d889f7-d66f-4905-876b-82134480694b/8375efdd-7f4f-4fbc-94e0-845e11f94b2a.jpeg",
-      "notes": "Up for sale is my 2000 S2000. Need space  in the garage.  Just had done paint cor rection an",
-      "make": "Honda",
-      "model": "S2000",
-      "watch_id": "honda-s2000",
-      "fair_value": 35400,
-      "value_score": 18.9,
-      "value_label": "Stretched",
-      "value_delta": 6599
     },
     {
       "id": "cgu-463204166",
@@ -11024,26 +11004,6 @@
       "value_delta": 8288
     },
     {
-      "id": "cmp-f5c5cfb8-7b57-4eaa-a2f2-fd44a1477fb8",
-      "source": "cars.com",
-      "title": "2024 Porsche 718 Cayman Cayman",
-      "url": "https://www.cars.com/vehicledetail/f5c5cfb8-7b57-4eaa-a2f2-fd44a1477fb8/",
-      "price": 80000,
-      "year": 2024,
-      "mileage": 9100,
-      "location": "SAMMAMISH, WA",
-      "status": "active",
-      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/661503b0-9806-4423-81e4-aee4d62c1d24/9c386fb2-d667-4605-9d98-436b226437ec.jpeg",
-      "notes": "I am selling my cherished 2024 Porsche c ayman base.  This car is an experience t o drive wi",
-      "make": "Porsche",
-      "model": "Cayman",
-      "watch_id": "porsche-cayman",
-      "fair_value": 65900,
-      "value_score": 14.3,
-      "value_label": "Stretched",
-      "value_delta": 14100
-    },
-    {
       "id": "cgu-463049857",
       "source": "cargurus",
       "title": "2006 Honda S2000 Roadster",
@@ -11162,6 +11122,26 @@
       "value_score": 13.5,
       "value_label": "Stretched",
       "value_delta": 14490
+    },
+    {
+      "id": "cmp-acedd67b-0fbb-4bc9-99e3-1488aa3ce057",
+      "source": "cars.com",
+      "title": "2024 Porsche 718 Cayman Cayman",
+      "url": "https://www.cars.com/vehicledetail/acedd67b-0fbb-4bc9-99e3-1488aa3ce057/",
+      "price": 80000,
+      "year": 2024,
+      "mileage": 10500,
+      "location": "SAMMAMISH, WA",
+      "status": "active",
+      "thumbnail": "https://platform.cstatic-images.com/xlarge/in/v2/p2p/661503b0-9806-4423-81e4-aee4d62c1d24/9c386fb2-d667-4605-9d98-436b226437ec.jpeg",
+      "notes": "I am selling my cherished 2024 Porsche c ayman base.  This car is an experience t o drive wi",
+      "make": "Porsche",
+      "model": "Cayman",
+      "watch_id": "porsche-cayman",
+      "fair_value": 65600,
+      "value_score": 13.4,
+      "value_label": "Stretched",
+      "value_delta": 14400
     },
     {
       "id": "cgu-457479480",
@@ -13344,10 +13324,10 @@
       "value_delta": 19197
     },
     {
-      "id": "eb-v1|237174292977|0",
+      "id": "eb-v1|237183665062|0",
       "source": "ebay",
       "title": "2012 Porsche Cayman R",
-      "url": "https://www.ebay.com/itm/237174292977",
+      "url": "https://www.ebay.com/itm/237183665062",
       "price": 83900,
       "year": 2012,
       "mileage": 39063,
@@ -14068,7 +14048,7 @@
       "source": "ebay",
       "title": "2021 Porsche Cayman Turbo S $213,094 MSRP New",
       "url": "https://www.ebay.com/itm/377644288416",
-      "price": 97773,
+      "price": 95773,
       "year": 2021,
       "mileage": 4144,
       "location": "Carrollton, TX",
@@ -14081,7 +14061,7 @@
       "fair_value": 73000,
       "value_score": 0.0,
       "value_label": "Stretched",
-      "value_delta": 24773
+      "value_delta": 22773
     },
     {
       "id": "cm-3137d8b3-0e9a-4874-acc2-39c7643e871f",
