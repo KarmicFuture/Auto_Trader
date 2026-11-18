@@ -1,0 +1,18 @@
+{
+  "name": "nearby-events",
+  "version": "1.0.0",
+  "description": "Events near me — location-aware event dashboard",
+  "private": true,
+  "main": "app.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node app.js",
+    "start": "node app.js",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
