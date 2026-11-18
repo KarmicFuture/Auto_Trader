@@ -16,6 +16,15 @@ from src.catalog import fetch_us_board_listings, listings_payload  # noqa: E402
 
 OUT = ROOT / "docs"
 WEB = ROOT / "src" / "web"
+EMPTY_TACO = ROOT / "empty-taco"
+
+
+def _copy_empty_taco_site() -> None:
+    """Keep the Empty Taco promo site on Pages after docs/ is rebuilt."""
+    if not EMPTY_TACO.is_dir():
+        return
+    dest = OUT / "empty-taco"
+    shutil.copytree(EMPTY_TACO, dest, dirs_exist_ok=True)
 
 
 def build() -> None:
@@ -43,6 +52,8 @@ def build() -> None:
     (OUT / ".nojekyll").write_text("")
     for name in ("listings", "board", "s2k"):
         (OUT / f"{name}.html").write_text(html)
+
+    _copy_empty_taco_site()
 
     print(f"Built {OUT} with {payload['count']} listings")
     if errors:
